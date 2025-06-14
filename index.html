@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>X:ORNO - Diagnostic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="tabs">
+    <button class="tab-button active" onclick="showTab('hardware')">Matériel</button>
+    <button class="tab-button" onclick="showTab('updates')">Mises à jour</button>
+    <button class="tab-button" onclick="showTab('activation')">Activation</button>
+  </div>
+
+  <div id="content">
+    <div id="hardware" class="tab active">
+      <h1>Chargement…</h1>
+    </div>
+
+    <div id="updates" class="tab">
+      <h1>Mises à jour Windows</h1>
+      <button id="updateBtn">Lancer les mises à jour</button>
+      <pre id="updateLog"></pre>
+    </div>
+
+    <div id="activation" class="tab">
+      <h1>Activation Windows</h1>
+      <button id="activateBtn">Lancer MAS_AIO.cmd</button>
+      <pre id="activationLog"></pre>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
