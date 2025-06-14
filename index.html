@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>X:ORNO - Diagnostic</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button id="themeSwitch">🌗 Mode auto</button>
+
   <div id="tabs">
     <button class="tab-button active" onclick="showTab('hardware')">Matériel</button>
     <button class="tab-button" onclick="showTab('updates')">Mises à jour</button>
@@ -14,12 +16,14 @@
 
   <div id="content">
     <div id="hardware" class="tab active">
-      <h1>Chargement…</h1>
+      <div class="loading-spinner"></div>
+      <p>Chargement des données matérielles...</p>
     </div>
 
     <div id="updates" class="tab">
       <h1>Mises à jour Windows</h1>
       <button id="updateBtn">Lancer les mises à jour</button>
+      <progress id="updateProgress" value="0" max="100" style="width:100%; display:none;"></progress>
       <pre id="updateLog"></pre>
     </div>
 
