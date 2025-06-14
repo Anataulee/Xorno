@@ -1,24 +1,35 @@
-window.addEventListener('DOMContentLoaded', async () => {
-  // Theme auto-based on OS
-  const current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', current);
-  document.getElementById('themeSwitch').addEventListener('click', () => {
-    const el = document.documentElement;
-    const n = el.getAttribute('data-theme');
-    el.setAttribute('data-theme', n === 'dark' ? 'light' : 'dark');
-  });
+function logDebug(...args) {
+  const area = document.getElementById('debugLog');
+  const msg = args.map(a => (typeof a === 'object' ? JSON.stringify(a, null, 2) : a)).join(' ');
+  area.textContent += `\n${msg}`;
+}
 
+function clearDebug() {
+  document.getElementById('debugLog').textContent = '';
+}
+
+window.addEventListener('DOMContentLoaded', async () => {
   window.xornoAPI.launchOHM();
+  logDebug("→ OHM lancé.");
+
   setTimeout(async () => {
+    logDebug("→ Extraction hardware...");
     const hw = await window.xornoAPI.extractHardwareInfo();
+    logDebug("↳ Résultat hardware:", hw);
+
     const disks = window.xornoAPI.getDisks();
+    logDebug("↳ Disques:", disks);
+
     const winVer = window.xornoAPI.getWindowsVersion();
+    logDebug("↳ Version Windows:", winVer);
+
     const container = document.getElementById('hardware');
 
     if (!hw) {
-      container.innerHTML = `<h1>Erreur de récupération</h1>
-        <p>Impossible de récupérer les infos matérielles.<br>
-        Vérifiez que OpenHardwareMonitor fonctionne.</p>`;
+      container.innerHTML = `
+        <h1>Erreur de récupération</h1>
+        <p>Impossible de récupérer les informations matérielles.<br>
+        Vérifiez que OpenHardwareMonitor fonctionne correctement.</p>`;
       return;
     }
 
@@ -26,8 +37,8 @@ window.addEventListener('DOMContentLoaded', async () => {
       <h1>État Matériel</h1>
       <div class="info-grid">
         <div><span>Processeur :</span> ${hw.cpuModel} (Temp: ${hw.cpuTemp}°C)</div>
-        <div><span>Carte Graph :</span> ${hw.gpuModel} (Temp: ${hw.gpuTemp}°C)</div>
-        <div><span>RAM :</span> ${hw.ramAmount} Go</div>
+        <div><span>Carte Graphique :</span> ${hw.gpuModel} (Temp: ${hw.gpuTemp}°C)</div>
+        <div><span>Mémoire RAM :</span> ${hw.ramAmount} Go</div>
         <div><span>Disques :</span> ${disks.join(', ')}</div>
         <div><span>Carte Mère :</span> ${hw.mbModel} (Temp: ${hw.mbTemp}°C)</div>
         <div><span>Windows :</span> ${winVer}</div>
@@ -36,8 +47,8 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 function showTab(id) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+  document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   document.querySelector(`[onclick="showTab('${id}')"]`).classList.add('active');
 }
@@ -45,24 +56,34 @@ function showTab(id) {
 document.getElementById('updateBtn').addEventListener('click', () => {
   const log = document.getElementById('updateLog');
   const prog = document.getElementById('updateProgress');
-  log.textContent = '';
+
+  log.textContent = 'Mise à jour en cours...';
   prog.style.display = 'block';
   prog.value = 0;
 
-  const ps = window.xornoAPI.installUpdates();
-  ps.stdout.on('data', data => {
-    const str = data.toString();
-    log.textContent += str;
-    const pctMatch = str.match(/PercentComplete\s*:\s*(\d+)/i);
-    if (pctMatch) prog.value = parseInt(pctMatch[1], 10);
-  });
-  ps.on('close', code => {
+  logDebug("→ Installation mises à jour...");
+
+  try {
+    const result = window.xornoAPI.installUpdates();
+    log.textContent = result;
+    logDebug("↳ Résultat:", result);
+  } catch (err) {
+    log.textContent = "Erreur de mise à jour.";
+    logDebug("⚠️ Erreur update:", err);
+  } finally {
     prog.style.display = 'none';
-    log.textContent += `\nProcess terminé (code ${code}).`;
-  });
+  }
 });
 
 document.getElementById('activateBtn').addEventListener('click', () => {
-  const res = window.xornoAPI.activateWindows();
-  document.getElementById('activationLog').textContent = res;
+  logDebug("→ Lancement activation...");
+  const result = window.xornoAPI.activateWindows();
+  document.getElementById('activationLog').textContent = result;
+  logDebug("↳ Résultat activation:", result);
+});
+
+document.getElementById('themeSwitch').addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  document.documentElement.setAttribute('data-theme', current === 'light' ? '' : 'light');
+  logDebug("🌓 Thème basculé:", current === 'light' ? 'dark' : 'light');
 });

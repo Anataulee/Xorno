@@ -1,29 +1,19 @@
-const { app, BrowserWindow } = require('electron');
+const { app } = require('electron');
+const sudo = require('sudo-prompt');
 const path = require('path');
 
-function createWindow() {
-  const win = new BrowserWindow({
-    width: 1000,
-    height: 700,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      contextIsolation: true,
-      nodeIntegration: false,
-      enableRemoteModule: false
-    }
-  });
-
-  win.loadFile('index.html');
-}
+const options = {
+  name: 'X ORNO',
+};
 
 app.whenReady().then(() => {
-  createWindow();
-
-  app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow();
+  const script = `"${process.execPath}" "${path.join(__dirname, 'main.elevated.js')}"`;
+  sudo.exec(script, options, (error) => {
+    if (error) {
+      console.error('Erreur d’élévation:', error);
+      app.quit();
+    } else {
+      app.quit(); // Quitte l'instance normale
+    }
   });
-});
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit();
 });
