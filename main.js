@@ -2,6 +2,7 @@ const { app, BrowserWindow } = require('electron');
 const sudo = require('sudo-prompt');
 const path = require('path');
 const isElevated = require('is-elevated');
+//bjr
 
 // Vérifie si l'application est lancée avec les droits admin
 isElevated().then(elevated => {
