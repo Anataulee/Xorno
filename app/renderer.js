@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'TheDocumentFoundation.LibreOffice', label: 'LibreOffice', checked: true },
     { id: 'Notepad++.Notepad++', label: 'Notepad++', checked: false },
     { id: 'Discord.Discord', label: 'Discord', checked: false },
-    { id: 'Spotify.Spotify', label: 'Spotify', checked: false },
+//    { id: 'Spotify.Spotify', label: 'Spotify', checked: false },
     { id: 'Microsoft.Edge', label: 'Microsoft Edge', checked: false },
     { id: 'Mozilla.Firefox', label: 'Mozilla Firefox', checked: false },
     { id: 'Valve.Steam', label: 'Steam', checked: false },
