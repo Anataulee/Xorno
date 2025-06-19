@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cont = document.getElementById('materiel-content');
-<<<<<<< HEAD
-
-=======
->>>>>>> 1
   const sections = {
     cpu: 'Processeur',
     gpu: 'Carte Graphique',
@@ -16,15 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     activation: 'Activation Windows'
   };
 
-<<<<<<< HEAD
-  cont.innerHTML = Object.values(sections).map(s =>
-    `<div id="sec-${s}"><strong>${s} :</strong> Chargement...</div>`
-  ).join('');
-=======
   cont.innerHTML = Object.values(sections)
     .map((s) => `<div id="sec-${s}"><strong>${s} :</strong> Chargement...</div>`)
     .join('');
->>>>>>> 1
 
   async function loadSection(key, fn) {
     try {
@@ -80,41 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadActivation();
   });
 
-<<<<<<< HEAD
-  document.getElementById('btn-ninite-bureau').addEventListener('click', async () => {
-    const output = document.getElementById('ninite-output');
-    output.textContent = 'Lancement de Ninite Bureautique...';
-    try {
-      const result = await window.xornoAPI.runNinite('bureau');
-      output.textContent = `Terminé :\n${result}`;
-    } catch (err) {
-      output.textContent = `Erreur : ${err.message}`;
-    }
-  });
-
-  document.getElementById('btn-ninite-gaming').addEventListener('click', async () => {
-    const output = document.getElementById('ninite-output');
-    output.textContent = 'Lancement de Ninite Gaming...';
-    try {
-      const result = await window.xornoAPI.runNinite('gaming');
-      output.textContent = `Terminé :\n${result}`;
-    } catch (err) {
-      output.textContent = `Erreur : ${err.message}`;
-    }
-  });
-
-  document.getElementById('btn-ninite-combo').addEventListener('click', async () => {
-    const output = document.getElementById('ninite-output');
-    output.textContent = 'Lancement de Ninite Combo...';
-    try {
-      const result = await window.xornoAPI.runNinite('combo');
-      output.textContent = `Terminé :\n${result}`;
-    } catch (err) {
-      output.textContent = `Erreur : ${err.message}`;
-    }
-  });
-
-=======
   ['bureau', 'gaming', 'combo'].forEach((type) => {
     document.getElementById(`btn-ninite-${type}`).addEventListener('click', async () => {
       const output = document.getElementById('ninite-output');
@@ -123,23 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
->>>>>>> 1
   document.getElementById('btn-quit').addEventListener('click', () => {
     window.xornoAPI.quitApp();
   });
 
-<<<<<<< HEAD
-  document.querySelectorAll('button[data-tab]').forEach(b => {
-    b.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      document.getElementById(b.dataset.tab).classList.add('active');
-      document.querySelectorAll('.tab-button').forEach(nb => nb.classList.remove('active'));
-      b.classList.add('active');
-    });
-  });
-
-=======
->>>>>>> 1
   document.getElementById('btn-quick-setup').addEventListener('click', async () => {
     const btn = document.getElementById('btn-quick-setup');
     btn.disabled = true;
@@ -180,14 +122,11 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'RARLab.WinRAR', label: 'WinRAR', checked: false }
   ];
 
-<<<<<<< HEAD
-=======
   const labelMap = wingetSoftware.reduce((acc, cur) => {
     acc[cur.id] = cur.label;
     return acc;
   }, {});
 
->>>>>>> 1
   const container = document.getElementById('winget-software-list');
   container.innerHTML = wingetSoftware
     .map(
@@ -196,27 +135,11 @@ document.addEventListener('DOMContentLoaded', () => {
     )
     .join('');
 
-<<<<<<< HEAD
-  // Nouvelle version Winget avec logs en direct et buffer 3 lignes
-=======
->>>>>>> 1
   document.getElementById('winget-form').addEventListener('submit', (e) => {
     e.preventDefault();
 
     const checked = [...document.querySelectorAll('input[name="apps"]:checked')].map((i) => i.value);
     const output = document.getElementById('winget-output');
-<<<<<<< HEAD
-    const buffer = [];
-
-    output.innerHTML = '<strong>Installation en cours...</strong><br><br>';
-
-    window.xornoAPI.runWingetInstallLive(checked, (line) => {
-      buffer.push(line);
-      if (buffer.length > 3) buffer.shift();
-      output.innerHTML = buffer.map(l => `<div>${l}</div>`).join('');
-    });
-  });
-=======
     output.innerHTML = checked
       .map(
         (id) =>
@@ -269,5 +192,4 @@ document.addEventListener('DOMContentLoaded', () => {
       b.classList.add('active');
     })
   );
->>>>>>> 1
 });

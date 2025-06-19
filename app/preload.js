@@ -1,17 +1,8 @@
 const si = require('systeminformation');
-<<<<<<< HEAD
-const { execSync, spawn, spawnSync } = require('child_process');
-const iconv = require('iconv-lite');
-const path = require('path');
-
-// Récupération des informations système
-
-=======
 const { execSync, spawn } = require('child_process');
 const iconv = require('iconv-lite');
 const path = require('path');
 
->>>>>>> 1
 async function getCpu() {
   const cpu = await si.cpu();
   return `${cpu.manufacturer} ${cpu.brand} @ ${cpu.speed} GHz`;
@@ -70,11 +61,6 @@ async function checkActivation() {
   }
 }
 
-<<<<<<< HEAD
-// Fonctions système
-
-=======
->>>>>>> 1
 function openWindowsUpdate() {
   execSync('start ms-settings:windowsupdate', { shell: 'cmd.exe' });
 }
@@ -108,60 +94,13 @@ function runNinite(type) {
   }
 }
 
-<<<<<<< HEAD
-// Nouvelle fonction : exécution de Winget en mode asynchrone avec flux live
-function runWingetInstallLive(appList, onLine) {
-  if (!Array.isArray(appList) || appList.length === 0) {
-    onLine("Aucun logiciel sélectionné.");
-    return;
-  }
-
-  const baseArgs = ["install", "--accept-package-agreements", "--accept-source-agreements", "-e"];
-=======
 function runWingetInstallLive(appList, reportStatus, reportLog) {
   if (!Array.isArray(appList) || appList.length === 0) return;
 
->>>>>>> 1
   let index = 0;
 
   const runNext = () => {
     const id = appList[index];
-<<<<<<< HEAD
-    onLine(`▶️ ${id}`);
-
-    const proc = spawn("winget", [...baseArgs, "--id", id], { shell: true });
-
-    proc.stdout.on('data', (data) => {
-      data.toString().split(/\r?\n/).forEach(line => {
-        if (line.trim()) onLine(line);
-      });
-    });
-
-    proc.stderr.on('data', (data) => {
-      data.toString().split(/\r?\n/).forEach(line => {
-        if (line.trim()) onLine(`ERREUR: ${line}`);
-      });
-    });
-
-    proc.on('close', (code) => {
-      if (code === 0) {
-        onLine(`✅ Installation terminée pour ${id}`);
-      } else {
-        onLine(`❌ Échec pour ${id} (code ${code})`);
-      }
-
-      index++;
-      if (index < appList.length) {
-        runNext();
-      }
-    });
-  };
-
-  runNext();
-}
-
-// Quitte l’application via commande système
-=======
     reportStatus(id, 'running');
     const proc = spawn(
       'cmd.exe',
@@ -200,15 +139,10 @@ function runWingetInstallLive(appList, reportStatus, reportLog) {
   runNext();
 }
 
->>>>>>> 1
 function quitApp() {
   execSync('taskkill /IM electron.exe /F');
 }
 
-<<<<<<< HEAD
-// Exposition de l’API vers le renderer
-=======
->>>>>>> 1
 window.xornoAPI = {
   getCpu,
   getGpu,
