@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>XORNO - Diagnostic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="tabs">
+    <button class="tab-button" data-tab="ninite">Ninite</button>
+    <button class="tab-button" data-tab="installations">Installations</button>
+    <button class="tab-button" data-tab="winget-logs">Logs</button>
+    <button class="tab-button active" data-tab="materiel">Matériel</button>
+    <button class="tab-button" data-tab="maj">Mises à jour</button>
+    <button class="tab-button" data-tab="activation">Activation</button>
+  </div>
+  <div id="content">
+    <div id="materiel" class="tab active">
+      <h1>État du système</h1>
+      <div id="materiel-content">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <div id="ninite" class="tab">
+      <h1>Installation via Ninite</h1>
+      <div class="ninite-buttons">
+        <button id="btn-ninite-bureau" class="action-btn">Bureautique</button>
+        <button id="btn-ninite-gaming" class="action-btn">Gaming</button>
+      </div>
+      <button id="btn-ninite-combo" class="combo-btn">Combo</button>
+      <pre id="ninite-output"></pre>
+    </div>
+    <div id="installations" class="tab">
+      <h1>Installations via Winget</h1>
+      <form id="winget-form">
+        <div id="winget-software-list"></div>
+        <button type="submit" class="action-btn">Installer la sélection</button>
+      </form>
+      <div id="winget-output"></div>
+    </div>
+    <div id="winget-logs" class="tab">
+      <h1>Logs détaillés Winget</h1>
+      <div id="winget-raw-log"
+        style="white-space:pre-wrap; max-height:300px; overflow-y:auto; background:#111; padding:10px; font-size:0.9rem;">
+      </div>
+    </div>
+    <div id="maj" class="tab">
+      <h1>Mises à jour Windows</h1>
+      <button id="btn-update" class="action-btn">Mettre à jour</button>
+      <div id="maj-content"></div>
+    </div>
+    <div id="activation" class="tab">
+      <h1>Activation Windows</h1>
+      <button id="btn-activate" class="action-btn">Activer Windows</button>
+      <div id="activation-content"></div>
+    </div>
+  </div>
+  <button id="btn-quit" class="quit-btn">Quitter l’application</button>
+  <button id="btn-quick-setup" class="quick-btn">Installation rapide</button>
+  <script src="renderer.js"></script>
+</body>
+
+</html>
