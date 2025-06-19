@@ -76,19 +76,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('btn-quick-setup').addEventListener('click', async () => {
     const btn = document.getElementById('btn-quick-setup');
+    const log = document.getElementById('quick-setup-log');
     btn.disabled = true;
     btn.textContent = 'En cours...';
-    document.getElementById('activation-content').innerHTML = `<pre>${
-      await window.xornoAPI.runActivate()
-    }</pre>`;
+    log.innerHTML = '';
+
+    const logStep = (msg) => {
+      log.innerHTML += `<div>${msg}</div>`;
+    };
+
+    logStep('🛠 Activation de Windows...');
+    logStep(`<pre>${await window.xornoAPI.runActivate()}</pre>`);
+
     await new Promise((r) => setTimeout(r, 1000));
-    document.getElementById('ninite-output').innerHTML = `<pre>${
-      await window.xornoAPI.runNinite('bureau')
-    }</pre>`;
+
+    logStep('📦 Installation de base via Ninite...');
+    logStep(`<pre>${await window.xornoAPI.runNinite('bureau')}</pre>`);
+
     await new Promise((r) => setTimeout(r, 1000));
+
+    logStep('🔄 Ouverture de Windows Update...');
     window.xornoAPI.openWindowsUpdate();
+
     document.getElementById('maj-content').textContent = 'Mises à jour lancées (panneau ouvert).';
-    loadActivation();
+
+    await loadActivation();
+
     btn.textContent = 'Terminé';
     setTimeout(() => {
       btn.disabled = false;
@@ -104,14 +117,16 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'TheDocumentFoundation.LibreOffice', label: 'LibreOffice', checked: true },
     { id: 'Notepad++.Notepad++', label: 'Notepad++', checked: false },
     { id: 'Discord.Discord', label: 'Discord', checked: false },
-//    { id: 'Spotify.Spotify', label: 'Spotify', checked: false },
     { id: 'Microsoft.Edge', label: 'Microsoft Edge', checked: false },
     { id: 'Mozilla.Firefox', label: 'Mozilla Firefox', checked: false },
     { id: 'Valve.Steam', label: 'Steam', checked: false },
     { id: 'EpicGames.EpicGamesLauncher', label: 'Epic Games', checked: false },
     { id: 'Opera.Opera', label: 'Opera', checked: false },
     { id: 'Brave.Brave', label: 'Brave', checked: false },
-    { id: 'RARLab.WinRAR', label: 'WinRAR', checked: false }
+    { id: 'RARLab.WinRAR', label: 'WinRAR', checked: false },
+    { id: 'Nvidia.GeForceExperience', label: 'NVIDIA GeForce Experience', checked: false },
+    { id: 'AMD.AMDSoftwareCloudEdition', label: 'AMD Software', checked: false },
+    { id: 'Malwarebytes.Malwarebytes', label: 'Malwarebytes Anti-Malware', checked: false }
   ];
 
   const labelMap = wingetSoftware.reduce((acc, cur) => {
@@ -184,4 +199,17 @@ document.addEventListener('DOMContentLoaded', () => {
       b.classList.add('active');
     })
   );
+
+  // 🎨 Thème clair/sombre
+  const themeBtn = document.getElementById('btn-theme-toggle');
+  themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    const theme = document.body.classList.contains('light') ? 'light' : 'dark';
+    localStorage.setItem('xorno-theme', theme);
+  });
+
+  const savedTheme = localStorage.getItem('xorno-theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light');
+  }
 });

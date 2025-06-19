@@ -215,3 +215,48 @@ pre {
   text-align: right;
   flex-shrink: 0;
 }
+:root {
+  --bg-color: #2c2c2c;
+  --text-color: #fff;
+  --panel-color: #1e1e1e;
+  --button-bg: #333;
+}
+
+body.light {
+  --bg-color: #f0f0f0;
+  --text-color: #000;
+  --panel-color: #ddd;
+  --button-bg: #ccc;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+#tabs {
+  background: var(--panel-color);
+}
+
+.tab-button {
+  background: var(--button-bg);
+  color: var(--text-color);
+}
+
+.theme-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #888;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+body.light .theme-btn {
+  background: #222;
+  color: #fff;
+}
