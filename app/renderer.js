@@ -70,14 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadActivation();
   });
 
-  ['bureau', 'gaming', 'combo'].forEach((type) => {
-    document.getElementById(`btn-ninite-${type}`).addEventListener('click', async () => {
-      const output = document.getElementById('ninite-output');
-      output.textContent = `Lancement de Ninite ${type}…`;
-      output.textContent = `Terminé :\n${await window.xornoAPI.runNinite(type)}`;
-    });
-  });
-
   document.getElementById('btn-quit').addEventListener('click', () => {
     window.xornoAPI.quitApp();
   });

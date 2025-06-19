@@ -9,12 +9,11 @@
 
 <body>
   <div id="tabs">
-    <button class="tab-button" data-tab="ninite">Ninite</button>
-    <button class="tab-button" data-tab="installations">Installations</button>
-    <button class="tab-button" data-tab="winget-logs">Logs</button>
-    <button class="tab-button active" data-tab="materiel">Matériel</button>
     <button class="tab-button" data-tab="maj">Mises à jour</button>
     <button class="tab-button" data-tab="activation">Activation</button>
+    <button class="tab-button active" data-tab="materiel">Matériel</button>
+    <button class="tab-button" data-tab="installations">Installations</button>
+    <button class="tab-button" data-tab="winget-logs">Logs</button>
   </div>
   <div id="content">
     <div id="materiel" class="tab active">
@@ -22,15 +21,6 @@
       <div id="materiel-content">
         <div class="spinner"></div>
       </div>
-    </div>
-    <div id="ninite" class="tab">
-      <h1>Installation via Ninite</h1>
-      <div class="ninite-buttons">
-        <button id="btn-ninite-bureau" class="action-btn">Bureautique</button>
-        <button id="btn-ninite-gaming" class="action-btn">Gaming</button>
-      </div>
-      <button id="btn-ninite-combo" class="combo-btn">Combo</button>
-      <pre id="ninite-output"></pre>
     </div>
     <div id="installations" class="tab">
       <h1>Installations via Winget</h1>
@@ -57,6 +47,7 @@
       <div id="activation-content"></div>
     </div>
   </div>
+  <div id="quick-setup-log"></div>
   <button id="btn-quit" class="quit-btn">Quitter l’application</button>
   <button id="btn-quick-setup" class="quick-btn">Installation rapide</button>
   <script src="renderer.js"></script>
