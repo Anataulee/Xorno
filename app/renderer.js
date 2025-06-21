@@ -13,41 +13,31 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   cont.innerHTML = Object.values(sections)
-    .map((s) => `<div id="sec-${s}"><strong>${s} :</strong> Chargement...</div>`)
+    .map(s => `<div id="sec-${s}"><strong>${s} :</strong> Chargement...</div>`)
     .join('');
 
   async function loadSection(key, fn) {
     try {
       const result = await fn();
       const el = document.getElementById(`sec-${sections[key]}`);
-      if (Array.isArray(result)) {
-        el.innerHTML =
-          `<strong>${sections[key]} :</strong><br>` +
-          result.map((d) => `&nbsp;&nbsp;- ${d}`).join('<br>');
-      } else {
-        el.innerHTML = `<strong>${sections[key]} :</strong> ${result}`;
-      }
+      el.innerHTML = Array.isArray(result)
+        ? `<strong>${sections[key]} :</strong><br>` + result.map(d => `&nbsp;&nbsp;- ${d}`).join('<br>')
+        : `<strong>${sections[key]} :</strong> ${result}`;
     } catch {
       document.getElementById(`sec-${sections[key]}`).innerHTML = `<strong>${sections[key]} :</strong> Erreur`;
     }
   }
 
-  loadSection('cpu', window.xornoAPI.getCpu);
-  loadSection('gpu', window.xornoAPI.getGpu);
-  loadSection('ram', window.xornoAPI.getRam);
-  loadSection('mb', window.xornoAPI.getMb);
-  loadSection('os', window.xornoAPI.getOs);
-  loadSection('disks', window.xornoAPI.getDisks);
-  loadSection('network', window.xornoAPI.getNetwork);
-  loadSection('battery', window.xornoAPI.getBattery);
+  ;['cpu','gpu','ram','mb','os','disks','network','battery'].forEach(k =>
+    loadSection(k, window.xornoAPI['get' + k.charAt(0).toUpperCase() + k.slice(1)])
+  );
 
   async function loadActivation() {
-    const el = document.getElementById('sec-Activation Windows');
     try {
       const status = await window.xornoAPI.checkActivation();
-      el.innerHTML = `<strong>Activation Windows :</strong> ${status}`;
+      document.getElementById('sec-Activation Windows').innerHTML = `<strong>Activation Windows :</strong> ${status}`;
     } catch {
-      el.innerHTML = `<strong>Activation Windows :</strong> Erreur`;
+      document.getElementById('sec-Activation Windows').innerHTML = `<strong>Activation Windows :</strong> Erreur`;
     }
   }
 
@@ -57,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.xornoAPI.openWindowsUpdate();
     const msg = document.getElementById('maj-content');
     msg.textContent = 'Ouverture de Windows Update…';
-    setTimeout(() => (msg.textContent = ''), 5000);
+    setTimeout(() => msg.textContent = '', 5000);
   });
 
   document.getElementById('btn-activate').addEventListener('click', async () => {
@@ -94,58 +84,30 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'Malwarebytes.Malwarebytes', label: 'Malwarebytes Anti-Malware', checked: false }
   ];
 
-  const labelMap = wingetSoftware.reduce((acc, cur) => {
-    acc[cur.id] = cur.label;
-    return acc;
-  }, {});
+  const labelMap = wingetSoftware.reduce((a, c) => (a[c.id] = c.label, a), {});
+  document.getElementById('winget-software-list').innerHTML =
+    wingetSoftware.map(a => `<label><input type="checkbox" name="apps" value="${a.id}" ${a.checked ? 'checked' : ''}> ${a.label}</label>`).join('');
 
-  const container = document.getElementById('winget-software-list');
-  container.innerHTML = wingetSoftware
-    .map(
-      (a) =>
-        `<label><input type="checkbox" name="apps" value="${a.id}" ${a.checked ? 'checked' : ''}> ${a.label}</label>`
-    )
-    .join('');
-
-  document.getElementById('winget-form').addEventListener('submit', (e) => {
+  document.getElementById('winget-form').addEventListener('submit', e => {
     e.preventDefault();
-
-    const checked = [...document.querySelectorAll('input[name="apps"]:checked')].map((i) => i.value);
+    const checked = [...document.querySelectorAll('input[name="apps"]:checked')].map(i => i.value);
     const output = document.getElementById('winget-output');
-    output.innerHTML = checked
-      .map(
-        (id) =>
-          `<div id="log-${id}" class="install-entry">
-             <span class="install-label">${labelMap[id]}</span>
-             <progress id="prog-${id}" max="100" value="0"></progress>
-             <span class="install-status" id="status-${id}">🕒 En attente</span>
-           </div>`
-      )
-      .join('');
-
+    output.innerHTML = checked.map(id =>
+      `<div id="log-${id}" class="install-entry"><span class="install-label">${labelMap[id]}</span><progress id="prog-${id}" max="100" value="0"></progress><span class="install-status" id="status-${id}">🕒 En attente</span></div>`
+    ).join('');
     const logRaw = document.getElementById('winget-raw-log');
     logRaw.innerHTML = '';
-
     window.xornoAPI.runWingetInstallLive(
       checked,
       (id, step) => {
         const statusEl = document.getElementById(`status-${id}`);
         const progEl = document.getElementById(`prog-${id}`);
         if (!statusEl || !progEl) return;
-
-        if (step === 'running') {
-          statusEl.textContent = '⬇️ En attente';
-        } else if (step === 'download') {
-          statusEl.textContent = '⬇️ Téléchargement...';
-          progEl.removeAttribute('value');
-        } else if (step === 'install') {
-          statusEl.textContent = '💿 Installation...';
-        } else if (step === 'ok') {
-          statusEl.textContent = '✅ Terminé';
-          progEl.value = 100;
-        } else if (step === 'fail') {
-          statusEl.textContent = '❌ Échec';
-        }
+        if (step === 'running') statusEl.textContent = '⬇️ En attente';
+        else if (step === 'download') { statusEl.textContent = '⬇️ Téléchargement…'; progEl.removeAttribute('value'); }
+        else if (step === 'install') statusEl.textContent = '💿 Installation…';
+        else if (step === 'ok') { statusEl.textContent = '✅ Terminé'; progEl.value = 100; }
+        else if (step === 'fail') statusEl.textContent = '❌ Échec';
       },
       (id, line) => {
         const clean = line.trim();
@@ -154,25 +116,21 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   });
 
-  document.querySelectorAll('button[data-tab]').forEach((b) =>
+  document.querySelectorAll('button[data-tab]').forEach(b =>
     b.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach((t) => t.classList.remove('active'));
-      document.getElementById(b.dataset.tab).classList.add('active');
-      document.querySelectorAll('.tab-button').forEach((nb) => nb.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelector(`#${b.dataset.tab}`).classList.add('active');
+      document.querySelectorAll('.tab-button').forEach(nb => nb.classList.remove('active'));
       b.classList.add('active');
     })
   );
 
   document.getElementById('btn-theme-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    const theme = document.body.classList.contains('light') ? 'light' : 'dark';
-    localStorage.setItem('xorno-theme', theme);
+    const light = document.body.classList.toggle('light');
+    localStorage.setItem('xorno-theme', light ? 'light' : 'dark');
   });
 
-  const savedTheme = localStorage.getItem('xorno-theme');
-  if (savedTheme === 'light') {
-    document.body.classList.add('light');
-  }
+  if (localStorage.getItem('xorno-theme') === 'light') document.body.classList.add('light');
 
   const modal = document.getElementById('quick-confirm-modal');
   const listEl = document.getElementById('quick-confirm-list');
@@ -181,56 +139,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('btn-quick-setup').addEventListener('click', () => {
     const selected = wingetSoftware.filter(a => a.checked);
-    listEl.innerHTML = selected
-      .map(
-        a =>
-          `<li><label><input type="checkbox" name="quick-app" value="${a.id}" checked> ${a.label}</label></li>`
-      )
-      .join('');
+    const activationCheckbox = `<li style="margin-bottom:10px;">
+      <label><input type="checkbox" id="quick-activation" checked> Activer Windows</label>
+    </li>`;
+    const appsCheckboxes = selected.map(a =>
+      `<li><label><input type="checkbox" name="quick-app" value="${a.id}" checked> ${a.label}</label></li>`
+    ).join('');
+    listEl.innerHTML = activationCheckbox + appsCheckboxes;
     modal.style.display = 'flex';
   });
 
-  cancelBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+  cancelBtn.addEventListener('click', () => modal.style.display = 'none');
 
   okBtn.addEventListener('click', async () => {
     modal.style.display = 'none';
-
-    const checked = [...document.querySelectorAll('input[name="quick-app"]:checked')].map(i => i.value);
+    const checkedApps = [...document.querySelectorAll('input[name="quick-app"]:checked')].map(i => i.value);
+    const doActivation = document.getElementById('quick-activation').checked;
     const log = document.getElementById('quick-setup-log');
     const btn = document.getElementById('btn-quick-setup');
     btn.disabled = true;
-    btn.textContent = 'En cours...';
+    btn.textContent = 'En cours…';
     log.innerHTML = '';
+    const logStep = msg => log.innerHTML += `<div>${msg}</div>`;
 
-    const logStep = (msg) => {
-      log.innerHTML += `<div>${msg}</div>`;
-    };
-
-    logStep(`<span class="status-icon info"></span>Activation de Windows...`);
-    const activationResult = await window.xornoAPI.runActivate();
-    const cleaned = activationResult.trim();
-    if (cleaned && !cleaned.toLowerCase().includes("déjà activé") && !cleaned.toLowerCase().includes("windows non activ")) {
-      logStep(`<pre>${cleaned}</pre>`);
+    if (doActivation) {
+      logStep(`<span class="status-icon info"></span>Activation de Windows...`);
+      const activationResult = await window.xornoAPI.runActivate();
+      const cleaned = activationResult.trim();
+      if (cleaned && !cleaned.toLowerCase().includes('déjà activé') && !cleaned.toLowerCase().includes('windows non activ')) {
+        logStep(`<pre>${cleaned}</pre>`);
+      }
     }
 
     await new Promise(r => setTimeout(r, 1000));
-
     logStep(`<span class="status-icon info"></span>Installation de base via Winget...`);
     let done = 0;
     await new Promise(doneAll => {
       window.xornoAPI.runWingetInstallLive(
-        checked,
+        checkedApps,
         (id, step) => {
-          if (step === 'ok') {
-            logStep(`<span class="status-icon success"></span>${labelMap[id]} installé avec succès`);
-          } else if (step === 'fail') {
-            logStep(`<span class="status-icon error"></span>Échec de l'installation de ${labelMap[id]}`);
-          }
+          if (step === 'ok') logStep(`<span class="status-icon success"></span>${labelMap[id]} installé avec succès`);
+          if (step === 'fail') logStep(`<span class="status-icon error"></span>Échec de l'installation de ${labelMap[id]}`);
           if (step === 'ok' || step === 'fail') {
             done++;
-            if (done === checked.length) doneAll();
+            if (done === checkedApps.length) doneAll();
           }
         },
         (id, line) => {
@@ -241,10 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     await new Promise(r => setTimeout(r, 1000));
-
     logStep(`<span class="status-icon info"></span>Ouverture de Windows Update...`);
     window.xornoAPI.openWindowsUpdate();
-
     document.getElementById('maj-content').textContent = 'Mises à jour lancées (panneau ouvert).';
     await loadActivation();
 
@@ -255,15 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 6000);
   });
 
-  window.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && modal.style.display === 'flex') {
-      modal.style.display = 'none';
-    }
-  });
-
-  window.addEventListener('click', e => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
+  window.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.style.display === 'flex') modal.style.display = 'none'; });
+  window.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
 });
