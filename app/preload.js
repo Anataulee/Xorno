@@ -120,20 +120,13 @@ function runWingetInstallLive(appList, reportStatus, reportLog) {
     });
 
     proc.stderr.on('data', (data) => {
-      const line = data.toString();
-      reportLog(id, line);
+      reportLog(id, data.toString());
     });
 
     proc.on('close', (code) => {
-      if (code === 0) {
-        reportStatus(id, 'ok');
-      } else {
-        reportStatus(id, 'fail');
-      }
+      reportStatus(id, code === 0 ? 'ok' : 'fail');
       index++;
-      if (index < appList.length) {
-        runNext();
-      }
+      if (index < appList.length) runNext();
     });
   };
 
@@ -142,6 +135,17 @@ function runWingetInstallLive(appList, reportStatus, reportLog) {
 
 function quitApp() {
   execSync('taskkill /IM electron.exe /F');
+}
+
+function runCreateDesktopIcons() {
+  try {
+    return execSync(
+      `powershell -ExecutionPolicy Bypass -File "${path.join(__dirname, '..', 'scripts', 'create-desktop-icons.ps1')}"`,
+      { encoding: 'utf8' }
+    );
+  } catch (e) {
+    return `Erreur création icônes bureau : ${e.message}`;
+  }
 }
 
 window.xornoAPI = {
@@ -158,5 +162,6 @@ window.xornoAPI = {
   runActivate,
   runNinite,
   runWingetInstallLive,
+  runCreateDesktopIcons,
   quitApp
 };

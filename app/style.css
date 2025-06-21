@@ -84,7 +84,6 @@ body {
   cursor: default;
 }
 
-/* Nouveau conteneur de boutons du bas */
 #footer-buttons {
   position: fixed;
   bottom: 20px;
@@ -258,11 +257,14 @@ body {
   background: var(--button-bg);
   color: var(--text-color);
 }
+
 .modal {
   display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
@@ -292,6 +294,7 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
 .status-icon {
   display: inline-block;
   width: 12px;
@@ -311,4 +314,31 @@ body {
 
 .status-icon.info {
   background: #2196f3;
+}
+
+#quick-confirm-list li.group-separator {
+  margin-top: 15px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  list-style: none;
+  height: auto;
+}
+
+#quick-confirm-modal .modal-content {
+  max-width: 420px;
+  padding: 20px;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+#quick-confirm-list {
+  list-style: none;
+  padding-left: 0;
+  max-height: none;
+  overflow: visible;
+  margin: 10px 0;
+}
+
+#quick-confirm-list li {
+  margin-bottom: 6px;
 }
