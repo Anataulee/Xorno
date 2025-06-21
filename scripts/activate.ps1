@@ -1,3 +1,8 @@
+# Forcer l'encodage UTF-8 pour éviter les caractères incorrects
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
+Add-Type -AssemblyName System.Windows.Forms
+
 # Vérifie l’état d’activation de Windows
 $activationStatus = (slmgr /xpr | Out-String)
 
@@ -22,6 +27,6 @@ if (-not (Test-Path $cmdPath)) {
     exit 1
 }
 
-# Lancement de MAS_AIO en tant qu’administrateur
-Write-Host "Windows non activé. Lancement de MAS_AIO.cmd..."
-Start-Process -FilePath $cmdPath -Verb RunAs -Wait
+# Lancement de MAS_AIO en tant qu’administrateur, sans afficher la fenêtre PowerShell
+#Write-Host "Windows non activé. Lancement de MAS_AIO.cmd..."
+Start-Process -FilePath $cmdPath -Verb RunAs -Wait -WindowStyle Hidden

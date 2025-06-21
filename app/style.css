@@ -292,3 +292,23 @@ body {
   display: flex;
   justify-content: space-around;
 }
+.status-icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.status-icon.success {
+  background: #4caf50;
+}
+
+.status-icon.error {
+  background: #f44336;
+}
+
+.status-icon.info {
+  background: #2196f3;
+}

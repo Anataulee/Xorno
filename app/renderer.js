@@ -148,10 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       (id, line) => {
-        const div = document.createElement('div');
-        div.textContent = `[${labelMap[id]}] ${line.trim()}`;
-        logRaw.appendChild(div);
-        logRaw.scrollTop = logRaw.scrollHeight;
+        const clean = line.trim();
+        if (!clean || /^[\\|/\-]+$/.test(clean)) return;
       }
     );
   });
@@ -180,26 +178,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const listEl = document.getElementById('quick-confirm-list');
   const okBtn = document.getElementById('quick-confirm-ok');
   const cancelBtn = document.getElementById('quick-confirm-cancel');
-  const sizeMap = {};
 
-  async function fetchSizes(ids) {
-    for (const id of ids) {
-      try {
-        const raw = await window.xornoAPI.execWingetShowSize(id);
-        const match = raw.match(/PackageSize:\s+([\d.]+)\s*(MB|GB)/i);
-        sizeMap[id] = match ? `${match[1]} ${match[2]}` : 'N/A';
-      } catch {
-        sizeMap[id] = 'N/A';
-      }
-    }
-  }
-
-  document.getElementById('btn-quick-setup').addEventListener('click', async () => {
+  document.getElementById('btn-quick-setup').addEventListener('click', () => {
     const selected = wingetSoftware.filter(a => a.checked);
-    const ids = selected.map(a => a.id);
-    await fetchSizes(ids);
-    const lines = selected.map(a => `• ${a.label} – ${sizeMap[a.id]}`);
-    listEl.innerHTML = lines.map(l => `<li>${l}</li>`).join('');
+    listEl.innerHTML = selected
+      .map(
+        a =>
+          `<li><label><input type="checkbox" name="quick-app" value="${a.id}" checked> ${a.label}</label></li>`
+      )
+      .join('');
     modal.style.display = 'flex';
   });
 
@@ -210,8 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   okBtn.addEventListener('click', async () => {
     modal.style.display = 'none';
 
-    const selected = wingetSoftware.filter(a => a.checked);
-    const ids = selected.map(a => a.id);
+    const checked = [...document.querySelectorAll('input[name="quick-app"]:checked')].map(i => i.value);
     const log = document.getElementById('quick-setup-log');
     const btn = document.getElementById('btn-quick-setup');
     btn.disabled = true;
@@ -222,32 +208,41 @@ document.addEventListener('DOMContentLoaded', () => {
       log.innerHTML += `<div>${msg}</div>`;
     };
 
-    logStep('🛠 Activation de Windows...');
-    logStep(`<pre>${await window.xornoAPI.runActivate()}</pre>`);
+    logStep(`<span class="status-icon info"></span>Activation de Windows...`);
+    const activationResult = await window.xornoAPI.runActivate();
+    const cleaned = activationResult.trim();
+    if (cleaned && !cleaned.toLowerCase().includes("déjà activé") && !cleaned.toLowerCase().includes("windows non activ")) {
+      logStep(`<pre>${cleaned}</pre>`);
+    }
 
     await new Promise(r => setTimeout(r, 1000));
 
-    logStep('📦 Installation de base via Winget...');
+    logStep(`<span class="status-icon info"></span>Installation de base via Winget...`);
     let done = 0;
     await new Promise(doneAll => {
       window.xornoAPI.runWingetInstallLive(
-        ids,
+        checked,
         (id, step) => {
-          logStep(`📦 ${labelMap[id]} : ${step}`);
+          if (step === 'ok') {
+            logStep(`<span class="status-icon success"></span>${labelMap[id]} installé avec succès`);
+          } else if (step === 'fail') {
+            logStep(`<span class="status-icon error"></span>Échec de l'installation de ${labelMap[id]}`);
+          }
           if (step === 'ok' || step === 'fail') {
             done++;
-            if (done === ids.length) doneAll();
+            if (done === checked.length) doneAll();
           }
         },
         (id, line) => {
-          logStep(`[${labelMap[id]}] ${line.trim()}`);
+          const clean = line.trim();
+          if (!clean || /^[\\|/\-]+$/.test(clean)) return;
         }
       );
     });
 
     await new Promise(r => setTimeout(r, 1000));
 
-    logStep('🔄 Ouverture de Windows Update...');
+    logStep(`<span class="status-icon info"></span>Ouverture de Windows Update...`);
     window.xornoAPI.openWindowsUpdate();
 
     document.getElementById('maj-content').textContent = 'Mises à jour lancées (panneau ouvert).';
@@ -265,6 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.style.display = 'none';
     }
   });
+
   window.addEventListener('click', e => {
     if (e.target === modal) {
       modal.style.display = 'none';

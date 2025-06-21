@@ -67,10 +67,11 @@ function openWindowsUpdate() {
 
 function runActivate() {
   try {
-    return execSync(
+    const raw = execSync(
       `powershell -ExecutionPolicy Bypass -File "${path.join(__dirname, '..', 'scripts', 'activate.ps1')}"`,
-      { encoding: 'utf8' }
+      { encoding: 'buffer' }
     );
+    return raw.toString('utf8');
   } catch (e) {
     return `Erreur PowerShell (activation): ${e.message}`;
   }
