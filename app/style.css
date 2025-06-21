@@ -1,344 +1,336 @@
+/* ===== BASE ===== */
 body {
-  font-family: Arial, sans-serif;
-  background: #2c2c2c;
-  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  text-align: center;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: #1f1f1f;
+  color: #e0e0e0;
 }
 
+/* ===== SIDEBAR ===== */
 #tabs {
   display: flex;
-  background: #1e1e1e;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 240px;
+  min-width: 240px;
+  max-width: 240px;
+  background: rgba(30, 30, 30, 0.65);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid #333;
+  padding-top: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.5);
 }
 
+/* ===== ONGLET STYLE ===== */
 .tab-button {
-  flex: 1;
-  padding: 1em;
-  background: #333;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  height: 56px;
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
   border: none;
-  color: #fff;
+  color: #ccc;
+  font-size: 1.05rem;
+  text-align: left;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background .2s, transform .1s;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab-button .icon {
+  width: 24px;
+  height: 24px;
+  color: #88aaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tab-button:hover {
-  background: #444;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
 }
 
-.tab-button:active {
-  transform: scale(0.98);
+.tab-button:hover .icon,
+.tab-button.active .icon {
+  color: #fff;
 }
 
 .tab-button.active {
-  background: #555;
+  background: rgba(0, 120, 215, 0.3);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ===== BOUTONS FOOTER DANS SIDEBAR ===== */
+#footer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+#footer-buttons .footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  height: 56px;
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.05rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+#footer-buttons .footer-btn .icon {
+  width: 24px;
+  height: 24px;
+  color: #88aaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-buttons .footer-btn:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+#footer-buttons .footer-btn:hover .icon {
+  color: #fff;
+}
+
+#footer-buttons .quick-btn { /* Installation rapide */
+}
+#footer-buttons .quit-btn { /* Quitter l’application */
+}
+
+/* ===== CONTENU PRINCIPAL ===== */
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 30px;
+  background: #1f1f1f;
 }
 
 .tab {
   display: none;
-  padding: 20px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
 }
 
 .tab.active {
   display: block;
 }
 
-.spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #ccc;
-  border-top: 4px solid #333;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* ===== CHECKBOX STYLE ===== */
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #2e2e2e;
+  border: 1.5px solid #777;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background: #0078d7;
+  border-color: #0078d7;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* ===== INSTALLATION LIST ===== */
+#winget-software-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  max-width: 900px;
   margin: 20px auto;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.action-btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #fff;
-  background: #4a90e2;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px;
-  transition: background .2s;
-}
-
-.action-btn:hover {
-  background: #357ab7;
-}
-
-.action-btn:disabled {
-  background: #666;
-  cursor: default;
-}
-
-#footer-buttons {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 999;
-  padding: 0 20px;
-}
-
-.footer-btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.quick-btn {
-  background: #229922;
-  color: #fff;
-}
-
-.quick-btn:hover {
-  background: #33bb33;
-}
-
-.quit-btn {
-  background: #aa2222;
-  color: #fff;
-}
-
-.quit-btn:hover {
-  background: #cc3333;
-}
-
-.theme-btn {
-  background: #888;
-  color: #fff;
-}
-
-body.light .theme-btn {
-  background: #222;
-  color: #fff;
-}
-
-.combo-btn {
-  display: block;
-  margin: 0 auto 20px;
-  padding: 10px 25px;
-  background: #bb6600;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.combo-btn:hover {
-  background: #dd7700;
-}
-
-.combo-btn:disabled {
-  background: #666;
-  cursor: default;
-}
-
-.ninite-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 15px;
-}
-
-#winget-software-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  text-align: left;
-}
-
 #winget-software-list label {
-  display: block;
-  padding: 10px;
-  background: #444;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background: #333;
+  border-radius: 4px;
+  padding: 10px 14px;
   cursor: pointer;
-  user-select: none;
+  border: 1px solid transparent;
+  transition: background 0.2s;
 }
 
-#winget-software-list input[type="checkbox"] {
-  margin-right: 8px;
+#winget-software-list label:hover {
+  background: #444;
 }
 
-pre {
-  white-space: pre-wrap;
-  text-align: left;
-  background: #1e1e1e;
-  padding: 15px;
-  border-radius: 5px;
-  max-width: 800px;
-  margin: 10px auto;
-}
-
-.status.ok {
-  color: #66ff66;
-}
-
-.status.warn {
-  color: #ffcc00;
-}
-
-.status.fail {
-  color: #ff6666;
-}
-
+/* ===== INSTALLATION LOGS ===== */
 .install-entry {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin: 5px 0;
 }
 
 .install-label {
-  width: 150px;
-  flex-shrink: 0;
-  text-align: left;
+  width: 180px;
 }
 
 .install-entry progress {
   flex-grow: 1;
   height: 16px;
-  min-width: 200px;
-  transition: value 0.3s ease;
+  appearance: none;
+}
+
+.install-entry progress::-webkit-progress-bar {
+  background: #333;
+  border-radius: 4px;
+}
+
+.install-entry progress::-webkit-progress-value {
+  background: #0a84ff;
+  border-radius: 4px;
 }
 
 .install-status {
-  width: 140px;
+  width: 100px;
   text-align: right;
-  flex-shrink: 0;
 }
 
-:root {
-  --bg-color: #2c2c2c;
-  --text-color: #fff;
-  --panel-color: #1e1e1e;
-  --button-bg: #333;
+/* ===== LOGS / PRE ===== */
+pre {
+  background: #212121;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 0.93rem;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
-body.light {
-  --bg-color: #f0f0f0;
-  --text-color: #000;
-  --panel-color: #ddd;
-  --button-bg: #ccc;
-}
-
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-}
-
-#tabs {
-  background: var(--panel-color);
-}
-
-.tab-button {
-  background: var(--button-bg);
-  color: var(--text-color);
-}
-
+/* ===== MODAL ===== */
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  inset: 0;
+  background: rgba(0,0,0,0.6);
   justify-content: center;
   align-items: center;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .modal-content {
-  background: #333;
-  color: #fff;
-  padding: 30px;
-  border-radius: 10px;
+  background: #2a2a2a;
+  padding: 24px;
+  border-radius: 6px;
   width: 90%;
-  max-width: 500px;
-  text-align: center;
-}
-
-.modal-content ul {
-  text-align: left;
-  margin: 15px auto;
-  padding-left: 20px;
-  max-height: 200px;
-  overflow-y: auto;
+  max-width: 480px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.8);
 }
 
 .modal-buttons {
-  margin-top: 20px;
   display: flex;
   justify-content: space-around;
-}
-
-.status-icon {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-.status-icon.success {
-  background: #4caf50;
-}
-
-.status-icon.error {
-  background: #f44336;
-}
-
-.status-icon.info {
-  background: #2196f3;
-}
-
-#quick-confirm-list li.group-separator {
-  margin-top: 15px;
-  border-top: 1px solid #555;
-  padding-top: 10px;
-  list-style: none;
-  height: auto;
-}
-
-#quick-confirm-modal .modal-content {
-  max-width: 420px;
-  padding: 20px;
-  max-height: 80vh;
-  overflow: hidden;
+  margin-top: 20px;
 }
 
 #quick-confirm-list {
   list-style: none;
   padding-left: 0;
-  max-height: none;
-  overflow: visible;
-  margin: 10px 0;
+  margin: 0;
 }
 
-#quick-confirm-list li {
-  margin-bottom: 6px;
+#quick-confirm-list div {
+  margin-bottom: 8px;
+}
+
+/* ===== SPINNER ===== */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #0078d7;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.action-btn:hover {
+  background-color: #0063b1;
+}
+
+.action-btn:disabled {
+  background-color: #3c3c3c;
+  color: #aaa;
+  cursor: default;
+}
+
+.action-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.action-btn.loading::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

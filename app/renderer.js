@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ? `<strong>${sections[key]} :</strong><br>` + value.map(d => `&nbsp;&nbsp;- ${d}`).join('<br>')
         : `<strong>${sections[key]} :</strong> ${value}`;
     } catch {
-      document.getElementById(`sec-${sections[key]}`).innerHTML = `<strong>${sections[key]} :</strong> Erreur`;
+      document.getElementById(`sec-${sections[key]}`).innerHTML =
+        `<strong>${sections[key]} :</strong> Erreur`;
     }
   }
 
-  ['cpu','gpu','ram','mb','os','disks','network','battery'].forEach(k =>
-    loadSection(k, window.xornoAPI['get' + k.charAt(0).toUpperCase() + k.slice(1)])
-  );
+  ['cpu','gpu','ram','mb','os','disks','network','battery']
+    .forEach(k => loadSection(k, window.xornoAPI['get' + k.charAt(0).toUpperCase() + k.slice(1)]));
 
   async function loadActivation() {
     try {
@@ -42,27 +42,38 @@ document.addEventListener('DOMContentLoaded', () => {
         `<strong>Activation Windows :</strong> Erreur`;
     }
   }
-
   loadActivation();
 
-  document.getElementById('btn-update').addEventListener('click', () => {
-    window.xornoAPI.openWindowsUpdate();
-    const msg = document.getElementById('maj-content');
-    msg.textContent = 'Ouverture de Windows Update…';
-    setTimeout(() => msg.textContent = '', 5000);
-  });
+  const updateBtn = document.getElementById('btn-update');
+  if (updateBtn) {
+    updateBtn.addEventListener('click', () => {
+      updateBtn.classList.add('loading');
+      window.xornoAPI.openWindowsUpdate();
+      const msg = document.getElementById('maj-content');
+      msg.textContent = 'Ouverture de Windows Update…';
+      setTimeout(() => {
+        updateBtn.classList.remove('loading');
+        msg.textContent = '';
+      }, 5000);
+    });
+  }
 
-  document.getElementById('btn-activate').addEventListener('click', async () => {
-    const btn = document.getElementById('btn-activate');
-    const out = document.getElementById('activation-content');
-    btn.disabled = true;
-    out.textContent = 'Activation en cours…';
-    out.innerHTML = `<pre>${await window.xornoAPI.runActivate()}</pre>`;
-    btn.disabled = false;
-    loadActivation();
-  });
+  const activateBtn = document.getElementById('btn-activate');
+  if (activateBtn) {
+    activateBtn.addEventListener('click', async () => {
+      activateBtn.classList.add('loading');
+      activateBtn.disabled = true;
+      const out = document.getElementById('activation-content');
+      out.textContent = 'Activation en cours…';
+      const result = await window.xornoAPI.runActivate();
+      out.innerHTML = `<pre>${result}</pre>`;
+      activateBtn.classList.remove('loading');
+      activateBtn.disabled = false;
+      loadActivation();
+    });
+  }
 
-  document.getElementById('btn-quit').addEventListener('click', () => {
+  document.getElementById('btn-quit')?.addEventListener('click', () => {
     window.xornoAPI.quitApp();
   });
 
@@ -96,7 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('winget-form').addEventListener('submit', e => {
     e.preventDefault();
-    const checked = [...document.querySelectorAll('input[name="apps"]:checked')].map(i => i.value);
+    const checked = [...document.querySelectorAll('input[name="apps"]:checked')]
+      .map(i => i.value);
+    const btn = e.submitter;
+    if (btn) btn.classList.add('loading');
     document.getElementById('winget-output').innerHTML = checked.map(id =>
       `<div id="log-${id}" class="install-entry">
          <span class="install-label">${labelMap[id]}</span>
@@ -104,8 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
          <span class="install-status" id="status-${id}">🕒 En attente</span>
        </div>`
     ).join('');
-    const logRaw = document.getElementById('winget-raw-log');
-    logRaw.innerHTML = '';
+    document.getElementById('winget-raw-log').innerHTML = '';
     window.xornoAPI.runWingetInstallLive(
       checked,
       (id, step) => {
@@ -118,8 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (step === 'ok') { s.textContent = '✅ Terminé'; p.value = 100; }
         else if (step === 'fail') s.textContent = '❌ Échec';
       },
-      (id, line) => {}
+      () => {}
     );
+    setTimeout(() => btn?.classList.remove('loading'), 10000);
   });
 
   document.querySelectorAll('button[data-tab]').forEach(b =>
@@ -131,55 +145,50 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   );
 
-  document.getElementById('btn-theme-toggle').addEventListener('click', () => {
-    const light = document.body.classList.toggle('light');
-    localStorage.setItem('xorno-theme', light ? 'light' : 'dark');
-  });
-
-  if (localStorage.getItem('xorno-theme') === 'light') {
-    document.body.classList.add('light');
-  }
-
   const modal = document.getElementById('quick-confirm-modal');
   const listEl = document.getElementById('quick-confirm-list');
   const okBtn = document.getElementById('quick-confirm-ok');
   const cancelBtn = document.getElementById('quick-confirm-cancel');
 
-  document.getElementById('btn-quick-setup').addEventListener('click', () => {
-    const selected = wingetSoftware.filter(a => a.checked);
-    const activationCheckbox = `<li><label><input type="checkbox" id="quick-activation" checked> Activer Windows</label></li>`;
-    const iconsCheckbox = `<li><label><input type="checkbox" id="quick-create-icons" checked> Créer raccourcis bureau</label></li>`;
-    const separator1 = `<li class="group-separator"></li>`;
-    const separator2 = `<li class="group-separator"></li>`;
-    const appsCheckboxes = selected.map(a =>
-      `<li><label><input type="checkbox" name="quick-app" value="${a.id}" checked> ${a.label}</label></li>`
-    ).join('');
-    listEl.innerHTML = activationCheckbox + separator1 + iconsCheckbox + separator2 + appsCheckboxes;
-    modal.style.display = 'flex';
-  });
+  const quickSetupBtn = document.getElementById('btn-quick-setup');
+  if (quickSetupBtn) {
+    quickSetupBtn.addEventListener('click', () => {
+      const selected = wingetSoftware.filter(a => a.checked);
+      const activationCheckbox = `<div><label><input type="checkbox" id="quick-activation" checked> Activer Windows</label></div>`;
+      const separator1 = `<hr style="border-color: #444; margin: 12px 0;">`;
+      const iconsCheckbox = `<div><label><input type="checkbox" id="quick-create-icons" checked> Créer raccourcis bureau</label></div>`;
+      const separator2 = `<hr style="border-color: #444; margin: 12px 0;">`;
+      const appsCheckboxes = selected.map(a =>
+        `<div><label><input type="checkbox" name="quick-app" value="${a.id}" checked> ${a.label}</label></div>`
+      ).join('');
+      listEl.innerHTML = activationCheckbox + separator1 + iconsCheckbox + separator2 + appsCheckboxes;
+      modal.style.display = 'flex';
+    });
+  }
 
   cancelBtn.addEventListener('click', () => { modal.style.display = 'none'; });
 
   okBtn.addEventListener('click', async () => {
     modal.style.display = 'none';
-    const checkedApps = [...document.querySelectorAll('input[name="quick-app"]:checked')].map(i => i.value);
+    const checkedApps = [...document.querySelectorAll('input[name="quick-app"]:checked')]
+      .map(i => i.value);
     const doActivation = document.getElementById('quick-activation').checked;
     const doIcons = document.getElementById('quick-create-icons').checked;
     const log = document.getElementById('quick-setup-log');
     const btn = document.getElementById('btn-quick-setup');
     btn.disabled = true;
-    btn.textContent = 'En cours…';
+    btn.classList.add('loading');
     log.innerHTML = '';
     const logStep = msg => log.innerHTML += `<div>${msg}</div>`;
 
     if (doIcons) {
       logStep(`<span class="status-icon info"></span>Création des raccourcis sur le bureau...`);
       const iconsResult = window.xornoAPI.runCreateDesktopIcons();
-      if (iconsResult && !iconsResult.toLowerCase().includes('erreur')) {
-        logStep(`<span class="status-icon success"></span>Raccourcis créés`);
-      } else if (iconsResult) {
-        logStep(`<span class="status-icon error"></span>${iconsResult}`);
-      }
+      logStep(
+        iconsResult && !iconsResult.toLowerCase().includes('erreur')
+          ? `<span class="status-icon success"></span>Raccourcis créés`
+          : `<span class="status-icon error"></span>${iconsResult}`
+      );
     }
 
     if (doActivation) {
@@ -188,13 +197,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const cleaned = activationResult.trim();
       if (cleaned &&
           !cleaned.toLowerCase().includes('déjà activé') &&
-          !cleaned.toLowerCase().includes('windows non activ')
-      ) {
+          !cleaned.toLowerCase().includes('windows non activ')) {
         logStep(`<pre>${cleaned}</pre>`);
       }
     }
 
-    if (checkedApps.length > 0) {
+    if (checkedApps.length) {
       logStep(`<span class="status-icon info"></span>Installation de base via Winget...`);
       let done = 0;
       await new Promise(doneAll => {
@@ -208,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
               if (done === checkedApps.length) doneAll();
             }
           },
-          (id, line) => {}
+          () => {}
         );
       });
     }
@@ -219,16 +227,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     await loadActivation();
 
-    btn.textContent = 'Terminé';
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.textContent = 'Installation rapide';
-    }, 6000);
+    btn.classList.remove('loading');
+    btn.disabled = false;
   });
 
   window.addEventListener('keydown', e => {
     if (e.key === 'Escape' && modal.style.display === 'flex') modal.style.display = 'none';
   });
+
   window.addEventListener('click', e => {
     if (e.target === modal) modal.style.display = 'none';
   });
