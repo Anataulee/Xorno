@@ -74,41 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.xornoAPI.quitApp();
   });
 
-  document.getElementById('btn-quick-setup').addEventListener('click', async () => {
-    const btn = document.getElementById('btn-quick-setup');
-    const log = document.getElementById('quick-setup-log');
-    btn.disabled = true;
-    btn.textContent = 'En cours...';
-    log.innerHTML = '';
-
-    const logStep = (msg) => {
-      log.innerHTML += `<div>${msg}</div>`;
-    };
-
-    logStep('🛠 Activation de Windows...');
-    logStep(`<pre>${await window.xornoAPI.runActivate()}</pre>`);
-
-    await new Promise((r) => setTimeout(r, 1000));
-
-    logStep('📦 Installation de base via Ninite...');
-    logStep(`<pre>${await window.xornoAPI.runNinite('bureau')}</pre>`);
-
-    await new Promise((r) => setTimeout(r, 1000));
-
-    logStep('🔄 Ouverture de Windows Update...');
-    window.xornoAPI.openWindowsUpdate();
-
-    document.getElementById('maj-content').textContent = 'Mises à jour lancées (panneau ouvert).';
-
-    await loadActivation();
-
-    btn.textContent = 'Terminé';
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.textContent = 'Installation rapide';
-    }, 6000);
-  });
-
   const wingetSoftware = [
     { id: 'Google.Chrome', label: 'Google Chrome', checked: true },
     { id: 'VideoLAN.VLC', label: 'VLC Media Player', checked: true },
@@ -200,9 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   );
 
-  // 🎨 Thème clair/sombre
-  const themeBtn = document.getElementById('btn-theme-toggle');
-  themeBtn.addEventListener('click', () => {
+  document.getElementById('btn-theme-toggle').addEventListener('click', () => {
     document.body.classList.toggle('light');
     const theme = document.body.classList.contains('light') ? 'light' : 'dark';
     localStorage.setItem('xorno-theme', theme);
@@ -212,4 +175,99 @@ document.addEventListener('DOMContentLoaded', () => {
   if (savedTheme === 'light') {
     document.body.classList.add('light');
   }
+
+  const modal = document.getElementById('quick-confirm-modal');
+  const listEl = document.getElementById('quick-confirm-list');
+  const okBtn = document.getElementById('quick-confirm-ok');
+  const cancelBtn = document.getElementById('quick-confirm-cancel');
+  const sizeMap = {};
+
+  async function fetchSizes(ids) {
+    for (const id of ids) {
+      try {
+        const raw = await window.xornoAPI.execWingetShowSize(id);
+        const match = raw.match(/PackageSize:\s+([\d.]+)\s*(MB|GB)/i);
+        sizeMap[id] = match ? `${match[1]} ${match[2]}` : 'N/A';
+      } catch {
+        sizeMap[id] = 'N/A';
+      }
+    }
+  }
+
+  document.getElementById('btn-quick-setup').addEventListener('click', async () => {
+    const selected = wingetSoftware.filter(a => a.checked);
+    const ids = selected.map(a => a.id);
+    await fetchSizes(ids);
+    const lines = selected.map(a => `• ${a.label} – ${sizeMap[a.id]}`);
+    listEl.innerHTML = lines.map(l => `<li>${l}</li>`).join('');
+    modal.style.display = 'flex';
+  });
+
+  cancelBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  okBtn.addEventListener('click', async () => {
+    modal.style.display = 'none';
+
+    const selected = wingetSoftware.filter(a => a.checked);
+    const ids = selected.map(a => a.id);
+    const log = document.getElementById('quick-setup-log');
+    const btn = document.getElementById('btn-quick-setup');
+    btn.disabled = true;
+    btn.textContent = 'En cours...';
+    log.innerHTML = '';
+
+    const logStep = (msg) => {
+      log.innerHTML += `<div>${msg}</div>`;
+    };
+
+    logStep('🛠 Activation de Windows...');
+    logStep(`<pre>${await window.xornoAPI.runActivate()}</pre>`);
+
+    await new Promise(r => setTimeout(r, 1000));
+
+    logStep('📦 Installation de base via Winget...');
+    let done = 0;
+    await new Promise(doneAll => {
+      window.xornoAPI.runWingetInstallLive(
+        ids,
+        (id, step) => {
+          logStep(`📦 ${labelMap[id]} : ${step}`);
+          if (step === 'ok' || step === 'fail') {
+            done++;
+            if (done === ids.length) doneAll();
+          }
+        },
+        (id, line) => {
+          logStep(`[${labelMap[id]}] ${line.trim()}`);
+        }
+      );
+    });
+
+    await new Promise(r => setTimeout(r, 1000));
+
+    logStep('🔄 Ouverture de Windows Update...');
+    window.xornoAPI.openWindowsUpdate();
+
+    document.getElementById('maj-content').textContent = 'Mises à jour lancées (panneau ouvert).';
+    await loadActivation();
+
+    btn.textContent = 'Terminé';
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.textContent = 'Installation rapide';
+    }, 6000);
+  });
+
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+      modal.style.display = 'none';
+    }
+  });
+  window.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
 });

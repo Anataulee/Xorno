@@ -48,11 +48,25 @@
     </div>
   </div>
   <div id="quick-setup-log"></div>
-  <button id="btn-quit" class="quit-btn">Quitter l’application</button>
-  <button id="btn-quick-setup" class="quick-btn">Installation rapide</button>
-  <script src="renderer.js"></script>
-  <button id="btn-theme-toggle" class="theme-btn">🌗 Thème</button>
 
+  <div id="footer-buttons">
+    <button id="btn-quick-setup" class="footer-btn quick-btn">Installation rapide</button>
+    <button id="btn-theme-toggle" class="footer-btn theme-btn">🌗 Thème</button>
+    <button id="btn-quit" class="footer-btn quit-btn">Quitter l’application</button>
+  </div>
+  <div id="quick-confirm-modal" class="modal">
+    <div class="modal-content">
+      <h2>Confirmer l'installation rapide</h2>
+      <p>Les logiciels suivants seront installés via Winget :</p>
+      <ul id="quick-confirm-list"></ul>
+      <div class="modal-buttons">
+        <button id="quick-confirm-cancel" class="action-btn">Annuler</button>
+        <button id="quick-confirm-ok" class="action-btn">Installer</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
 </body>
 
 </html>
