@@ -19,8 +19,10 @@ isElevated().then(elevated => {
     const win = new BrowserWindow({
       width: 1000,
       height: 700,
-      autoHideMenuBar: true,   // cache la barre de menu
-      frame: false,            // enlève la barre de titre native
+      transparent: true,
+      frame: false,
+      vibrancy: 'acrylic',
+      visualEffectState: 'active',
       webPreferences: {
         preload: path.join(__dirname, 'app', 'preload.js'),
         nodeIntegration: true,
@@ -28,7 +30,6 @@ isElevated().then(elevated => {
       }
     });
 
-    win.setMenu(null);         // supprime complètement la barre de menu
     win.loadFile(path.join(__dirname, 'app', 'index.html'));
   }
 
