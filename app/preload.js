@@ -2,6 +2,7 @@ const si = require('systeminformation');
 const { execSync, spawn } = require('child_process');
 const iconv = require('iconv-lite');
 const path = require('path');
+const { ipcRenderer } = require('electron');
 
 async function getCpu() {
   const cpu = await si.cpu();
@@ -134,7 +135,7 @@ function runWingetInstallLive(appList, reportStatus, reportLog) {
 }
 
 function quitApp() {
-  execSync('taskkill /IM electron.exe /F');
+  ipcRenderer.send('app-quit');
 }
 
 function runCreateDesktopIcons() {

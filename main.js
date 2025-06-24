@@ -1,3 +1,4 @@
+const { ipcMain } = require('electron');
 const { app } = require('electron');
 const path = require('path');
 const isElevated = require('is-elevated');
@@ -80,4 +81,7 @@ isElevated().then(elevated => {
     log('📦 Fermeture app');
     if (process.platform !== 'darwin') app.quit();
   });
+});
+ipcMain.on('app-quit', () => {
+  app.quit();
 });
