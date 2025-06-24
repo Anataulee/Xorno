@@ -18,19 +18,33 @@ log('🚀 Démarrage main.js');
 
 isElevated().then(elevated => {
   if (!elevated) {
-    const exe = path.join(__dirname, 'node_modules', 'electron', 'dist', 'electron.exe');
+    // Correction ici : gérer dev vs build
+    let exe;
+    if (app.isPackaged) {
+      exe = process.execPath; // Cas packagé : c’est l'exe final
+    } else {
+      exe = path.join(__dirname, 'node_modules', 'electron', 'dist', 'electron.exe'); // Cas dev
+    }
+
     const cmd = `"${exe}" "${__dirname}"`;
-    log('🔁 Relance avec élévation :', cmd);
-    sudo.exec(cmd, { name: 'XORNO', cwd: __dirname }, err => {
-      err ? log('❌ Erreur élévation :', err) : log('✅ Relancé avec succès');
+    log('🔁 Relance avec élévation :', cmd);
+
+    sudo.exec(cmd, { name: 'XORNO', cwd: path.dirname(exe) }, err => {
+      if (err) {
+        log('❌ Erreur élévation :', err);
+      } else {
+        log('✅ Relancé avec succès');
+      }
       app.quit();
     });
+
     return;
   }
 
   log('✅ Processus élevé — création fenêtre');
   app.whenReady().then(() => {
     log('➡️ app ready');
+
     try {
       const win = new AcrylicBrowserWindow({
         width: 1000,
@@ -58,7 +72,7 @@ isElevated().then(elevated => {
       win.loadFile(indexPath);
 
     } catch (e) {
-      log('‼️ Erreur création fenêtre :', e);
+      log('‼️ Erreur création fenêtre :', e);
     }
   });
 

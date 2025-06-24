@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateBtn = document.getElementById('btn-update');
   if (updateBtn) {
     updateBtn.addEventListener('click', () => {
-      updateBtn.classList.add('loading');
       window.xornoAPI.openWindowsUpdate();
       const msg = document.getElementById('maj-content');
       msg.textContent = 'Ouverture de Windows Update…';
@@ -110,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const checked = [...document.querySelectorAll('input[name="apps"]:checked')]
       .map(i => i.value);
     const btn = e.submitter;
-    if (btn) btn.classList.add('loading');
     document.getElementById('winget-output').innerHTML = checked.map(id =>
       `<div id="log-${id}" class="install-entry">
          <span class="install-label">${labelMap[id]}</span>
