@@ -1,0 +1,44 @@
+{
+	"Backups" : [],
+	"DeviceList" : [],
+	"IgnoreList" : [],
+	"OpenTasks" : [],
+	"Status" : 
+	{
+		"crashingDrivers" : 0,
+		"foundDevices" : 0,
+		"hasProblemDevices" : 0,
+		"lastDeviceScan" : 0,
+		"lastRevert" : 0,
+		"lastScan" : 0,
+		"lastUpdate" : 0,
+		"outdatedDrivers" : 0,
+		"rebootRequired" : false,
+		"version" : "24.4.5778.0",
+		"vulnerableDrivers" : 0
+	},
+	"audioEndpoints" : 
+	{
+		"current" : 
+		[
+			{
+				"default" : true,
+				"flow" : 0,
+				"id" : "{0.0.0.00000000}.{C7E50729-A147-4E65-BC26-A8063146FB56}",
+				"name" : "Haut-parleurs (Conexant SmartAudio HD)",
+				"role" : 2,
+				"state" : 1
+			},
+			{
+				"default" : true,
+				"flow" : 1,
+				"id" : "{0.0.1.00000000}.{FE37A803-A5BF-4709-896B-4BBFB690F2A8}",
+				"name" : "Microphone (Conexant SmartAudio HD)",
+				"role" : 2,
+				"state" : 1
+			}
+		]
+	},
+	"computerInfo" : null,
+	"hasProblemList" : []
+}

@@ -1,0 +1,20 @@
+﻿[2025-06-25 08:48:50.486] [info   ] [DULib      ] [ 1208: 8808] [3390A7:  38] [*erUpdater::UpdateManager::UpdateManager] Initialize Update Engine
+[2025-06-25 09:05:51.987] [info   ] [DULib      ] [10776: 3320] [3390A7:  38] [*erUpdater::UpdateManager::UpdateManager] Initialize Update Engine
+[2025-06-25 09:17:08.504] [info   ] [DULib      ] [ 9140: 3852] [3390A7:  38] [*erUpdater::UpdateManager::UpdateManager] Initialize Update Engine
+[2025-06-25 09:18:48.755] [info   ] [DULib      ] [ 9616: 9368] [3390A7:  38] [*erUpdater::UpdateManager::UpdateManager] Initialize Update Engine
+[2025-06-25 09:19:02.567] [info   ] [DULib      ] [ 9616: 2344] [210E39:1423] [*iverUpdater::DriverUpdaterImpl::logTask] Creating new SCAN Task
+[2025-06-25 09:19:02.567] [info   ] [DULib      ] [ 9616:13232] [210E39:2248] [  DriverUpdater::DriverUpdaterImpl::Scan] Starting Scan
+[2025-06-25 09:19:15.495] [info   ] [DULib      ] [ 9616:13232] [210E39:2340] [  DriverUpdater::DriverUpdaterImpl::Scan] Scan operation aborted by user.
+[2025-06-25 09:19:15.495] [info   ] [DULib      ] [ 9616:13232] [210E39:2383] [  DriverUpdater::DriverUpdaterImpl::Scan] Refreshing audio endpoint collection
+[2025-06-25 09:19:19.921] [info   ] [DULib      ] [ 8484: 2260] [3390A7:  38] [*erUpdater::UpdateManager::UpdateManager] Initialize Update Engine
+[2025-06-25 09:21:01.506] [info   ] [DULib      ] [11348: 3972] [3390A7:  38] [*erUpdater::UpdateManager::UpdateManager] Initialize Update Engine
+[2025-06-25 09:21:03.304] [info   ] [DULib      ] [11348:  860] [210E39:1423] [*iverUpdater::DriverUpdaterImpl::logTask] Creating new SCAN Task
+[2025-06-25 09:21:03.304] [info   ] [DULib      ] [11348:11284] [210E39:2248] [  DriverUpdater::DriverUpdaterImpl::Scan] Starting Scan
+[2025-06-25 09:21:04.991] [info   ] [DULib      ] [11348:11284] [841F9F:3661] [*Updater::Device::RefreshFunctionalState] Device functional state result: 227
+[2025-06-25 09:21:07.768] [info   ] [DULib      ] [11348:11284] [841F9F:3661] [*Updater::Device::RefreshFunctionalState] Device functional state result: 227
+[2025-06-25 09:21:12.376] [info   ] [DULib      ] [11348:11284] [841F9F:3661] [*Updater::Device::RefreshFunctionalState] Device functional state result: 227
+[2025-06-25 09:21:12.891] [info   ] [DULib      ] [11348:11284] [841F9F:3661] [*Updater::Device::RefreshFunctionalState] Device functional state result: 227
+[2025-06-25 09:21:17.859] [info   ] [DULib      ] [11348:11284] [210E39:2286] [  DriverUpdater::DriverUpdaterImpl::Scan] We found 52 Devices on your system.
+[2025-06-25 09:21:18.234] [info   ] [DULib      ] [11348:11284] [210E39:2306] [  DriverUpdater::DriverUpdaterImpl::Scan] For your computer 913 related drivers are available - 15 are newer
+[2025-06-25 09:21:18.234] [info   ] [DULib      ] [11348:11284] [210E39:2308] [  DriverUpdater::DriverUpdaterImpl::Scan] 0 drivers are vulnerable
+[2025-06-25 09:21:18.234] [info   ] [DULib      ] [11348:11284] [210E39:2383] [  DriverUpdater::DriverUpdaterImpl::Scan] Refreshing audio endpoint collection

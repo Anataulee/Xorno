@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  ['cpu','gpu','ram','mb','os','disks','network','battery']
+  ['cpu', 'gpu', 'ram', 'mb', 'os', 'disks', 'network', 'battery']
     .forEach(k => loadSection(k, window.xornoAPI['get' + k.charAt(0).toUpperCase() + k.slice(1)]));
 
   async function loadActivation() {
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `<div id="log-${id}" class="install-entry">
          <span class="install-label">${labelMap[id]}</span>
          <progress id="prog-${id}" max="100" value="0"></progress>
-         <span class="install-status" id="status-${id}">🕒 En attente</span>
+         <span class="install-status" id="status-${id}">En attente</span>
        </div>`
     ).join('');
     document.getElementById('winget-raw-log').innerHTML = '';
@@ -123,15 +123,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const s = document.getElementById(`status-${id}`);
         const p = document.getElementById(`prog-${id}`);
         if (!s || !p) return;
-        if (step === 'running') s.textContent = '⬇️ En attente';
-        else if (step === 'download') { s.textContent = '⬇️ Téléchargement…'; p.removeAttribute('value'); }
-        else if (step === 'install') s.textContent = '💿 Installation…';
-        else if (step === 'ok') { s.textContent = '✅ Terminé'; p.value = 100; }
-        else if (step === 'fail') s.textContent = '❌ Échec';
+        if (step === 'running') s.textContent = 'En attente';
+        else if (step === 'download') { s.textContent = 'Téléchargement…'; p.removeAttribute('value'); }
+        else if (step === 'install') s.textContent = 'Installation…';
+        else if (step === 'ok') { s.textContent = 'Terminé'; p.value = 100; }
+        else if (step === 'fail') s.textContent = 'Échec';
       },
       () => {}
     );
     setTimeout(() => btn?.classList.remove('loading'), 10000);
+  });
+
+  document.getElementById('virus-ban-form')?.addEventListener('submit', async e => {
+    e.preventDefault();
+    const checked = [...document.querySelectorAll('input[name="vb-tool"]:checked')]
+      .map(i => i.value);
+    const logContainer = document.getElementById('virus-ban-log');
+    logContainer.innerHTML = '';
+    const logStep = msg => logContainer.innerHTML += `<div>${msg}</div>`;
+
+    const wantsJRT = checked.includes('JRT.exe');
+    if (wantsJRT) {
+      const confirmJRT = confirm("JRT va fermer toutes les applications ouvertes. Continuer ?");
+      if (!confirmJRT) checked.splice(checked.indexOf('JRT.exe'), 1);
+    }
+
+    await new Promise(done => {
+      window.xornoAPI.runVirusBanCustom(checked, msg => {
+        logStep(msg);
+        if (msg === 'Virus Ban terminé.') done();
+      });
+    });
   });
 
   document.querySelectorAll('button[data-tab]').forEach(b =>
@@ -159,7 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const appsCheckboxes = selected.map(a =>
         `<div><label><input type="checkbox" name="quick-app" value="${a.id}" checked> ${a.label}</label></div>`
       ).join('');
-      listEl.innerHTML = activationCheckbox + separator1 + iconsCheckbox + separator2 + appsCheckboxes;
+      const separator3 = `<hr style="border-color: #444; margin: 12px 0;">`;
+      const virusBanCheckbox = `<div><label><input type="checkbox" id="quick-virus-ban"> Lancer le Virus Ban après l'installation</label></div>`;
+      listEl.innerHTML = activationCheckbox + separator1 + iconsCheckbox + separator2 + appsCheckboxes + separator3 + virusBanCheckbox;
       modal.style.display = 'flex';
     });
   }
@@ -172,6 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(i => i.value);
     const doActivation = document.getElementById('quick-activation').checked;
     const doIcons = document.getElementById('quick-create-icons').checked;
+    const doVirusBan = document.getElementById('quick-virus-ban').checked;
     const log = document.getElementById('quick-setup-log');
     const btn = document.getElementById('btn-quick-setup');
     btn.disabled = true;
@@ -180,17 +205,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const logStep = msg => log.innerHTML += `<div>${msg}</div>`;
 
     if (doIcons) {
-      logStep(`<span class="status-icon info"></span>Création des raccourcis sur le bureau...`);
+      logStep(`Création des raccourcis sur le bureau...`);
       const iconsResult = window.xornoAPI.runCreateDesktopIcons();
       logStep(
         iconsResult && !iconsResult.toLowerCase().includes('erreur')
-          ? `<span class="status-icon success"></span>Raccourcis créés`
-          : `<span class="status-icon error"></span>${iconsResult}`
+          ? `Raccourcis créés`
+          : `${iconsResult}`
       );
     }
 
     if (doActivation) {
-      logStep(`<span class="status-icon info"></span>Activation de Windows...`);
+      logStep(`Activation de Windows...`);
       const activationResult = await window.xornoAPI.runActivate();
       const cleaned = activationResult.trim();
       if (cleaned &&
@@ -201,14 +226,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (checkedApps.length) {
-      logStep(`<span class="status-icon info"></span>Installation de base via Winget...`);
+      logStep(`Installation de base via Winget...`);
       let done = 0;
       await new Promise(doneAll => {
         window.xornoAPI.runWingetInstallLive(
           checkedApps,
           (id, step) => {
-            if (step === 'ok') logStep(`<span class="status-icon success"></span>${labelMap[id]} installé avec succès`);
-            if (step === 'fail') logStep(`<span class="status-icon error"></span>Échec installation ${labelMap[id]}`);
+            if (step === 'ok') logStep(`${labelMap[id]} installé avec succès`);
+            if (step === 'fail') logStep(`Échec installation ${labelMap[id]}`);
             if (step === 'ok' || step === 'fail') {
               done++;
               if (done === checkedApps.length) doneAll();
@@ -219,9 +244,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    logStep(`<span class="status-icon info"></span>Ouverture de Windows Update...`);
+    logStep(`Ouverture de Windows Update...`);
     window.xornoAPI.openWindowsUpdate();
     document.getElementById('maj-content').textContent = 'Mises à jour lancées (panneau ouvert).';
+
+    if (doVirusBan) {
+      logStep(`Lancement du Virus Ban...`);
+      await new Promise(done => {
+        window.xornoAPI.runVirusBanCustom(msg => {
+          logStep(msg);
+          if (msg === 'Virus Ban terminé.') done();
+        });
+      });
+    }
 
     await loadActivation();
 

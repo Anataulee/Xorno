@@ -1,0 +1,170 @@
+﻿[2025-06-25 08:48:50.403] [info   ] [DULib      ] [ 1208: 8808] [31A92A:  69] [*ater::`anonymous-namespace'::InitLogger] Logger initialized.
+[2025-06-25 08:48:50.403] [info   ] [ini_access ] [ 1208: 8808] [280E7A:  91] ini accessor for file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\servers.def created
+[2025-06-25 08:48:50.403] [warning] [ini_access ] [ 1208: 8808] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\config.def
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 08:48:50.420] [info   ] [files      ] [ 1208: 8808] [069D4A: 221] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data started
+[2025-06-25 08:48:50.420] [warning] [ini_access ] [ 1208: 8808] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\settings.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 08:48:50.420] [warning] [ini_access ] [ 1208: 8808] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\usercfg.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 08:48:50.420] [warning] [ini_access ] [ 1208: 8808] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\setup.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 08:48:50.437] [info   ] [lic_setting] [ 1208: 8808] [04E793: 203] ~s7MSM7DSKYLP+K8iuUtcwK+iGmGPmymIz+2vK6sZTtG0uxEp3PgJs5urpSCxHkvGsroRdp/PeMnC6KopvwVK1/O3EH7Qmwmo7dv8bL0YTtbztxx/mdokgtOlpSOz
+[2025-06-25 08:48:50.437] [warning] [lic_curl   ] [ 1208: 8808] [A0917B: 199] invalid resolve fallbacks
+[2025-06-25 08:48:50.470] [warning] [Burger     ] [ 1208: 8808] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 08:48:50.470] [error  ] [Burger     ] [ 1208: 8808] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 08:48:50.470] [warning] [Burger     ] [ 1208: 8808] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 08:48:50.470] [error  ] [Burger     ] [ 1208: 8808] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 08:48:50.470] [warning] [Burger     ] [ 1208: 8808] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 08:48:50.470] [warning] [Burger     ] [ 1208: 8808] [B43A58: 297] [*tandalone_svc::BurgerReporter::GASwitch] Property GDPR_THIRD_PARTY_ANALYTICS_ENABLED not found, set default value
+[2025-06-25 08:48:50.470] [warning] [Burger     ] [ 1208: 8808] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 08:49:07.288] [warning] [ini_access ] [ 1208: 8848] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\burger_client.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 08:49:07.335] [info   ] [files      ] [ 1208: 1272] [069D4A: 141] watch task termination for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data requested
+[2025-06-25 08:49:07.335] [info   ] [files      ] [ 1208: 1272] [069D4A: 157] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data gracefully terminated
+[2025-06-25 08:49:07.445] [info   ] [log_module ] [ 1208: 1272] [7D5D99:  29] LogModule is going to be destroyed.
+[2025-06-25 08:49:07.445] [info   ] [log_module ] [ 1208: 1272] [7D5D99:  30] =====================================================================================================================
+[2025-06-25 09:05:51.924] [info   ] [DULib      ] [10776: 3320] [31A92A:  69] [*ater::`anonymous-namespace'::InitLogger] Logger initialized.
+[2025-06-25 09:05:51.924] [info   ] [ini_access ] [10776: 3320] [280E7A:  91] ini accessor for file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\servers.def created
+[2025-06-25 09:05:51.924] [warning] [ini_access ] [10776: 3320] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\config.def
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:05:51.924] [info   ] [files      ] [10776: 3320] [069D4A: 221] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data started
+[2025-06-25 09:05:51.924] [warning] [ini_access ] [10776: 3320] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\settings.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:05:51.924] [warning] [ini_access ] [10776: 3320] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\setup.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:05:51.971] [info   ] [lic_setting] [10776: 3320] [04E793: 203] ~pLYIM7DSKYLP+K8iuUtcwK+iGmGPmymIz+2vK6sZTtG0uxEp3PgJs5urpSCxHkvGsroRdp/PeMnC6KopvwVK1/O3EH7Qmwmo7dv8bL0YTtbztxx/mdokgtOlpSOz
+[2025-06-25 09:05:51.971] [warning] [lic_curl   ] [10776: 3320] [A0917B: 199] invalid resolve fallbacks
+[2025-06-25 09:05:51.987] [warning] [Burger     ] [10776: 3320] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:05:51.987] [error  ] [Burger     ] [10776: 3320] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:05:51.987] [warning] [Burger     ] [10776: 3320] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:05:51.987] [error  ] [Burger     ] [10776: 3320] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:05:51.987] [warning] [Burger     ] [10776: 3320] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:05:51.987] [warning] [Burger     ] [10776: 3320] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:05:52.034] [warning] [files      ] [10776: 6160] [069D4A: 255] C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data overlapped IO failed, error: 995.
+[2025-06-25 09:05:55.958] [warning] [ini_access ] [10776:13292] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\burger_client.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:05:55.963] [info   ] [files      ] [10776:10540] [069D4A: 141] watch task termination for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data requested
+[2025-06-25 09:05:55.963] [info   ] [files      ] [10776:10540] [069D4A: 157] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data gracefully terminated
+[2025-06-25 09:05:56.075] [info   ] [log_module ] [10776:10540] [7D5D99:  29] LogModule is going to be destroyed.
+[2025-06-25 09:05:56.075] [info   ] [log_module ] [10776:10540] [7D5D99:  30] =====================================================================================================================
+[2025-06-25 09:17:08.483] [info   ] [DULib      ] [ 9140: 3852] [31A92A:  69] [*ater::`anonymous-namespace'::InitLogger] Logger initialized.
+[2025-06-25 09:17:08.484] [info   ] [ini_access ] [ 9140: 3852] [280E7A:  91] ini accessor for file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\servers.def created
+[2025-06-25 09:17:08.486] [warning] [ini_access ] [ 9140: 3852] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\config.def
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:17:08.486] [info   ] [files      ] [ 9140: 3852] [069D4A: 221] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data started
+[2025-06-25 09:17:08.486] [warning] [ini_access ] [ 9140: 3852] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\settings.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:17:08.489] [warning] [ini_access ] [ 9140: 3852] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\setup.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:17:08.496] [info   ] [lic_setting] [ 9140: 3852] [04E793: 203] ~tKxfX5XYL4nS4qgr/hhK16uxDWDc2CWJx+KhOawKW8yyukUzv/ge3YHoqiOrD0zKs7oacIiJZITC56MtsA5di767Ej/c+AWr8bHmL60KXIu+txN2ndUvlY/oqSE=
+[2025-06-25 09:17:08.496] [warning] [lic_curl   ] [ 9140: 3852] [A0917B: 199] invalid resolve fallbacks
+[2025-06-25 09:17:08.502] [warning] [Burger     ] [ 9140: 3852] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:17:08.503] [error  ] [Burger     ] [ 9140: 3852] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:17:08.503] [warning] [Burger     ] [ 9140: 3852] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:17:08.503] [error  ] [Burger     ] [ 9140: 3852] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:17:08.503] [warning] [Burger     ] [ 9140: 3852] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:17:08.503] [warning] [Burger     ] [ 9140: 3852] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:17:08.527] [warning] [files      ] [ 9140:13148] [069D4A: 255] C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data overlapped IO failed, error: 995.
+[2025-06-25 09:17:14.291] [warning] [ini_access ] [ 9140:12272] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\burger_client.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:17:14.295] [info   ] [files      ] [ 9140: 6960] [069D4A: 141] watch task termination for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data requested
+[2025-06-25 09:17:14.295] [info   ] [files      ] [ 9140: 6960] [069D4A: 157] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data gracefully terminated
+[2025-06-25 09:17:14.405] [info   ] [log_module ] [ 9140: 6960] [7D5D99:  29] LogModule is going to be destroyed.
+[2025-06-25 09:17:14.405] [info   ] [log_module ] [ 9140: 6960] [7D5D99:  30] =====================================================================================================================
+[2025-06-25 09:18:48.740] [info   ] [DULib      ] [ 9616: 9368] [31A92A:  69] [*ater::`anonymous-namespace'::InitLogger] Logger initialized.
+[2025-06-25 09:18:48.740] [info   ] [ini_access ] [ 9616: 9368] [280E7A:  91] ini accessor for file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\servers.def created
+[2025-06-25 09:18:48.740] [warning] [ini_access ] [ 9616: 9368] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\config.def
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:18:48.740] [info   ] [files      ] [ 9616: 9368] [069D4A: 221] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data started
+[2025-06-25 09:18:48.740] [warning] [ini_access ] [ 9616: 9368] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\settings.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:18:48.740] [warning] [ini_access ] [ 9616: 9368] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\setup.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:18:48.740] [info   ] [lic_setting] [ 9616: 9368] [04E793: 203] ~radfX5XYL4nS4qgr/hhK16uxDWDc2CWJx+KhOawKW8yyukUzv/ge3YHoqiOrD0zKs7oacIiJZITC56MtsA5di767Ej/c+AWr8bHmL60KXIu+txN2ndUvlY/oqSE=
+[2025-06-25 09:18:48.740] [warning] [lic_curl   ] [ 9616: 9368] [A0917B: 199] invalid resolve fallbacks
+[2025-06-25 09:18:48.755] [warning] [Burger     ] [ 9616: 9368] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:18:48.755] [error  ] [Burger     ] [ 9616: 9368] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:18:48.755] [warning] [Burger     ] [ 9616: 9368] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:18:48.755] [error  ] [Burger     ] [ 9616: 9368] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:18:48.755] [warning] [Burger     ] [ 9616: 9368] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:18:48.755] [warning] [Burger     ] [ 9616: 9368] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:18:48.787] [warning] [files      ] [ 9616: 4380] [069D4A: 255] C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data overlapped IO failed, error: 995.
+[2025-06-25 09:19:19.890] [info   ] [DULib      ] [ 8484: 2260] [31A92A:  69] [*ater::`anonymous-namespace'::InitLogger] Logger initialized.
+[2025-06-25 09:19:19.890] [info   ] [ini_access ] [ 8484: 2260] [280E7A:  91] ini accessor for file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\servers.def created
+[2025-06-25 09:19:19.890] [warning] [ini_access ] [ 8484: 2260] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\config.def
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:19:19.890] [info   ] [files      ] [ 8484: 2260] [069D4A: 221] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data started
+[2025-06-25 09:19:19.890] [warning] [ini_access ] [ 8484: 2260] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\settings.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:19:19.905] [warning] [ini_access ] [ 8484: 2260] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\setup.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:19:19.905] [info   ] [lic_setting] [ 8484: 2260] [04E793: 203] ~/ZgWcJnVOY7P7OY/uxlZwK+nX3CT1SyOxv60LaoCQMvn9DxQqIFqhM3ksyi9BEHLuLcLIdLYKYvE6qgprEVMyrD4X1Cz9xrdgei1La1FTMaxsR59mclkhM7m
+[2025-06-25 09:19:19.905] [warning] [lic_curl   ] [ 8484: 2260] [A0917B: 199] invalid resolve fallbacks
+[2025-06-25 09:19:19.905] [warning] [Burger     ] [ 8484: 2260] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:19:19.905] [error  ] [Burger     ] [ 8484: 2260] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:19:19.905] [warning] [Burger     ] [ 8484: 2260] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:19:19.905] [error  ] [Burger     ] [ 8484: 2260] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:19:19.905] [warning] [Burger     ] [ 8484: 2260] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:19:19.905] [warning] [Burger     ] [ 8484: 2260] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:19:29.722] [warning] [ini_access ] [ 8484:11044] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\burger_client.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:19:29.722] [info   ] [files      ] [ 8484: 2052] [069D4A: 141] watch task termination for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data requested
+[2025-06-25 09:19:29.722] [info   ] [files      ] [ 8484: 2052] [069D4A: 157] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data gracefully terminated
+[2025-06-25 09:19:29.831] [info   ] [log_module ] [ 8484: 2052] [7D5D99:  29] LogModule is going to be destroyed.
+[2025-06-25 09:19:29.831] [info   ] [log_module ] [ 8484: 2052] [7D5D99:  30] =====================================================================================================================
+[2025-06-25 09:19:47.124] [warning] [ini_access ] [ 9616: 3708] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\burger_client.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:19:47.155] [info   ] [files      ] [ 9616: 2624] [069D4A: 141] watch task termination for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data requested
+[2025-06-25 09:19:47.155] [info   ] [files      ] [ 9616: 2624] [069D4A: 157] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data gracefully terminated
+[2025-06-25 09:19:47.264] [info   ] [log_module ] [ 9616: 2624] [7D5D99:  29] LogModule is going to be destroyed.
+[2025-06-25 09:19:47.264] [info   ] [log_module ] [ 9616: 2624] [7D5D99:  30] =====================================================================================================================
+[2025-06-25 09:21:01.475] [info   ] [DULib      ] [11348: 3972] [31A92A:  69] [*ater::`anonymous-namespace'::InitLogger] Logger initialized.
+[2025-06-25 09:21:01.475] [info   ] [ini_access ] [11348: 3972] [280E7A:  91] ini accessor for file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\servers.def created
+[2025-06-25 09:21:01.490] [warning] [ini_access ] [11348: 3972] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\config.def
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:21:01.490] [info   ] [files      ] [11348: 3972] [069D4A: 221] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data started
+[2025-06-25 09:21:01.490] [warning] [ini_access ] [11348: 3972] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\settings.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:21:01.490] [warning] [ini_access ] [11348: 3972] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\setup.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:21:01.490] [info   ] [lic_setting] [11348: 3972] [04E793: 203] ~vLYeZNz3I4TE5bUlsAwP1rimCXaOyGqEzuWgJbkeXcSpvRB9xpsJpPWx5i+yBFrBvrsRfZnYPtWP6KUguwpBwK/6HHyRl2qk7seWdv4IXMSu+hxwkN4ricT56C+xBg==
+[2025-06-25 09:21:01.490] [warning] [lic_curl   ] [11348: 3972] [A0917B: 199] invalid resolve fallbacks
+[2025-06-25 09:21:01.506] [warning] [Burger     ] [11348: 3972] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:21:01.506] [error  ] [Burger     ] [11348: 3972] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:21:01.506] [warning] [Burger     ] [11348: 3972] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:21:01.506] [error  ] [Burger     ] [11348: 3972] [B43A58: 270] [*alone_svc::BurgerReporter::BurgerSwitch] Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2025-06-25 09:21:01.506] [warning] [Burger     ] [11348: 3972] [B43A58: 273] [*alone_svc::BurgerReporter::BurgerSwitch] Analytics (Burger.v4) disabled (hostname: )
+[2025-06-25 09:21:01.506] [warning] [Burger     ] [11348: 3972] [B43A58: 190] [*dalone_svc::BurgerReporter::RegisterRPC] Could not get RPC.
+[2025-06-25 09:21:01.568] [warning] [files      ] [11348: 7796] [069D4A: 255] C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data overlapped IO failed, error: 995.
+[2025-06-25 09:21:36.755] [warning] [ini_access ] [11348: 7972] [280E7A: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\burger_client.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-25 09:21:36.755] [info   ] [files      ] [11348: 3036] [069D4A: 141] watch task termination for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data requested
+[2025-06-25 09:21:36.755] [info   ] [files      ] [11348: 3036] [069D4A: 157] watch task for C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data gracefully terminated
+[2025-06-25 09:21:36.880] [info   ] [log_module ] [11348: 3036] [7D5D99:  29] LogModule is going to be destroyed.
+[2025-06-25 09:21:36.880] [info   ] [log_module ] [11348: 3036] [7D5D99:  30] =====================================================================================================================

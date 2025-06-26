@@ -3,6 +3,7 @@ const { execSync, spawn } = require('child_process');
 const iconv = require('iconv-lite');
 const path = require('path');
 const { ipcRenderer } = require('electron');
+const fs = require('fs');
 
 async function getCpu() {
   const cpu = await si.cpu();
@@ -134,10 +135,6 @@ function runWingetInstallLive(appList, reportStatus, reportLog) {
   runNext();
 }
 
-function quitApp() {
-  ipcRenderer.send('app-quit');
-}
-
 function runCreateDesktopIcons() {
   try {
     return execSync(
@@ -147,6 +144,56 @@ function runCreateDesktopIcons() {
   } catch (e) {
     return `Erreur création icônes bureau : ${e.message}`;
   }
+}
+
+function quitApp() {
+  ipcRenderer.send('app-quit');
+}
+
+function runVirusBanCustom(tools, reportLog) {
+  const outilsPath = path.join(__dirname, '..', 'outils');
+  const closeBrowsersScript = path.join(__dirname, '..', 'scripts', 'close-browsers.ps1');
+  const commands = tools.map(tool => {
+    if (tool === 'WindowsDefender') {
+      return { name: 'Windows Defender', cmd: 'powershell -Command "Start-MpScan -ScanType QuickScan"' };
+    } else {
+      const exePath = path.join(outilsPath, tool);
+      let args = '';
+      if (tool === 'CCleaner64.exe') args = `/AUTO /INI="${path.join(outilsPath, 'ccleaner.ini')}"`;
+      else if (tool === 'adwcleaner.exe') args = '/eula /clean';
+      return { name: tool.replace('.exe', ''), cmd: `"${exePath}" ${args}` };
+    }
+  });
+
+  let index = 0;
+
+  const runNext = () => {
+    if (index >= commands.length) {
+      reportLog('Virus Ban terminé.');
+      return;
+    }
+
+    const { name, cmd } = commands[index];
+
+    if (name === 'CCleaner64') {
+      try {
+        execSync(`powershell -ExecutionPolicy Bypass -File "${closeBrowsersScript}"`, { encoding: 'utf8' });
+        reportLog('Navigateurs fermés.');
+      } catch (e) {
+        reportLog(`Erreur fermeture navigateurs : ${e.message}`);
+      }
+    }
+
+    reportLog(`Lancement : ${name}`);
+    const proc = spawn('cmd.exe', ['/c', cmd], { shell: true });
+    proc.on('close', () => {
+      reportLog(`Terminé : ${name}`);
+      index++;
+      runNext();
+    });
+  };
+
+  runNext();
 }
 
 window.xornoAPI = {
@@ -164,5 +211,6 @@ window.xornoAPI = {
   runNinite,
   runWingetInstallLive,
   runCreateDesktopIcons,
-  quitApp
+  quitApp,
+  runVirusBanCustom
 };

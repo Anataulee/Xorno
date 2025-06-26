@@ -1,0 +1,5014 @@
+{
+	"Backups" : [],
+	"DeviceList" : 
+	[
+		{
+			"childrenIds" : [],
+			"class" : "Processor",
+			"classGuid" : "{50127DC3-0F36-415E-A6CC-4CB3BE910B65}",
+			"classIconName" : "Processor",
+			"compatibleIds" : 
+			[
+				"ACPI\\Processor"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 72,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Processeur Intel",
+					"driverDate" : 12884745600,
+					"driverDateFormatted" : "2009-04-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{50127dc3-0f36-415e-a6cc-4cb3be910b65}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5794",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
+					"hardwareId" : "acpi\\genuineintel_-_intel64",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "cpu.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Intel",
+					"matchingId" : "040034DF014B7DE14F14D8D5ED7456B778CCAD90691F44F289DF6D25A53D290F",
+					"oemInf" : "C:\\Windows\\INF\\cpu.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711684,
+					"rejectedReason" : 0,
+					"sectionName" : "IntelPPM_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\cpu.inf_amd64_405c347a5eef5f2a\\cpu.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\GenuineIntel_-_Intel64_Family_6_Model_78",
+				"*GenuineIntel_-_Intel64_Family_6_Model_78",
+				"ACPI\\GenuineIntel_-_Intel64_Family_6",
+				"*GenuineIntel_-_Intel64_Family_6",
+				"ACPI\\GenuineIntel_-_Intel64",
+				"*GenuineIntel_-_Intel64"
+			],
+			"hasProblem" : false,
+			"hash" : "040034DF014B7DE14F14D8D5ED7456B778CCAD90691F44F289DF6D25A53D290F",
+			"id" : "Intel-Intel(R)Core(TM)i5-6200UCPU@2.30GHz",
+			"ignored" : false,
+			"installDate" : 13392295789,
+			"installDateFormatted" : "2025-05-21 10:09:49",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295789,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_78_-_INTEL(R)_CORE(TM)_I5-6200U_CPU_@_2.30GHZ\\_1",
+			"instances" : 
+			[
+				"ACPI\\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_78_-_INTEL(R)_CORE(TM)_I5-6200U_CPU_@_2.30GHZ\\_1",
+				"ACPI\\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_78_-_INTEL(R)_CORE(TM)_I5-6200U_CPU_@_2.30GHZ\\_2",
+				"ACPI\\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_78_-_INTEL(R)_CORE(TM)_I5-6200U_CPU_@_2.30GHZ\\_3",
+				"ACPI\\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_78_-_INTEL(R)_CORE(TM)_I5-6200U_CPU_@_2.30GHZ\\_4"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Intel",
+			"name" : "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
+			"parent" : "ACPI_HAL\\PNP0C08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "SecurityDevices",
+			"classGuid" : "{D94EE5D8-D189-4994-83D2-F68D7D41B0E6}",
+			"classIconName" : "SecurityDevices",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 40,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Module de plateforme s\u00e9curis\u00e9e\u00a02.0",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{d94ee5d8-d189-4994-83d2-f68d7d41b0e6}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5794",
+					"fix" : false,
+					"flags" : 1351748,
+					"friendlyName" : "Module de plateforme s\u00e9curis\u00e9e\u00a02.0",
+					"hardwareId" : "acpi\\msft0101",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296226,
+					"infDateFormatted" : "2025-06-13 13:50:26",
+					"infFileName" : "tpm.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(standard)",
+					"matchingId" : "0464A13F368D20F4FA36CF4EB98C0B907A72A5E0417562E81E2256626EB71800",
+					"oemInf" : "C:\\Windows\\INF\\tpm.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711681,
+					"rejectedReason" : 0,
+					"sectionName" : "Tpm2BaseInstall",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\tpm.inf_amd64_1d878197ebb9a0c0\\tpm.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_MSFT&DEV_0101",
+				"ACPI\\MSFT0101",
+				"*MSFT0101"
+			],
+			"hasProblem" : false,
+			"hash" : "0464A13F368D20F4FA36CF4EB98C0B907A72A5E0417562E81E2256626EB71800",
+			"id" : "(standard)-Moduledeplateformes\u00e9curis\u00e9e\u00a02.0",
+			"ignored" : false,
+			"installDate" : 13392295789,
+			"installDateFormatted" : "2025-05-21 10:09:49",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295789,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\MSFT0101\\2&DABA3FF&0",
+			"instances" : 
+			[
+				"ACPI\\MSFT0101\\2&DABA3FF&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(standard)",
+			"name" : "Module de plateforme s\u00e9curis\u00e9e\u00a02.0",
+			"parent" : "ACPI_HAL\\PNP0C08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"PCI\\VEN_10EC&DEV_8168&SUBSYS_200F1043&REV_10\\01000000684CE00000"
+			],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D14&REV_F1",
+				"PCI\\VEN_8086&DEV_9D14",
+				"PCI\\VEN_8086&CC_060400",
+				"PCI\\VEN_8086&CC_0604",
+				"PCI\\VEN_8086",
+				"PCI\\CC_060400&DT_4",
+				"PCI\\CC_060400",
+				"PCI\\CC_0604&DT_4",
+				"PCI\\CC_0604"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 9,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Port racine PCI Express",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0021",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5607",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Port racine PCI Express",
+					"hardwareId" : "pci\\cc_0604&dt_4",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "pci.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+					"matchingId" : "10DD251EECA500D3D49506FBDCA507D664493F1D2E26446A993D8C358BC8C899",
+					"oemInf" : "C:\\Windows\\INF\\pci.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719879,
+					"rejectedReason" : 0,
+					"sectionName" : "PCI_BRIDGE",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\pci.inf_amd64_fa7515b440352bbb\\pci.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D14&SUBSYS_12601043&REV_F1",
+				"PCI\\VEN_8086&DEV_9D14&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_9D14&CC_060400",
+				"PCI\\VEN_8086&DEV_9D14&CC_0604"
+			],
+			"hasProblem" : false,
+			"hash" : "10DD251EECA500D3D49506FBDCA507D664493F1D2E26446A993D8C358BC8C899",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-PortracinePCIExpress",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_8086&DEV_9D14&SUBSYS_12601043&REV_F1\\3&11583659&0&E4",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_9D14&SUBSYS_12601043&REV_F1\\3&11583659&0&E4"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 28, function 4",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Port racine PCI Express",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 25,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Interface de gestion Microsoft Windows pour ACPI",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0029",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.1",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Interface de gestion Microsoft Windows pour ACPI",
+					"hardwareId" : "*pnp0c14",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183274,
+					"infDateFormatted" : "2019-12-07 09:07:54",
+					"infFileName" : "wmiacpi.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "12CE3292CE7BD6C4115D1810DA5C2E6AC45487806D07F793EE0EEB1306431D4E",
+					"oemInf" : "C:\\Windows\\INF\\wmiacpi.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711682,
+					"rejectedReason" : 0,
+					"sectionName" : "WMIMAP_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\wmiacpi.inf_amd64_4ab67656039b026b\\wmiacpi.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_PNP&DEV_0C14",
+				"ACPI\\PNP0C14",
+				"*PNP0C14"
+			],
+			"hasProblem" : false,
+			"hash" : "12CE3292CE7BD6C4115D1810DA5C2E6AC45487806D07F793EE0EEB1306431D4E",
+			"id" : "Microsoft-InterfacedegestionMicrosoftWindowspourACPI",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\PNP0C14\\OPT1",
+			"instances" : 
+			[
+				"ACPI\\PNP0C14\\ATK",
+				"ACPI\\PNP0C14\\OPT1"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "Interface de gestion Microsoft Windows pour ACPI",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_1904&REV_08",
+				"PCI\\VEN_8086&DEV_1904",
+				"PCI\\VEN_8086&CC_060000",
+				"PCI\\VEN_8086&CC_0600",
+				"PCI\\VEN_8086",
+				"PCI\\CC_060000",
+				"PCI\\CC_0600"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 5,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_1904&SUBSYS_12601043&REV_08",
+				"PCI\\VEN_8086&DEV_1904&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_1904&CC_060000",
+				"PCI\\VEN_8086&DEV_1904&CC_0600"
+			],
+			"hasProblem" : false,
+			"hash" : "132F2719AB402EAB256102B7863B0287036CA67D7CA1FBE9D9B8B683EEDEAF62",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-Pontprocesseurh\u00f4testandardPCI",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_8086&DEV_1904&SUBSYS_12601043&REV_08\\3&11583659&0&00",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_1904&SUBSYS_12601043&REV_08\\3&11583659&0&00"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 0, function 0",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Pont processeur h\u00f4te standard PCI",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 0
+		},
+		{
+			"childrenIds" : 
+			[
+				"ACPI\\INT0800\\4&885A278&0",
+				"ACPI\\PNP0103\\0",
+				"ACPI\\PNP0000\\4&885A278&0",
+				"ACPI\\PNP0C02\\2",
+				"ACPI\\PNP0B00\\4&885A278&0",
+				"ACPI\\PNP0100\\4&885A278&0",
+				"ACPI\\INT3F0D\\4&885A278&0",
+				"ACPI\\PNP0C09\\4&885A278&0",
+				"ACPI\\PNP0C02\\13",
+				"ACPI\\ATK3001\\4&885A278&0"
+			],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D48&REV_21",
+				"PCI\\VEN_8086&DEV_9D48",
+				"PCI\\VEN_8086&CC_060100",
+				"PCI\\VEN_8086&CC_0601",
+				"PCI\\VEN_8086",
+				"PCI\\CC_060100",
+				"PCI\\CC_0601"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 13,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Pont ISA standard PCI",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0023",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.3636",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Pont ISA standard PCI",
+					"hardwareId" : "pci\\cc_0601",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "machine.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+					"matchingId" : "1B02189C2F16F9CDD2961ACCFE0C0517279522736B3610B613C06BF0E8A9E675",
+					"oemInf" : "C:\\Windows\\INF\\machine.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719878,
+					"rejectedReason" : 0,
+					"sectionName" : "MSISADRV",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\machine.inf_amd64_72ab89a5cc3218be\\machine.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D48&SUBSYS_12601043&REV_21",
+				"PCI\\VEN_8086&DEV_9D48&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_9D48&CC_060100",
+				"PCI\\VEN_8086&DEV_9D48&CC_0601"
+			],
+			"hasProblem" : false,
+			"hash" : "1B02189C2F16F9CDD2961ACCFE0C0517279522736B3610B613C06BF0E8A9E675",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-PontISAstandardPCI",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_8086&DEV_9D48&SUBSYS_12601043&REV_21\\3&11583659&0&F8",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_9D48&SUBSYS_12601043&REV_21\\3&11583659&0&F8"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 31, function 0",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Pont ISA standard PCI",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "CDROM",
+			"classGuid" : "{4D36E965-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Storage",
+			"compatibleIds" : 
+			[
+				"SCSI\\CdRom",
+				"SCSI\\RAW"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 138,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Lecteur de CD-ROM",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e965-e325-11ce-bfc1-08002be10318}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.4355",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "HL-DT-ST DVDRAM GUE1N",
+					"hardwareId" : "gencdrom",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "cdrom.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(Lecteurs de CD-ROM standard)",
+					"matchingId" : "1BF23121CC08EE6F17F2E2284D1FBD45F9DA4B562EA014B4E37DE0CA582CA867",
+					"oemInf" : "C:\\Windows\\INF\\cdrom.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711685,
+					"rejectedReason" : 0,
+					"sectionName" : "cdrom_install",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\cdrom.inf_amd64_f618268e6b943f2d\\cdrom.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"SCSI\\CdRomHL-DT-STDVDRAM_GUE1N____AS00",
+				"SCSI\\CdRomHL-DT-STDVDRAM_GUE1N____",
+				"SCSI\\CdRomHL-DT-ST",
+				"SCSI\\HL-DT-STDVDRAM_GUE1N____A",
+				"HL-DT-STDVDRAM_GUE1N____A",
+				"GenCdRom"
+			],
+			"hasProblem" : false,
+			"hash" : "1BF23121CC08EE6F17F2E2284D1FBD45F9DA4B562EA014B4E37DE0CA582CA867",
+			"id" : "(LecteursdeCD-ROMstandard)-HL-DT-STDVDRAMGUE1N",
+			"ignored" : false,
+			"installDate" : 13392295791,
+			"installDateFormatted" : "2025-05-21 10:09:51",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295791,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "SCSI\\CDROM&VEN_HL-DT-ST&PROD_DVDRAM_GUE1N\\4&459709C&0&000100",
+			"instances" : 
+			[
+				"SCSI\\CDROM&VEN_HL-DT-ST&PROD_DVDRAM_GUE1N\\4&459709C&0&000100"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "Bus Number 0, Target Id 1, LUN 0",
+			"manufacturer" : "(Lecteurs de CD-ROM standard)",
+			"name" : "HL-DT-ST DVDRAM GUE1N",
+			"parent" : "PCI\\VEN_8086&DEV_282A&SUBSYS_12601043&REV_21\\3&11583659&0&B8",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 87,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_PNP&DEV_0C0D",
+				"ACPI\\PNP0C0D",
+				"*PNP0C0D"
+			],
+			"hasProblem" : false,
+			"hash" : "1DA4732E12E96C3063049DDF2B75F965C88E1F76FCBFBAD6DC644C6AF7D5E978",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-CouvercleACPI",
+			"ignored" : false,
+			"installDate" : 13392295789,
+			"installDateFormatted" : "2025-05-21 10:09:49",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295789,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\PNP0C0D\\2&DABA3FF&0",
+			"instances" : 
+			[
+				"ACPI\\PNP0C0D\\2&DABA3FF&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Couvercle ACPI",
+			"parent" : "ACPI_HAL\\PNP0C08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 0
+		},
+		{
+			"childrenIds" : [],
+			"class" : "",
+			"classGuid" : "",
+			"classIconName" : "",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 140,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_INT&DEV_3403",
+				"ACPI\\INT3403",
+				"*INT3403"
+			],
+			"hasProblem" : true,
+			"hash" : "20341AFB373593336283EEFF6F054D7F32BED629E2AECA6BC4A18ED4E995F764",
+			"id" : "Unknowndevice",
+			"ignored" : false,
+			"installDate" : 13392295794,
+			"installDateFormatted" : "2025-05-21 10:09:54",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295794,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000002",
+			"instancePath" : "ACPI\\INT3403\\GEN1",
+			"instances" : 
+			[
+				"ACPI\\INT3403\\GEN1",
+				"ACPI\\INT3403\\GEN2"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "",
+			"name" : "Unknown device",
+			"parent" : "ACPI\\PNP0C09\\4&885A278&0",
+			"problemCode" : 28,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "HIDClass",
+			"classGuid" : "{745A17A0-74D3-11D0-B6FE-00A0C90F57DA}",
+			"classIconName" : "USB",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 34,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "P\u00e9riph\u00e9rique fournisseur IHM",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{745a17a0-74d3-11d0-b6fe-00a0c90f57da}\\0001",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.3636",
+					"fix" : false,
+					"flags" : 3416132,
+					"friendlyName" : "P\u00e9riph\u00e9rique fournisseur IHM",
+					"hardwareId" : "hid_device_upr:ff00-ffff",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296226,
+					"infDateFormatted" : "2025-06-13 13:50:26",
+					"infFileName" : "input.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+					"matchingId" : "20B23D7222852AADFBE56A2B6B945FC86BEF5922CCCE79EE6D8456D43051E7B8",
+					"oemInf" : "C:\\Windows\\INF\\input.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16715781,
+					"rejectedReason" : 0,
+					"sectionName" : "HID_Raw_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\input.inf_amd64_71e43a6eaa912e56\\input.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"HID\\VEN_ELAN&DEV_1000&Col02",
+				"HID\\ELAN1000&Col02",
+				"HID\\*ELAN1000&Col02",
+				"HID\\VID_04F3&UP:FF00_U:00C5",
+				"HID_DEVICE_UP:FF00_U:00C5",
+				"HID_DEVICE_UPR:FF00-FFFF",
+				"HID_DEVICE"
+			],
+			"hasProblem" : false,
+			"hash" : "20B23D7222852AADFBE56A2B6B945FC86BEF5922CCCE79EE6D8456D43051E7B8",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-P\u00e9riph\u00e9riquefournisseurIHM",
+			"ignored" : false,
+			"installDate" : 13392295792,
+			"installDateFormatted" : "2025-05-21 10:09:52",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295792,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "HID\\ELAN1000&COL02\\5&16D04072&0&0001",
+			"instances" : 
+			[
+				"HID\\ELAN1000&COL02\\5&16D04072&0&0001"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "P\u00e9riph\u00e9rique fournisseur IHM",
+			"parent" : "ACPI\\ELAN1000\\1",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Net",
+			"classGuid" : "{4D36E972-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Connectivity",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_10EC&DEV_8168&REV_10",
+				"PCI\\VEN_10EC&DEV_8168",
+				"PCI\\VEN_10EC&CC_020000",
+				"PCI\\VEN_10EC&CC_0200",
+				"PCI\\VEN_10EC",
+				"PCI\\CC_020000&DT_0",
+				"PCI\\CC_020000",
+				"PCI\\CC_0200&DT_0",
+				"PCI\\CC_0200"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 11,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Contr\u00f4leur Realtek PCIe GbE Famille",
+					"driverDate" : 13073097600,
+					"driverDateFormatted" : "2015-04-10 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e972-e325-11ce-bfc1-08002be10318}\\0002",
+					"driverType" : 2,
+					"driverVersion" : "9.1.410.2015",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Realtek PCIe GbE Family Controller",
+					"hardwareId" : "pci\\ven_10ec&dev_8168&rev_10",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183274,
+					"infDateFormatted" : "2019-12-07 09:07:54",
+					"infFileName" : "rt640x64.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Realtek",
+					"matchingId" : "20D099998FA47958B88AAE35F695526F194128B070462AFA4DD344C4AF70FEBF",
+					"oemInf" : "C:\\Windows\\INF\\rt640x64.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719872,
+					"rejectedReason" : 0,
+					"sectionName" : "RTL8168Series.ndi",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\rt640x64.inf_amd64_8984d8483eef476c\\rt640x64.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_10EC&DEV_8168&SUBSYS_200F1043&REV_10",
+				"PCI\\VEN_10EC&DEV_8168&SUBSYS_200F1043",
+				"PCI\\VEN_10EC&DEV_8168&CC_020000",
+				"PCI\\VEN_10EC&DEV_8168&CC_0200"
+			],
+			"hasProblem" : false,
+			"hash" : "20D099998FA47958B88AAE35F695526F194128B070462AFA4DD344C4AF70FEBF",
+			"id" : "Realtek-RealtekPCIeGbEFamilyController",
+			"ignored" : false,
+			"installDate" : 13392295808,
+			"installDateFormatted" : "2025-05-21 10:10:08",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295808,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_10EC&DEV_8168&SUBSYS_200F1043&REV_10\\01000000684CE00000",
+			"instances" : 
+			[
+				"PCI\\VEN_10EC&DEV_8168&SUBSYS_200F1043&REV_10\\01000000684CE00000"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 2, device 0, function 0",
+			"manufacturer" : "Realtek",
+			"name" : "Realtek PCIe GbE Family Controller",
+			"parent" : "PCI\\VEN_8086&DEV_9D14&SUBSYS_12601043&REV_F1\\3&11583659&0&E4",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"HID\\{00001124-0000-1000-8000-00805F9B34FB}_VID&00020A5C_PID&4503\\8&2339EEC8&0&0000"
+			],
+			"class" : "HIDClass",
+			"classGuid" : "{745A17A0-74D3-11D0-B6FE-00A0C90F57DA}",
+			"classIconName" : "USB",
+			"compatibleIds" : 
+			[
+				"BTHENUM\\{00001124-0000-1000-8000-00805f9b34fb}",
+				"BTHENUM\\{00001124-0000-1000-8000-00805f9b34fb}_GENERIC"
+			],
+			"connected" : true,
+			"containerId" : "{C8BDE295-AF1B-593A-ABF3-E6CAAB8E804C}",
+			"devType" : 34,
+			"deviceInst" : 120,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "P\u00e9riph\u00e9rique IHM Bluetooth",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{745a17a0-74d3-11d0-b6fe-00a0c90f57da}\\0007",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.3636",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "P\u00e9riph\u00e9rique IHM Bluetooth",
+					"hardwareId" : "bthenum\\{00001124-0000-1000-8000-00805f9b34fb}",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296226,
+					"infDateFormatted" : "2025-06-13 13:50:26",
+					"infFileName" : "hidbth.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "23BB44BA94CC323F03B0D60AA04A8113BB0923B1566590EF47D2E36F6AF58414",
+					"oemInf" : "C:\\Windows\\INF\\hidbth.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16723968,
+					"rejectedReason" : 0,
+					"sectionName" : "HIDBTH_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\hidbth.inf_amd64_b5de0e7e45555968\\hidbth.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"BTHENUM\\{00001124-0000-1000-8000-00805f9b34fb}_VID&00020a5c_PID&4503",
+				"BTHENUM\\{00001124-0000-1000-8000-00805f9b34fb}_LOCALMFG&001d"
+			],
+			"hasProblem" : false,
+			"hash" : "23BB44BA94CC323F03B0D60AA04A8113BB0923B1566590EF47D2E36F6AF58414",
+			"id" : "Microsoft-P\u00e9riph\u00e9riqueIHMBluetooth",
+			"ignored" : false,
+			"installDate" : 13394042249,
+			"installDateFormatted" : "2025-06-10 15:17:29",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13394042249,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "BTHENUM\\{00001124-0000-1000-8000-00805F9B34FB}_VID&00020A5C_PID&4503\\7&32368669&0&DC2C26AFCD86_C00000000",
+			"instances" : 
+			[
+				"BTHENUM\\{00001124-0000-1000-8000-00805F9B34FB}_VID&00020A5C_PID&4503\\7&32368669&0&DC2C26AFCD86_C00000000"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "P\u00e9riph\u00e9rique IHM Bluetooth",
+			"parent" : "BTH\\MS_BTHBRB\\6&34019FBB&0&1",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"*PNP0C02"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 31,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_INT&DEV_3F0D",
+				"ACPI\\INT3F0D",
+				"*INT3F0D"
+			],
+			"hasProblem" : false,
+			"hash" : "26786A5F41CEAB2FB74BE6087BB6E773890F668F89015CDEB0102FC01B67F0BF",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-Ressourcesdelacartem\u00e8re",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\INT3F0D\\4&885A278&0",
+			"instances" : 
+			[
+				"ACPI\\INT3F0D\\4&885A278&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Ressources de la carte m\u00e8re",
+			"parent" : "PCI\\VEN_8086&DEV_9D48&SUBSYS_12601043&REV_21\\3&11583659&0&F8",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 0
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Mouse",
+			"classGuid" : "{4D36E96F-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Mouse",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{5E48D9FE-464B-11F0-9588-74C63BFCD830}",
+			"devType" : 34,
+			"deviceInst" : 109,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "P\u00e9riph\u00e9rique IHM",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e96f-e325-11ce-bfc1-08002be10318}\\0003",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.3636",
+					"fix" : false,
+					"flags" : 3153988,
+					"friendlyName" : "Souris IHM",
+					"hardwareId" : "hid_device",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296226,
+					"infDateFormatted" : "2025-06-13 13:50:26",
+					"infFileName" : "input.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+					"matchingId" : "2BC2E250A9A07E4798E36A6073D5D30E815897E6A1573E71B7D142FB1B1F0DAF",
+					"oemInf" : "C:\\Windows\\INF\\input.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16715781,
+					"rejectedReason" : 0,
+					"sectionName" : "HID_Raw_Inst",
+					"selectionOrder" : 1,
+					"state" : 1,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\input.inf_amd64_71e43a6eaa912e56\\input.inf",
+					"vulnerable" : false
+				},
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Souris IHM",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e96f-e325-11ce-bfc1-08002be10318}\\0003",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.1",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "Souris IHM",
+					"hardwareId" : "hid_device_system_mouse",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183276,
+					"infDateFormatted" : "2019-12-07 09:07:56",
+					"infFileName" : "msmouse.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "2BC2E250A9A07E4798E36A6073D5D30E815897E6A1573E71B7D142FB1B1F0DAF",
+					"oemInf" : "C:\\Windows\\INF\\msmouse.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16715779,
+					"rejectedReason" : 0,
+					"sectionName" : "HID_Mouse_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\msmouse.inf_amd64_1793a485b491b199\\msmouse.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"HID\\VID_17EF&PID_6019&REV_6300",
+				"HID\\VID_17EF&PID_6019",
+				"HID\\VID_17EF&UP:0001_U:0002",
+				"HID_DEVICE_SYSTEM_MOUSE",
+				"HID_DEVICE_UP:0001_U:0002",
+				"HID_DEVICE"
+			],
+			"hasProblem" : false,
+			"hash" : "2BC2E250A9A07E4798E36A6073D5D30E815897E6A1573E71B7D142FB1B1F0DAF",
+			"id" : "Microsoft-SourisIHM",
+			"ignored" : false,
+			"installDate" : 13394297393,
+			"installDateFormatted" : "2025-06-13 14:09:53",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13394297393,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "HID\\VID_17EF&PID_6019\\6&2E4B5A84&0&0000",
+			"instances" : 
+			[
+				"HID\\VID_17EF&PID_6019\\6&2E4B5A84&0&0000"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "Souris IHM",
+			"parent" : "USB\\VID_17EF&PID_6019\\5&3478949&0&1",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"PCI\\VEN_168C&DEV_0042&SUBSYS_22311A3B&REV_31\\4&3275E187&0&00E5"
+			],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D15&REV_F1",
+				"PCI\\VEN_8086&DEV_9D15",
+				"PCI\\VEN_8086&CC_060400",
+				"PCI\\VEN_8086&CC_0604",
+				"PCI\\VEN_8086",
+				"PCI\\CC_060400&DT_4",
+				"PCI\\CC_060400",
+				"PCI\\CC_0604&DT_4",
+				"PCI\\CC_0604"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 3,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Port racine PCI Express",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0022",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5607",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Port racine PCI Express",
+					"hardwareId" : "pci\\cc_0604&dt_4",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "pci.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+					"matchingId" : "2D57BDDF510C970EFE1DD157B50DF3984859678D1C888619E2298A1BA6549AE5",
+					"oemInf" : "C:\\Windows\\INF\\pci.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719879,
+					"rejectedReason" : 0,
+					"sectionName" : "PCI_BRIDGE",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\pci.inf_amd64_fa7515b440352bbb\\pci.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D15&SUBSYS_12601043&REV_F1",
+				"PCI\\VEN_8086&DEV_9D15&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_9D15&CC_060400",
+				"PCI\\VEN_8086&DEV_9D15&CC_0604"
+			],
+			"hasProblem" : false,
+			"hash" : "2D57BDDF510C970EFE1DD157B50DF3984859678D1C888619E2298A1BA6549AE5",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-PortracinePCIExpress",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_8086&DEV_9D15&SUBSYS_12601043&REV_F1\\3&11583659&0&E5",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_9D15&SUBSYS_12601043&REV_F1\\3&11583659&0&E5"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 28, function 5",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Port racine PCI Express",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "DiskDrive",
+			"classGuid" : "{4D36E967-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Storage",
+			"compatibleIds" : 
+			[
+				"SCSI\\Disk",
+				"SCSI\\RAW"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 37,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Lecteur de disque",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e967-e325-11ce-bfc1-08002be10318}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.4597",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "PNY CS900 240GB SSD",
+					"hardwareId" : "gendisk",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "disk.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(Lecteurs de disque standard)",
+					"matchingId" : "2D60198EA32FF8240D95986143ADDF15148FCB51CC7E5F716909CE4264C99120",
+					"oemInf" : "C:\\Windows\\INF\\disk.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711685,
+					"rejectedReason" : 0,
+					"sectionName" : "disk_install",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\disk.inf_amd64_8398eaa246ab3f17\\disk.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"SCSI\\DiskPNY_____CS900___________CS90",
+				"SCSI\\DiskPNY_____CS900___________",
+				"SCSI\\DiskPNY_____",
+				"SCSI\\PNY_____CS900___________C",
+				"PNY_____CS900___________C",
+				"GenDisk"
+			],
+			"hasProblem" : false,
+			"hash" : "2D60198EA32FF8240D95986143ADDF15148FCB51CC7E5F716909CE4264C99120",
+			"id" : "(Lecteursdedisquestandard)-PNYCS900240GBSSD",
+			"ignored" : false,
+			"installDate" : 13392295791,
+			"installDateFormatted" : "2025-05-21 10:09:51",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295791,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "SCSI\\DISK&VEN_PNY&PROD_CS900\\4&459709C&0&000000",
+			"instances" : 
+			[
+				"SCSI\\DISK&VEN_PNY&PROD_CS900\\4&459709C&0&000000"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "Bus Number 0, Target Id 0, LUN 0",
+			"manufacturer" : "(Lecteurs de disque standard)",
+			"name" : "PNY CS900 240GB SSD",
+			"parent" : "PCI\\VEN_8086&DEV_282A&SUBSYS_12601043&REV_21\\3&11583659&0&B8",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Display",
+			"classGuid" : "{4D36E968-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Display",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_10DE&DEV_139B&REV_A2",
+				"PCI\\VEN_10DE&DEV_139B",
+				"PCI\\VEN_10DE&CC_030200",
+				"PCI\\VEN_10DE&CC_0302",
+				"PCI\\VEN_10DE",
+				"PCI\\CC_030200&DT_0",
+				"PCI\\CC_030200",
+				"PCI\\CC_0302&DT_0",
+				"PCI\\CC_0302"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 17,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "NVIDIA GeForce GTX 960M",
+					"driverDate" : 13156819200,
+					"driverDateFormatted" : "2017-12-04 00:00:00",
+					"driverFiles" : 
+					[
+						"C:\\Windows\\System32\\DriverStore\\FileRepository\\nvam.inf_amd64_1aae4f19e68d0780\\nvlddmkm.sys"
+					],
+					"driverKey" : "{4d36e968-e325-11ce-bfc1-08002be10318}\\0001",
+					"driverNvidia" : true,
+					"driverNvidiaBranch" : "R384",
+					"driverType" : 2,
+					"driverVersion" : "23.21.13.8857",
+					"fix" : false,
+					"flags" : 270404,
+					"friendlyName" : "NVIDIA GeForce GTX 960M",
+					"hardwareId" : "pci\\ven_10de&dev_139b&subsys_12601043",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : false,
+					"infDate" : 13392296567,
+					"infDateFormatted" : "2025-05-21 10:22:47",
+					"infFileName" : "nvam.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "NVIDIA",
+					"matchingId" : "2E3443A2FE4C1BC38C0E02DB58C6506BEB5940E7599CB89164FADB77DD3438B6",
+					"oemInf" : "C:\\Windows\\INF\\oem5.inf",
+					"providerName" : "NVIDIA",
+					"rank" : 13697025,
+					"rejectedReason" : 0,
+					"sectionName" : "Section140",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvam.inf_amd64_1aae4f19e68d0780\\nvam.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_10DE&DEV_139B&SUBSYS_12601043&REV_A2",
+				"PCI\\VEN_10DE&DEV_139B&SUBSYS_12601043",
+				"PCI\\VEN_10DE&DEV_139B&CC_030200",
+				"PCI\\VEN_10DE&DEV_139B&CC_0302"
+			],
+			"hasProblem" : false,
+			"hash" : "2E3443A2FE4C1BC38C0E02DB58C6506BEB5940E7599CB89164FADB77DD3438B6",
+			"id" : "NVIDIA-NVIDIAGeForceGTX960M",
+			"ignored" : false,
+			"installDate" : 13392296687,
+			"installDateFormatted" : "2025-05-21 10:24:47",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392296687,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_10DE&DEV_139B&SUBSYS_12601043&REV_A2\\4&2721B0D4&0&00E0",
+			"instances" : 
+			[
+				"PCI\\VEN_10DE&DEV_139B&SUBSYS_12601043&REV_A2\\4&2721B0D4&0&00E0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 1, device 0, function 0",
+			"manufacturer" : "NVIDIA",
+			"name" : "NVIDIA GeForce GTX 960M",
+			"parent" : "PCI\\VEN_8086&DEV_9D10&SUBSYS_12601043&REV_F1\\3&11583659&0&E0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "DiskDrive",
+			"classGuid" : "{4D36E967-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Storage",
+			"compatibleIds" : 
+			[
+				"USBSTOR\\Disk",
+				"USBSTOR\\RAW",
+				"GenDisk"
+			],
+			"connected" : true,
+			"containerId" : "{2B67715F-874D-5BDE-BEAC-6E37A3E3C8F2}",
+			"devType" : 34,
+			"deviceInst" : 62,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Lecteur de disque",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e967-e325-11ce-bfc1-08002be10318}\\0006",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.4597",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "Kingston DataTraveler 2.0 USB Device",
+					"hardwareId" : "gendisk",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "disk.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(Lecteurs de disque standard)",
+					"matchingId" : "30650F31B8D5661D5A7D997BFF125F90C6E35FC6D4667034C8931927F1901E3B",
+					"oemInf" : "C:\\Windows\\INF\\disk.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711686,
+					"rejectedReason" : 0,
+					"sectionName" : "disk_install",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\disk.inf_amd64_8398eaa246ab3f17\\disk.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"USBSTOR\\DiskKingstonDataTraveler_2.01.00",
+				"USBSTOR\\DiskKingstonDataTraveler_2.0",
+				"USBSTOR\\DiskKingston",
+				"USBSTOR\\KingstonDataTraveler_2.01",
+				"KingstonDataTraveler_2.01",
+				"USBSTOR\\GenDisk",
+				"GenDisk"
+			],
+			"hasProblem" : false,
+			"hash" : "30650F31B8D5661D5A7D997BFF125F90C6E35FC6D4667034C8931927F1901E3B",
+			"id" : "(Lecteursdedisquestandard)-KingstonDataTraveler2.0USBDevice",
+			"ignored" : false,
+			"installDate" : 13394796867,
+			"installDateFormatted" : "2025-06-19 08:54:27",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13394796867,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "USBSTOR\\DISK&VEN_KINGSTON&PROD_DATATRAVELER_2.0&REV_1.00\\60A44C4138F0FEC0C98B25A4&0",
+			"instances" : 
+			[
+				"USBSTOR\\DISK&VEN_KINGSTON&PROD_DATATRAVELER_2.0&REV_1.00\\60A44C4138F0FEC0C98B25A4&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(Lecteurs de disque standard)",
+			"name" : "Kingston DataTraveler 2.0 USB Device",
+			"parent" : "USB\\VID_0951&PID_1665\\60A44C4138F0FEC0C98B25A4",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Net",
+			"classGuid" : "{4D36E972-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Connectivity",
+			"compatibleIds" : 
+			[
+				"{5d624f94-8850-40c3-a3fa-a4fd2080baf3}\\vwifimp_wfd"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 113,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Carte virtuelle Microsoft Wi-Fi Direct",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e972-e325-11ce-bfc1-08002be10318}\\0003",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.1",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Microsoft Wi-Fi Direct Virtual Adapter",
+					"hardwareId" : "{5d624f94-8850-40c3-a3fa-a4fd2080baf3}\\vwifimp_wfd",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183270,
+					"infDateFormatted" : "2019-12-07 09:07:50",
+					"infFileName" : "netvwifimp.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "30D1740F1EE0F75085DBC37FE8C4C2B02DE3F249121A4BF11BD7C4D19F7D00C8",
+					"oemInf" : "C:\\Windows\\INF\\netvwifimp.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711680,
+					"rejectedReason" : 0,
+					"sectionName" : "vwifimp_wfd.ndi",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\netvwifimp.inf_amd64_ec11d0ad3c5b262a\\netvwifimp.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"{5d624f94-8850-40c3-a3fa-a4fd2080baf3}\\vwifimp_wfd"
+			],
+			"hasProblem" : false,
+			"hash" : "30D1740F1EE0F75085DBC37FE8C4C2B02DE3F249121A4BF11BD7C4D19F7D00C8",
+			"id" : "Microsoft-MicrosoftWi-FiDirectVirtualAdapter",
+			"ignored" : false,
+			"installDate" : 13392295808,
+			"installDateFormatted" : "2025-05-21 10:10:08",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295808,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\\VWIFIMP_WFD\\5&2842835&0&11",
+			"instances" : 
+			[
+				"{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\\VWIFIMP_WFD\\5&2842835&0&11",
+				"{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\\VWIFIMP_WFD\\5&2842835&0&12"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "VWiFi Bus 0",
+			"manufacturer" : "Microsoft",
+			"name" : "Microsoft Wi-Fi Direct Virtual Adapter",
+			"parent" : "PCI\\VEN_168C&DEV_0042&SUBSYS_22311A3B&REV_31\\4&3275E187&0&00E5",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "",
+			"classGuid" : "",
+			"classIconName" : "",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D21&REV_21",
+				"PCI\\VEN_8086&DEV_9D21",
+				"PCI\\VEN_8086&CC_058000",
+				"PCI\\VEN_8086&CC_0580",
+				"PCI\\VEN_8086",
+				"PCI\\CC_058000",
+				"PCI\\CC_0580"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 6,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D21&SUBSYS_12601043&REV_21",
+				"PCI\\VEN_8086&DEV_9D21&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_9D21&CC_058000",
+				"PCI\\VEN_8086&DEV_9D21&CC_0580"
+			],
+			"hasProblem" : true,
+			"hash" : "320FECAF86FBE0169D40636B02EC13368025F03679FDB32B72D88322E636A778",
+			"id" : "PCIMemoryController",
+			"ignored" : false,
+			"installDate" : 13392295794,
+			"installDateFormatted" : "2025-05-21 10:09:54",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295794,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000002",
+			"instancePath" : "PCI\\VEN_8086&DEV_9D21&SUBSYS_12601043&REV_21\\3&11583659&0&FA",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_9D21&SUBSYS_12601043&REV_21\\3&11583659&0&FA"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 31, function 2",
+			"manufacturer" : "",
+			"name" : "PCI Memory Controller",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 28,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 51,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_PNP&DEV_0C0E",
+				"ACPI\\PNP0C0E",
+				"*PNP0C0E"
+			],
+			"hasProblem" : false,
+			"hash" : "352A30D2AB0F83F3041C6E7A7166AFB1B55DD5A8920030DE01AF1709E8BD986F",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-BoutonveilleACPI",
+			"ignored" : false,
+			"installDate" : 13392295789,
+			"installDateFormatted" : "2025-05-21 10:09:49",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295789,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\PNP0C0E\\2&DABA3FF&0",
+			"instances" : 
+			[
+				"ACPI\\PNP0C0E\\2&DABA3FF&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Bouton veille ACPI",
+			"parent" : "ACPI_HAL\\PNP0C08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 0
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Battery",
+			"classGuid" : "{72631E54-78A4-11D0-BCF7-00AA00B7B32A}",
+			"classIconName" : "Battery",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 29,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Batterie \u00e0 m\u00e9thode de contr\u00f4le compatible ACPI Microsoft",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{72631e54-78a4-11d0-bcf7-00aa00b7b32a}\\0001",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.1",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Batterie \u00e0 m\u00e9thode de contr\u00f4le compatible ACPI Microsoft",
+					"hardwareId" : "acpi\\pnp0c0a",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183274,
+					"infDateFormatted" : "2019-12-07 09:07:54",
+					"infFileName" : "cmbatt.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "38C7146291FAC7A6E9218BA378974CA1C75E8D0E8EB71A6373F5A7667D8BAA52",
+					"oemInf" : "C:\\Windows\\INF\\cmbatt.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711681,
+					"rejectedReason" : 0,
+					"sectionName" : "CmBatt_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\cmbatt.inf_amd64_554d46f6008bc631\\cmbatt.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_PNP&DEV_0C0A",
+				"ACPI\\PNP0C0A",
+				"*PNP0C0A"
+			],
+			"hasProblem" : false,
+			"hash" : "38C7146291FAC7A6E9218BA378974CA1C75E8D0E8EB71A6373F5A7667D8BAA52",
+			"id" : "Microsoft-Batterie\u00e0m\u00e9thodedecontr\u00f4lecompatibleACPIMicrosoft",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\PNP0C0A\\0",
+			"instances" : 
+			[
+				"ACPI\\PNP0C0A\\0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "Batterie \u00e0 m\u00e9thode de contr\u00f4le compatible ACPI Microsoft",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"HID\\ATK4002\\3&1C78FF7D&0&0000"
+			],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 97,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "ASUS Wireless Radio Control",
+					"driverDate" : 13250217600,
+					"driverDateFormatted" : "2020-11-19 00:00:00",
+					"driverFiles" : 
+					[
+						"C:\\Windows\\system32\\DRIVERS\\AsRadioControl.sys"
+					],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0045",
+					"driverType" : 2,
+					"driverVersion" : "1.0.0.13",
+					"fix" : false,
+					"flags" : 270404,
+					"friendlyName" : "ASUS Wireless Radio Control",
+					"hardwareId" : "acpi\\atk4002",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : false,
+					"infDate" : 13392296488,
+					"infDateFormatted" : "2025-05-21 10:21:28",
+					"infFileName" : "asradiocontrol.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "ASUS",
+					"matchingId" : "3AF29993D0239E0EBD87C57C88F36A53CFA8A8A772622FC5C984E3CEBCE37845",
+					"oemInf" : "C:\\Windows\\INF\\oem4.inf",
+					"providerName" : "ASUS",
+					"rank" : 16711681,
+					"rejectedReason" : 0,
+					"sectionName" : "Airplane_Control",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\asradiocontrol.inf_amd64_2065f6d5ffe497ba\\asradiocontrol.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_ATK&DEV_4002",
+				"ACPI\\ATK4002",
+				"*ATK4002"
+			],
+			"hasProblem" : false,
+			"hash" : "3AF29993D0239E0EBD87C57C88F36A53CFA8A8A772622FC5C984E3CEBCE37845",
+			"id" : "ASUS-ASUSWirelessRadioControl",
+			"ignored" : false,
+			"installDate" : 13392296488,
+			"installDateFormatted" : "2025-05-21 10:21:28",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392296488,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\ATK4002\\2&DABA3FF&0",
+			"instances" : 
+			[
+				"ACPI\\ATK4002\\2&DABA3FF&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "ASUS",
+			"name" : "ASUS Wireless Radio Control",
+			"parent" : "ACPI_HAL\\PNP0C08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"SCSI\\DISK&VEN_PNY&PROD_CS900\\4&459709C&0&000000",
+				"SCSI\\CDROM&VEN_HL-DT-ST&PROD_DVDRAM_GUE1N\\4&459709C&0&000100"
+			],
+			"class" : "SCSIAdapter",
+			"classGuid" : "{4D36E97B-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Storage",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_282A&REV_21",
+				"PCI\\VEN_8086&DEV_282A",
+				"PCI\\VEN_8086&CC_010400",
+				"PCI\\VEN_8086&CC_0104",
+				"PCI\\VEN_8086",
+				"PCI\\CC_010400",
+				"PCI\\CC_0104"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 20,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Contr\u00f4leur RAID SATA de circuit microprogramm\u00e9 Intel",
+					"driverDate" : 13162521600,
+					"driverDateFormatted" : "2018-02-08 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97b-e325-11ce-bfc1-08002be10318}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "15.44.0.1015",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Contr\u00f4leur RAID SATA de circuit microprogramm\u00e9 Intel",
+					"hardwareId" : "pci\\ven_8086&dev_282a&cc_0104",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183274,
+					"infDateFormatted" : "2019-12-07 09:07:54",
+					"infFileName" : "iastorav.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Intel Corporation",
+					"matchingId" : "3EDCDCA93331448CB904B0958CF2BEF02EAEBA31E61BE44FF066B1CA9FCB1AED",
+					"oemInf" : "C:\\Windows\\INF\\iastorav.inf",
+					"providerName" : "Intel Corporation",
+					"rank" : 16711683,
+					"rejectedReason" : 0,
+					"sectionName" : "iaStorAVC_inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\iastorav.inf_amd64_87f761c07c99d5e7\\iastorav.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_282A&SUBSYS_12601043&REV_21",
+				"PCI\\VEN_8086&DEV_282A&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_282A&CC_010400",
+				"PCI\\VEN_8086&DEV_282A&CC_0104"
+			],
+			"hasProblem" : false,
+			"hash" : "3EDCDCA93331448CB904B0958CF2BEF02EAEBA31E61BE44FF066B1CA9FCB1AED",
+			"id" : "IntelCorporation-Contr\u00f4leurRAIDSATAdecircuitmicroprogramm\u00e9Intel",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_8086&DEV_282A&SUBSYS_12601043&REV_21\\3&11583659&0&B8",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_282A&SUBSYS_12601043&REV_21\\3&11583659&0&B8"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 23, function 0",
+			"manufacturer" : "Intel Corporation",
+			"name" : "Contr\u00f4leur RAID SATA de circuit microprogramm\u00e9 Intel",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Bluetooth",
+			"classGuid" : "{E0CBF06C-CD8B-4647-BB8A-263B43F0F974}",
+			"classIconName" : "Bluetooth",
+			"compatibleIds" : 
+			[
+				"BTHENUM\\GENERIC_DEVICE"
+			],
+			"connected" : true,
+			"containerId" : "{C8BDE295-AF1B-593A-ABF3-E6CAAB8E804C}",
+			"devType" : 34,
+			"deviceInst" : 56,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "P\u00e9riph\u00e9rique Bluetooth",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}\\0004",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5848",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "BM30X mouse",
+					"hardwareId" : "bthenum\\generic_device",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "bth.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "3FA6A0F465F6ABD8D77C1A699819B32838E02819E8875B7B8008908056A9127D",
+					"oemInf" : "C:\\Windows\\INF\\bth.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719872,
+					"rejectedReason" : 0,
+					"sectionName" : "BthGenericDevice",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\bth.inf_amd64_4bae36cc9672513d\\bth.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"BTHENUM\\Dev_DC2C26AFCD86"
+			],
+			"hasProblem" : false,
+			"hash" : "3FA6A0F465F6ABD8D77C1A699819B32838E02819E8875B7B8008908056A9127D",
+			"id" : "Microsoft-BM30Xmouse",
+			"ignored" : false,
+			"installDate" : 13394042247,
+			"installDateFormatted" : "2025-06-10 15:17:27",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13394042247,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "BTHENUM\\DEV_DC2C26AFCD86\\7&32368669&0&BLUETOOTHDEVICE_DC2C26AFCD86",
+			"instances" : 
+			[
+				"BTHENUM\\DEV_DC2C26AFCD86\\7&32368669&0&BLUETOOTHDEVICE_DC2C26AFCD86"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "BM30X mouse",
+			"parent" : "BTH\\MS_BTHBRB\\6&34019FBB&0&1",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "MEDIA",
+			"classGuid" : "{4D36E96C-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Audio",
+			"compatibleIds" : 
+			[
+				"HDAUDIO\\FUNC_01&CTLR_VEN_8086&CTLR_DEV_9D70&VEN_8086&DEV_2809&REV_1000",
+				"HDAUDIO\\FUNC_01&CTLR_VEN_8086&VEN_8086&DEV_2809&REV_1000",
+				"HDAUDIO\\FUNC_01&VEN_8086&DEV_2809&REV_1000",
+				"HDAUDIO\\FUNC_01&CTLR_VEN_8086&CTLR_DEV_9D70&VEN_8086&DEV_2809",
+				"HDAUDIO\\FUNC_01&CTLR_VEN_8086&VEN_8086&DEV_2809",
+				"HDAUDIO\\FUNC_01&VEN_8086&DEV_2809",
+				"HDAUDIO\\FUNC_01&CTLR_VEN_8086&CTLR_DEV_9D70&VEN_8086",
+				"HDAUDIO\\FUNC_01&CTLR_VEN_8086&VEN_8086",
+				"HDAUDIO\\FUNC_01&VEN_8086",
+				"HDAUDIO\\FUNC_01&CTLR_VEN_8086&CTLR_DEV_9D70",
+				"HDAUDIO\\FUNC_01&CTLR_VEN_8086",
+				"HDAUDIO\\FUNC_01&GF&VEN_8086&DEV_2809&SUBSYS_80860101&REV_1000",
+				"HDAUDIO\\FUNC_01"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 29,
+			"deviceInst" : 35,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "P\u00e9riph\u00e9rique High Definition Audio",
+					"driverDate" : 13342147200,
+					"driverDateFormatted" : "2023-10-19 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e96c-e325-11ce-bfc1-08002be10318}\\0001",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.3636",
+					"fix" : false,
+					"flags" : 1056836,
+					"friendlyName" : "Son Intel(R) pour \u00e9crans",
+					"hardwareId" : "hdaudio\\func_01",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296223,
+					"infDateFormatted" : "2025-06-13 13:50:23",
+					"infFileName" : "hdaudio.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "42FA31A9C95942EB864BC912C4CAD430050A3143855CAFD07E0921F4B0396235",
+					"oemInf" : "C:\\Windows\\INF\\hdaudio.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16723980,
+					"rejectedReason" : 0,
+					"sectionName" : "HdAudModel",
+					"selectionOrder" : 1,
+					"state" : 1,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\hdaudio.inf_amd64_98fd5b0ddcb79b7d\\hdaudio.inf",
+					"vulnerable" : false
+				},
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Son Intel(R) pour \u00e9crans",
+					"driverDate" : 13281926400,
+					"driverDateFormatted" : "2021-11-21 00:00:00",
+					"driverFiles" : 
+					[
+						"C:\\Windows\\System32\\DriverStore\\FileRepository\\intcdaud.inf_amd64_461786e87388a070\\IntcDAud.sys",
+						"C:\\Windows\\system32\\DRIVERS\\drmk.sys",
+						"C:\\Windows\\system32\\DRIVERS\\portcls.sys"
+					],
+					"driverKey" : "{4d36e96c-e325-11ce-bfc1-08002be10318}\\0001",
+					"driverType" : 2,
+					"driverVersion" : "10.26.0.12",
+					"fix" : false,
+					"flags" : 270404,
+					"friendlyName" : "Son Intel(R) pour \u00e9crans",
+					"hardwareId" : "hdaudio\\func_01&ven_8086&dev_2809&subsys_80860101",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : false,
+					"infDate" : 13392296926,
+					"infDateFormatted" : "2025-05-21 10:28:46",
+					"infFileName" : "intcdaud.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Intel(R) Corporation",
+					"matchingId" : "42FA31A9C95942EB864BC912C4CAD430050A3143855CAFD07E0921F4B0396235",
+					"oemInf" : "C:\\Windows\\INF\\oem14.inf",
+					"providerName" : "Intel(R) Corporation",
+					"rank" : 16711681,
+					"rejectedReason" : 0,
+					"sectionName" : "IntcAudModel",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\intcdaud.inf_amd64_461786e87388a070\\intcdaud.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"HDAUDIO\\FUNC_01&VEN_8086&DEV_2809&SUBSYS_80860101&REV_1000",
+				"HDAUDIO\\FUNC_01&VEN_8086&DEV_2809&SUBSYS_80860101"
+			],
+			"hasProblem" : false,
+			"hash" : "42FA31A9C95942EB864BC912C4CAD430050A3143855CAFD07E0921F4B0396235",
+			"id" : "Intel(R)Corporation-SonIntel(R)pour\u00e9crans",
+			"ignored" : false,
+			"installDate" : 13392296953,
+			"installDateFormatted" : "2025-05-21 10:29:13",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392296953,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "HDAUDIO\\FUNC_01&VEN_8086&DEV_2809&SUBSYS_80860101&REV_1000\\4&12917A64&0&0201",
+			"instances" : 
+			[
+				"HDAUDIO\\FUNC_01&VEN_8086&DEV_2809&SUBSYS_80860101&REV_1000\\4&12917A64&0&0201"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "Internal High Definition Audio Bus",
+			"manufacturer" : "Intel(R) Corporation",
+			"name" : "Son Intel(R) pour \u00e9crans",
+			"parent" : "PCI\\VEN_8086&DEV_9D70&SUBSYS_1D7D1043&REV_21\\3&11583659&0&FB",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"BTHENUM\\{00001000-0000-1000-8000-00805F9B34FB}_VID&00020A5C_PID&4503\\7&32368669&0&DC2C26AFCD86_C00000000",
+				"BTHENUM\\{00001124-0000-1000-8000-00805F9B34FB}_VID&00020A5C_PID&4503\\7&32368669&0&DC2C26AFCD86_C00000000",
+				"BTHENUM\\{00001200-0000-1000-8000-00805F9B34FB}_VID&00020A5C_PID&4503\\7&32368669&0&DC2C26AFCD86_C00000000",
+				"BTHENUM\\DEV_DC2C26AFCD86\\7&32368669&0&BLUETOOTHDEVICE_DC2C26AFCD86"
+			],
+			"class" : "Bluetooth",
+			"classGuid" : "{E0CBF06C-CD8B-4647-BB8A-263B43F0F974}",
+			"classIconName" : "Bluetooth",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 36,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "\u00c9num\u00e9rateur Microsoft Bluetooth",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}\\0001",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5848",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "\u00c9num\u00e9rateur Microsoft Bluetooth",
+					"hardwareId" : "bth\\ms_bthbrb",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "bth.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "4317FA9637474FE778DE6904BC2D96775E5FB094D7C7F31C8EFF8E968CC959BA",
+					"oemInf" : "C:\\Windows\\INF\\bth.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711680,
+					"rejectedReason" : 0,
+					"sectionName" : "BthEnum",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\bth.inf_amd64_4bae36cc9672513d\\bth.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"BTH\\MS_BTHBRB"
+			],
+			"hasProblem" : false,
+			"hash" : "4317FA9637474FE778DE6904BC2D96775E5FB094D7C7F31C8EFF8E968CC959BA",
+			"id" : "Microsoft-\u00c9num\u00e9rateurMicrosoftBluetooth",
+			"ignored" : false,
+			"installDate" : 13392295794,
+			"installDateFormatted" : "2025-05-21 10:09:54",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295794,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "BTH\\MS_BTHBRB\\6&34019FBB&0&1",
+			"instances" : 
+			[
+				"BTH\\MS_BTHBRB\\6&34019FBB&0&1",
+				"BTH\\MS_BTHPAN\\6&34019FBB&0&2",
+				"BTH\\MS_RFCOMM\\6&34019FBB&0&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "\u00c9num\u00e9rateur Microsoft Bluetooth",
+			"parent" : "USB\\VID_13D3&PID_3491\\5&3478949&0&8",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"UEFI\\RES_{DF0561DE-4B1E-573C-B57D-16FACE6A0503}\\0"
+			],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 112,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Syst\u00e8me compatible UEFI Microsoft",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0007",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.1",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Syst\u00e8me compatible UEFI Microsoft",
+					"hardwareId" : "acpi_hal\\uefi",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183273,
+					"infDateFormatted" : "2019-12-07 09:07:53",
+					"infFileName" : "uefi.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "468BBA25CBB1BE9053F83BAF4271F7B9D252DB6F54581A6A12BC5514EFFA5915",
+					"oemInf" : "C:\\Windows\\INF\\uefi.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711680,
+					"rejectedReason" : 0,
+					"sectionName" : "UEFI_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\uefi.inf_amd64_c1628ffa62c8e54c\\uefi.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI_HAL\\UEFI"
+			],
+			"hasProblem" : false,
+			"hash" : "468BBA25CBB1BE9053F83BAF4271F7B9D252DB6F54581A6A12BC5514EFFA5915",
+			"id" : "Microsoft-Syst\u00e8mecompatibleUEFIMicrosoft",
+			"ignored" : false,
+			"installDate" : 13392295789,
+			"installDateFormatted" : "2025-05-21 10:09:49",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295789,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI_HAL\\UEFI\\0",
+			"instances" : 
+			[
+				"ACPI_HAL\\UEFI\\0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "Syst\u00e8me compatible UEFI Microsoft",
+			"parent" : "ROOT\\ACPI_HAL\\0000",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 143,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_PNP&DEV_0100",
+				"ACPI\\PNP0100",
+				"*PNP0100"
+			],
+			"hasProblem" : false,
+			"hash" : "51CD8B9FB1093EEC85D2C9F3B592BB9A6450ABB9D6177724888A53F76AE5A5C6",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-Horlogesyst\u00e8me",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\PNP0100\\4&885A278&0",
+			"instances" : 
+			[
+				"ACPI\\PNP0100\\4&885A278&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Horloge syst\u00e8me",
+			"parent" : "PCI\\VEN_8086&DEV_9D48&SUBSYS_12601043&REV_21\\3&11583659&0&F8",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 0
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"*PNP0C02"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 132,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_INT&DEV_340E",
+				"ACPI\\INT340E",
+				"*INT340E"
+			],
+			"hasProblem" : false,
+			"hash" : "57A66988CBA3EFB2A3A86167E2A483B3C6A39FB19923DF3AD50F411F98C5FA34",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-Ressourcesdelacartem\u00e8re",
+			"ignored" : false,
+			"installDate" : 13392295789,
+			"installDateFormatted" : "2025-05-21 10:09:49",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295789,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\INT340E\\2&DABA3FF&0",
+			"instances" : 
+			[
+				"ACPI\\INT340E\\2&DABA3FF&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Ressources de la carte m\u00e8re",
+			"parent" : "ACPI_HAL\\PNP0C08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 0
+		},
+		{
+			"childrenIds" : 
+			[
+				"ACPI\\ELAN1000\\1"
+			],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D61&REV_21",
+				"PCI\\VEN_8086&DEV_9D61",
+				"PCI\\VEN_8086&CC_118000",
+				"PCI\\VEN_8086&CC_1180",
+				"PCI\\VEN_8086",
+				"PCI\\CC_118000",
+				"PCI\\CC_1180"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 2,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Contr\u00f4leur h\u00f4te I2C d\u2019E/S s\u00e9rie Intel(R) - 9D61",
+					"driverDate" : 13168569600,
+					"driverDateFormatted" : "2018-04-19 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0019",
+					"driverType" : 2,
+					"driverVersion" : "30.100.1816.3",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "Contr\u00f4leur h\u00f4te I2C d\u2019E/S s\u00e9rie Intel(R) - 9D61",
+					"hardwareId" : "pci\\ven_8086&dev_9d61",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183267,
+					"infDateFormatted" : "2019-12-07 09:07:47",
+					"infFileName" : "ialpss2i_i2c_skl.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Intel Corporation",
+					"matchingId" : "68E1872D012EE0A9DB66A5DA56DEAF15F53C80FD58DC0B88DEB7F9F8BA20C3D9",
+					"oemInf" : "C:\\Windows\\INF\\iaLPSS2i_I2C_SKL.inf",
+					"providerName" : "Intel Corporation",
+					"rank" : 16719873,
+					"rejectedReason" : 0,
+					"sectionName" : "iaLPSS2i_I2C_Device",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\ialpss2i_i2c_skl.inf_amd64_9d9dbb01837eba23\\ialpss2i_i2c_skl.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D61&SUBSYS_12601043&REV_21",
+				"PCI\\VEN_8086&DEV_9D61&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_9D61&CC_118000",
+				"PCI\\VEN_8086&DEV_9D61&CC_1180"
+			],
+			"hasProblem" : false,
+			"hash" : "68E1872D012EE0A9DB66A5DA56DEAF15F53C80FD58DC0B88DEB7F9F8BA20C3D9",
+			"id" : "IntelCorporation-Contr\u00f4leurh\u00f4teI2Cd\u2019E/Ss\u00e9rieIntel(R)-9D61",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_8086&DEV_9D61&SUBSYS_12601043&REV_21\\3&11583659&0&A9",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_9D61&SUBSYS_12601043&REV_21\\3&11583659&0&A9"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 21, function 1",
+			"manufacturer" : "Intel Corporation",
+			"name" : "Contr\u00f4leur h\u00f4te I2C d\u2019E/S s\u00e9rie Intel(R) - 9D61",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Keyboard",
+			"classGuid" : "{4D36E96B-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Keyboard",
+			"compatibleIds" : 
+			[
+				"*PNP030B"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 91,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Clavier PS/2 PC/AT \u00e9tendu (101/102 touches)",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e96b-e325-11ce-bfc1-08002be10318}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.1",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "Clavier PS/2 PC/AT \u00e9tendu (101/102 touches)",
+					"hardwareId" : "*pnp030b",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183276,
+					"infDateFormatted" : "2019-12-07 09:07:56",
+					"infFileName" : "keyboard.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(Claviers standard)",
+					"matchingId" : "6BE265E97C15B37F703F4199177E1A8363B69CDF1F4943F38D91F366EFDCBFAB",
+					"oemInf" : "C:\\Windows\\INF\\keyboard.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719872,
+					"rejectedReason" : 0,
+					"sectionName" : "STANDARD_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\keyboard.inf_amd64_5938c699b80ebb8f\\keyboard.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_ATK&DEV_3001",
+				"ACPI\\ATK3001",
+				"*ATK3001"
+			],
+			"hasProblem" : false,
+			"hash" : "6BE265E97C15B37F703F4199177E1A8363B69CDF1F4943F38D91F366EFDCBFAB",
+			"id" : "(Claviersstandard)-ClavierPS/2PC/AT\u00e9tendu(101/102touches)",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\ATK3001\\4&885A278&0",
+			"instances" : 
+			[
+				"ACPI\\ATK3001\\4&885A278&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(Claviers standard)",
+			"name" : "Clavier PS/2 PC/AT \u00e9tendu (101/102 touches)",
+			"parent" : "PCI\\VEN_8086&DEV_9D48&SUBSYS_12601043&REV_21\\3&11583659&0&F8",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D60&REV_21",
+				"PCI\\VEN_8086&DEV_9D60",
+				"PCI\\VEN_8086&CC_118000",
+				"PCI\\VEN_8086&CC_1180",
+				"PCI\\VEN_8086",
+				"PCI\\CC_118000",
+				"PCI\\CC_1180"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 8,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Contr\u00f4leur h\u00f4te I2C d\u2019E/S s\u00e9rie Intel(R) - 9D60",
+					"driverDate" : 13168569600,
+					"driverDateFormatted" : "2018-04-19 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0018",
+					"driverType" : 2,
+					"driverVersion" : "30.100.1816.3",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "Contr\u00f4leur h\u00f4te I2C d\u2019E/S s\u00e9rie Intel(R) - 9D60",
+					"hardwareId" : "pci\\ven_8086&dev_9d60",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183267,
+					"infDateFormatted" : "2019-12-07 09:07:47",
+					"infFileName" : "ialpss2i_i2c_skl.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Intel Corporation",
+					"matchingId" : "754C33579FEC5125E51FE4AE06E15575ED7FDB2FE16DDDB6F146A68F70A5E179",
+					"oemInf" : "C:\\Windows\\INF\\iaLPSS2i_I2C_SKL.inf",
+					"providerName" : "Intel Corporation",
+					"rank" : 16719873,
+					"rejectedReason" : 0,
+					"sectionName" : "iaLPSS2i_I2C_Device",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\ialpss2i_i2c_skl.inf_amd64_9d9dbb01837eba23\\ialpss2i_i2c_skl.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D60&SUBSYS_12601043&REV_21",
+				"PCI\\VEN_8086&DEV_9D60&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_9D60&CC_118000",
+				"PCI\\VEN_8086&DEV_9D60&CC_1180"
+			],
+			"hasProblem" : false,
+			"hash" : "754C33579FEC5125E51FE4AE06E15575ED7FDB2FE16DDDB6F146A68F70A5E179",
+			"id" : "IntelCorporation-Contr\u00f4leurh\u00f4teI2Cd\u2019E/Ss\u00e9rieIntel(R)-9D60",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_8086&DEV_9D60&SUBSYS_12601043&REV_21\\3&11583659&0&A8",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_9D60&SUBSYS_12601043&REV_21\\3&11583659&0&A8"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 21, function 0",
+			"manufacturer" : "Intel Corporation",
+			"name" : "Contr\u00f4leur h\u00f4te I2C d\u2019E/S s\u00e9rie Intel(R) - 9D60",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\\VWIFIMP_WFD\\5&2842835&0&11",
+				"{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\\VWIFIMP_WFD\\5&2842835&0&12"
+			],
+			"class" : "Net",
+			"classGuid" : "{4D36E972-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Connectivity",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_168C&DEV_0042&REV_31",
+				"PCI\\VEN_168C&DEV_0042",
+				"PCI\\VEN_168C&CC_028000",
+				"PCI\\VEN_168C&CC_0280",
+				"PCI\\VEN_168C",
+				"PCI\\CC_028000&DT_0",
+				"PCI\\CC_028000",
+				"PCI\\CC_0280&DT_0",
+				"PCI\\CC_0280"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 15,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Carte r\u00e9seau sans fil Qualcomm Atheros QCA9377",
+					"driverDate" : 13179369600,
+					"driverDateFormatted" : "2018-08-22 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e972-e325-11ce-bfc1-08002be10318}\\0001",
+					"driverType" : 2,
+					"driverVersion" : "12.0.0.722",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Qualcomm Atheros QCA9377 Wireless Network Adapter",
+					"hardwareId" : "pci\\ven_168c&dev_0042&subsys_22311a3b&rev_31",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183267,
+					"infDateFormatted" : "2019-12-07 09:07:47",
+					"infFileName" : "netathr10x.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Qualcomm Atheros Communications Inc.",
+					"matchingId" : "75E5815B8814804A3FC3F690A28949A1F032F532CC5825FF031671B6138B9987",
+					"oemInf" : "C:\\Windows\\INF\\netathr10x.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711680,
+					"rejectedReason" : 0,
+					"sectionName" : "ATHR_DEV_OS63_988x_AS_NFA435_TF11.ndi",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\netathr10x.inf_amd64_2691c4f95b80eb3b\\netathr10x.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_168C&DEV_0042&SUBSYS_22311A3B&REV_31",
+				"PCI\\VEN_168C&DEV_0042&SUBSYS_22311A3B",
+				"PCI\\VEN_168C&DEV_0042&CC_028000",
+				"PCI\\VEN_168C&DEV_0042&CC_0280"
+			],
+			"hasProblem" : false,
+			"hash" : "75E5815B8814804A3FC3F690A28949A1F032F532CC5825FF031671B6138B9987",
+			"id" : "QualcommAtherosCommunicationsInc.-QualcommAtherosQCA9377WirelessNetworkAdapter",
+			"ignored" : false,
+			"installDate" : 13392295808,
+			"installDateFormatted" : "2025-05-21 10:10:08",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295808,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_168C&DEV_0042&SUBSYS_22311A3B&REV_31\\4&3275E187&0&00E5",
+			"instances" : 
+			[
+				"PCI\\VEN_168C&DEV_0042&SUBSYS_22311A3B&REV_31\\4&3275E187&0&00E5"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 3, device 0, function 0",
+			"manufacturer" : "Qualcomm Atheros Communications Inc.",
+			"name" : "Qualcomm Atheros QCA9377 Wireless Network Adapter",
+			"parent" : "PCI\\VEN_8086&DEV_9D15&SUBSYS_12601043&REV_F1\\3&11583659&0&E5",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 65,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_PNP&DEV_0103",
+				"ACPI\\PNP0103",
+				"*PNP0103"
+			],
+			"hasProblem" : false,
+			"hash" : "86F00D70838FAE147FECBB23A92DCECA402B9A32D6A0A3B52D28C8481B5C8EF7",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-Compteurd'\u00e9v\u00e9nementdehautepr\u00e9cision",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\PNP0103\\0",
+			"instances" : 
+			[
+				"ACPI\\PNP0103\\0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Compteur d'\u00e9v\u00e9nement de haute pr\u00e9cision",
+			"parent" : "PCI\\VEN_8086&DEV_9D48&SUBSYS_12601043&REV_21\\3&11583659&0&F8",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 0
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Battery",
+			"classGuid" : "{72631E54-78A4-11D0-BCF7-00AA00B7B32A}",
+			"classIconName" : "Battery",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 85,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Adaptateur secteur Microsoft",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{72631e54-78a4-11d0-bcf7-00aa00b7b32a}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.1",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Adaptateur secteur Microsoft",
+					"hardwareId" : "acpi\\acpi0003",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183274,
+					"infDateFormatted" : "2019-12-07 09:07:54",
+					"infFileName" : "cmbatt.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "8B333CE54941ED43490E731BB730B08B2B89BCE4114A38CCA32F98CAC3DB7CCC",
+					"oemInf" : "C:\\Windows\\INF\\cmbatt.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711681,
+					"rejectedReason" : 0,
+					"sectionName" : "AcAdapter_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\cmbatt.inf_amd64_554d46f6008bc631\\cmbatt.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_ACPI&DEV_0003",
+				"ACPI\\ACPI0003",
+				"*ACPI0003"
+			],
+			"hasProblem" : false,
+			"hash" : "8B333CE54941ED43490E731BB730B08B2B89BCE4114A38CCA32F98CAC3DB7CCC",
+			"id" : "Microsoft-AdaptateursecteurMicrosoft",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\ACPI0003\\3&11583659&0",
+			"instances" : 
+			[
+				"ACPI\\ACPI0003\\3&11583659&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "Adaptateur secteur Microsoft",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"HID\\ELAN1000&COL01\\5&16D04072&0&0000",
+				"HID\\ELAN1000&COL02\\5&16D04072&0&0001"
+			],
+			"class" : "HIDClass",
+			"classGuid" : "{745A17A0-74D3-11D0-B6FE-00A0C90F57DA}",
+			"classIconName" : "USB",
+			"compatibleIds" : 
+			[
+				"ACPI\\PNP0C50",
+				"PNP0C50"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 134,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "P\u00e9riph\u00e9rique I2C HID",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{745a17a0-74d3-11d0-b6fe-00a0c90f57da}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.1",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "P\u00e9riph\u00e9rique I2C HID",
+					"hardwareId" : "acpi\\pnp0c50",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13220183276,
+					"infDateFormatted" : "2019-12-07 09:07:56",
+					"infFileName" : "hidi2c.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "8E9BBEB3D327BD8CAF2CBF4DB622C03A7A2B0EFC8820F4D29BD7B1B1F9A9F56D",
+					"oemInf" : "C:\\Windows\\INF\\hidi2c.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719872,
+					"rejectedReason" : 0,
+					"sectionName" : "hidi2c_Device",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\hidi2c.inf_amd64_aad0f43cb9f97e75\\hidi2c.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_ELAN&DEV_1000",
+				"ACPI\\ELAN1000",
+				"*ELAN1000"
+			],
+			"hasProblem" : false,
+			"hash" : "8E9BBEB3D327BD8CAF2CBF4DB622C03A7A2B0EFC8820F4D29BD7B1B1F9A9F56D",
+			"id" : "Microsoft-P\u00e9riph\u00e9riqueI2CHID",
+			"ignored" : false,
+			"installDate" : 13392295808,
+			"installDateFormatted" : "2025-05-21 10:10:08",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295808,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\ELAN1000\\1",
+			"instances" : 
+			[
+				"ACPI\\ELAN1000\\1"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "P\u00e9riph\u00e9rique I2C HID",
+			"parent" : "PCI\\VEN_8086&DEV_9D61&SUBSYS_12601043&REV_21\\3&11583659&0&A9",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"BTH\\MS_RFCOMM\\6&34019FBB&0&0",
+				"BTH\\MS_BTHBRB\\6&34019FBB&0&1",
+				"BTH\\MS_BTHPAN\\6&34019FBB&0&2",
+				"BTH\\MS_BTHLE\\6&34019FBB&0&3"
+			],
+			"class" : "Bluetooth",
+			"classGuid" : "{E0CBF06C-CD8B-4647-BB8A-263B43F0F974}",
+			"classIconName" : "Bluetooth",
+			"compatibleIds" : 
+			[
+				"USB\\Class_E0&SubClass_01&Prot_01",
+				"USB\\Class_E0&SubClass_01",
+				"USB\\Class_E0"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 89,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Qualcomm Atheros Bluetooth 4.1",
+					"driverDate" : 13134614400,
+					"driverDateFormatted" : "2017-03-22 00:00:00",
+					"driverFiles" : 
+					[
+						"C:\\Windows\\system32\\DRIVERS\\btfilter.sys",
+						"C:\\Windows\\system32\\DRIVERS\\BTHUSB.SYS",
+						"C:\\Windows\\system32\\DRIVERS\\bthport.sys"
+					],
+					"driverKey" : "{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.0.303",
+					"fix" : false,
+					"flags" : 270404,
+					"friendlyName" : "Qualcomm Atheros Bluetooth 4.1",
+					"hardwareId" : "usb\\vid_13d3&pid_3491",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : false,
+					"infDate" : 13392296455,
+					"infDateFormatted" : "2025-05-21 10:20:55",
+					"infFileName" : "btfilter.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Qualcomm Atheros Communications",
+					"matchingId" : "97AF31EF171AE366201A4EBE0554F68EEBB336BF00E0D12C8ECF132FDE8CB1D8",
+					"oemInf" : "C:\\Windows\\INF\\oem3.inf",
+					"providerName" : "Qualcomm Atheros Communications",
+					"rank" : 16711681,
+					"rejectedReason" : 0,
+					"sectionName" : "QCABTUSB",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\btfilter.inf_amd64_8a91208b0cedca83\\btfilter.inf",
+					"vulnerable" : false
+				},
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Generic Bluetooth Adapter",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5848",
+					"fix" : false,
+					"flags" : 1056832,
+					"friendlyName" : "Qualcomm Atheros Bluetooth 4.1",
+					"hardwareId" : "usb\\class_e0&subclass_01&prot_01",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "bth.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "GenericAdapter",
+					"matchingId" : "97AF31EF171AE366201A4EBE0554F68EEBB336BF00E0D12C8ECF132FDE8CB1D8",
+					"oemInf" : "C:\\Windows\\INF\\bth.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719872,
+					"rejectedReason" : 0,
+					"sectionName" : "BthUsbGeneric",
+					"selectionOrder" : 1,
+					"state" : 1,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\bth.inf_amd64_4bae36cc9672513d\\bth.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"USB\\VID_13D3&PID_3491&REV_0001",
+				"USB\\VID_13D3&PID_3491"
+			],
+			"hasProblem" : false,
+			"hash" : "97AF31EF171AE366201A4EBE0554F68EEBB336BF00E0D12C8ECF132FDE8CB1D8",
+			"id" : "QualcommAtherosCommunications-QualcommAtherosBluetooth4.1",
+			"ignored" : false,
+			"installDate" : 13392296457,
+			"installDateFormatted" : "2025-05-21 10:20:57",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392296457,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "USB\\VID_13D3&PID_3491\\5&3478949&0&8",
+			"instances" : 
+			[
+				"USB\\VID_13D3&PID_3491\\5&3478949&0&8"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "Port_#0008.Hub_#0001",
+			"manufacturer" : "Qualcomm Atheros Communications",
+			"name" : "Qualcomm Atheros Bluetooth 4.1",
+			"parent" : "USB\\ROOT_HUB30\\4&152DA58&0&0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"USB\\ROOT_HUB30\\4&152DA58&0&0"
+			],
+			"class" : "USB",
+			"classGuid" : "{36FC9E60-C465-11CF-8056-444553540000}",
+			"classIconName" : "USB",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D2F&REV_21",
+				"PCI\\VEN_8086&DEV_9D2F",
+				"PCI\\VEN_8086&CC_0C0330",
+				"PCI\\VEN_8086&CC_0C03",
+				"PCI\\VEN_8086",
+				"PCI\\CC_0C0330",
+				"PCI\\CC_0C03"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 7,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Contr\u00f4leur d\u2019h\u00f4te compatible xHCI USB",
+					"driverDate" : 13388457600,
+					"driverDateFormatted" : "2025-04-07 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{36fc9e60-c465-11cf-8056-444553540000}\\0000",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5794",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Intel(R) USB 3.0 eXtensible Host Controller - 1.0 (Microsoft)",
+					"hardwareId" : "pci\\cc_0c0330",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296226,
+					"infDateFormatted" : "2025-06-13 13:50:26",
+					"infFileName" : "usbxhci.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Contr\u00f4leur d\u2019h\u00f4te xHCI USB g\u00e9n\u00e9rique",
+					"matchingId" : "9CF89F2F9BE63E6D09D5D453C76FC4FB06B06A8283380D964FB0E16CFA6BF14B",
+					"oemInf" : "C:\\Windows\\INF\\usbxhci.inf",
+					"providerName" : "Microsoft",
+					"rank" : 8396805,
+					"rejectedReason" : 0,
+					"sectionName" : "Generic.Install",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\usbxhci.inf_amd64_5f916d3d8fd4e259\\usbxhci.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D2F&SUBSYS_201F1043&REV_21",
+				"PCI\\VEN_8086&DEV_9D2F&SUBSYS_201F1043",
+				"PCI\\VEN_8086&DEV_9D2F&CC_0C0330",
+				"PCI\\VEN_8086&DEV_9D2F&CC_0C03"
+			],
+			"hasProblem" : false,
+			"hash" : "9CF89F2F9BE63E6D09D5D453C76FC4FB06B06A8283380D964FB0E16CFA6BF14B",
+			"id" : "Contr\u00f4leurd\u2019h\u00f4texHCIUSBg\u00e9n\u00e9rique-Intel(R)USB3.0eXtensibleHostController-1.0(Microsoft)",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_8086&DEV_9D2F&SUBSYS_201F1043&REV_21\\3&11583659&0&A0",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_9D2F&SUBSYS_201F1043&REV_21\\3&11583659&0&A0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 20, function 0",
+			"manufacturer" : "Contr\u00f4leur d\u2019h\u00f4te xHCI USB g\u00e9n\u00e9rique",
+			"name" : "Intel(R) USB 3.0 eXtensible Host Controller - 1.0 (Microsoft)",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Bluetooth",
+			"classGuid" : "{E0CBF06C-CD8B-4647-BB8A-263B43F0F974}",
+			"classIconName" : "Bluetooth",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 126,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "\u00c9num\u00e9rateur Microsoft Bluetooth LE",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}\\0002",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.3636",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "\u00c9num\u00e9rateur Microsoft Bluetooth LE",
+					"hardwareId" : "bth\\ms_bthle",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296226,
+					"infDateFormatted" : "2025-06-13 13:50:26",
+					"infFileName" : "bthleenum.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "A102F73A5C3A95402FC2FD21B34F40D63AD64CE7EBA950B18DA626E45D0B58BF",
+					"oemInf" : "C:\\Windows\\INF\\bthleenum.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711680,
+					"rejectedReason" : 0,
+					"sectionName" : "BthLEEnum",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\bthleenum.inf_amd64_537421752c2d18ef\\bthleenum.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"BTH\\MS_BTHLE"
+			],
+			"hasProblem" : false,
+			"hash" : "A102F73A5C3A95402FC2FD21B34F40D63AD64CE7EBA950B18DA626E45D0B58BF",
+			"id" : "Microsoft-\u00c9num\u00e9rateurMicrosoftBluetoothLE",
+			"ignored" : false,
+			"installDate" : 13392295794,
+			"installDateFormatted" : "2025-05-21 10:09:54",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295794,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "BTH\\MS_BTHLE\\6&34019FBB&0&3",
+			"instances" : 
+			[
+				"BTH\\MS_BTHLE\\6&34019FBB&0&3"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "\u00c9num\u00e9rateur Microsoft Bluetooth LE",
+			"parent" : "USB\\VID_13D3&PID_3491\\5&3478949&0&8",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"HID\\VID_17EF&PID_6019\\6&2E4B5A84&0&0000"
+			],
+			"class" : "HIDClass",
+			"classGuid" : "{745A17A0-74D3-11D0-B6FE-00A0C90F57DA}",
+			"classIconName" : "USB",
+			"compatibleIds" : 
+			[
+				"USB\\Class_03&SubClass_01&Prot_02",
+				"USB\\Class_03&SubClass_01",
+				"USB\\Class_03"
+			],
+			"connected" : true,
+			"containerId" : "{5E48D9FE-464B-11F0-9588-74C63BFCD830}",
+			"devType" : 34,
+			"deviceInst" : 108,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "P\u00e9riph\u00e9rique d\u2019entr\u00e9e USB",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{745a17a0-74d3-11d0-b6fe-00a0c90f57da}\\0008",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.3636",
+					"fix" : false,
+					"flags" : 3416132,
+					"friendlyName" : "P\u00e9riph\u00e9rique d\u2019entr\u00e9e USB",
+					"hardwareId" : "generic_hid_device",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296226,
+					"infDateFormatted" : "2025-06-13 13:50:26",
+					"infFileName" : "input.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+					"matchingId" : "A3702C79CB9CB4C6F3E3EE9F2C06D6B51D6D48D4D4D624AFC1CEA42DECE3F00A",
+					"oemInf" : "C:\\Windows\\INF\\input.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16724225,
+					"rejectedReason" : 0,
+					"sectionName" : "HID_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\input.inf_amd64_71e43a6eaa912e56\\input.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"USB\\VID_17EF&PID_6019&REV_6300",
+				"USB\\VID_17EF&PID_6019"
+			],
+			"hasProblem" : false,
+			"hash" : "A3702C79CB9CB4C6F3E3EE9F2C06D6B51D6D48D4D4D624AFC1CEA42DECE3F00A",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-P\u00e9riph\u00e9riqued\u2019entr\u00e9eUSB",
+			"ignored" : false,
+			"installDate" : 13394297393,
+			"installDateFormatted" : "2025-06-13 14:09:53",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13394297393,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "USB\\VID_17EF&PID_6019\\5&3478949&0&1",
+			"instances" : 
+			[
+				"USB\\VID_17EF&PID_6019\\5&3478949&0&1"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "Port_#0001.Hub_#0001",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "P\u00e9riph\u00e9rique d\u2019entr\u00e9e USB",
+			"parent" : "USB\\ROOT_HUB30\\4&152DA58&0&0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 118,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_PNP&DEV_0000",
+				"ACPI\\PNP0000",
+				"*PNP0000"
+			],
+			"hasProblem" : false,
+			"hash" : "A5A8700D171B6F9DD8B7597C92D55D351B55F8AC9529A2279639DD129EADD4E4",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-Contr\u00f4leurd'interruptionsprogrammable",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\PNP0000\\4&885A278&0",
+			"instances" : 
+			[
+				"ACPI\\PNP0000\\4&885A278&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Contr\u00f4leur d'interruptions programmable",
+			"parent" : "PCI\\VEN_8086&DEV_9D48&SUBSYS_12601043&REV_21\\3&11583659&0&F8",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 0
+		},
+		{
+			"childrenIds" : [],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"*PNP0D80"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 121,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Plug-in du moteur d\u2019alimentation Intel(R)",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0010",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5794",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "Plug-in du moteur d\u2019alimentation Intel(R)",
+					"hardwareId" : "acpi\\int33a1",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296224,
+					"infDateFormatted" : "2025-06-13 13:50:24",
+					"infFileName" : "intelpep.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Intel Corporation",
+					"matchingId" : "A9121046FCCDD2746739A253F01F32708CA7CAB692CE523826D4F8E01EABD6C7",
+					"oemInf" : "C:\\Windows\\INF\\intelpep.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711681,
+					"rejectedReason" : 0,
+					"sectionName" : "HSWULT",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\intelpep.inf_amd64_a4f1e99d9c4ad9d6\\intelpep.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_INT&DEV_33A1",
+				"ACPI\\INT33A1",
+				"*INT33A1"
+			],
+			"hasProblem" : false,
+			"hash" : "A9121046FCCDD2746739A253F01F32708CA7CAB692CE523826D4F8E01EABD6C7",
+			"id" : "IntelCorporation-Plug-indumoteurd\u2019alimentationIntel(R)",
+			"ignored" : false,
+			"installDate" : 13392295789,
+			"installDateFormatted" : "2025-05-21 10:09:49",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295789,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI\\INT33A1\\1",
+			"instances" : 
+			[
+				"ACPI\\INT33A1\\1"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Intel Corporation",
+			"name" : "Plug-in du moteur d\u2019alimentation Intel(R)",
+			"parent" : "ACPI_HAL\\PNP0C08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 0
+		},
+		{
+			"childrenIds" : [],
+			"class" : "",
+			"classGuid" : "",
+			"classIconName" : "",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 44,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI\\VEN_INT&DEV_3400",
+				"ACPI\\INT3400",
+				"*INT3400"
+			],
+			"hasProblem" : true,
+			"hash" : "B0A56F7ADA30A86769D8DC91B91CD0E937285CBDED27504FEC5B4366A0A7495E",
+			"id" : "Unknowndevice",
+			"ignored" : false,
+			"installDate" : 13392295794,
+			"installDateFormatted" : "2025-05-21 10:09:54",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295794,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000002",
+			"instancePath" : "ACPI\\INT3400\\2&DABA3FF&0",
+			"instances" : 
+			[
+				"ACPI\\INT3400\\2&DABA3FF&0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "",
+			"name" : "Unknown device",
+			"parent" : "ACPI_HAL\\PNP0C08\\0",
+			"problemCode" : 28,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Monitor",
+			"classGuid" : "{4D36E96E-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "Monitor",
+			"compatibleIds" : 
+			[
+				"*PNP09FF"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 124,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Moniteur Plug-and-Play g\u00e9n\u00e9rique",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e96e-e325-11ce-bfc1-08002be10318}\\0002",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5794",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "Moniteur Plug-and-Play g\u00e9n\u00e9rique",
+					"hardwareId" : "*pnp09ff",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296224,
+					"infDateFormatted" : "2025-06-13 13:50:24",
+					"infFileName" : "monitor.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(Types d\u2019\u00e9crans standard)",
+					"matchingId" : "B0CE5DD7467EC0E4B24F77BDED092463EDDE9AC4234CFC380C1BB19BA9707096",
+					"oemInf" : "C:\\Windows\\INF\\monitor.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719872,
+					"rejectedReason" : 0,
+					"sectionName" : "PnPMonitor.Install",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\monitor.inf_amd64_619fca89b0812a99\\monitor.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"MONITOR\\CMN1734"
+			],
+			"hasProblem" : false,
+			"hash" : "B0CE5DD7467EC0E4B24F77BDED092463EDDE9AC4234CFC380C1BB19BA9707096",
+			"id" : "(Typesd\u2019\u00e9cransstandard)-MoniteurPlug-and-Playg\u00e9n\u00e9rique",
+			"ignored" : false,
+			"installDate" : 13392296957,
+			"installDateFormatted" : "2025-05-21 10:29:17",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392296957,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "DISPLAY\\CMN1734\\4&2DDC66FD&0&UID265988",
+			"instances" : 
+			[
+				"DISPLAY\\CMN1734\\4&2DDC66FD&0&UID265988"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "(Types d\u2019\u00e9crans standard)",
+			"name" : "Moniteur Plug-and-Play g\u00e9n\u00e9rique",
+			"parent" : "PCI\\VEN_8086&DEV_1916&SUBSYS_12601043&REV_07\\3&11583659&0&10",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"ACPI\\PNP0A08\\0",
+				"ACPI\\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_78_-_INTEL(R)_CORE(TM)_I5-6200U_CPU_@_2.30GHZ\\_1",
+				"ACPI\\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_78_-_INTEL(R)_CORE(TM)_I5-6200U_CPU_@_2.30GHZ\\_2",
+				"ACPI\\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_78_-_INTEL(R)_CORE(TM)_I5-6200U_CPU_@_2.30GHZ\\_3",
+				"ACPI\\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_78_-_INTEL(R)_CORE(TM)_I5-6200U_CPU_@_2.30GHZ\\_4",
+				"ACPI\\ACPI000C\\2&DABA3FF&0",
+				"ACPI\\INT33A1\\1",
+				"ACPI\\MSFT0101\\2&DABA3FF&0",
+				"ACPI\\PNP0C14\\ATK",
+				"ACPI\\ATK4002\\2&DABA3FF&0",
+				"ACPI\\INT340E\\2&DABA3FF&0",
+				"ACPI\\THERMALZONE\\THRM",
+				"ACPI\\PNP0C0D\\2&DABA3FF&0",
+				"ACPI\\PNP0C0E\\2&DABA3FF&0",
+				"ACPI\\INT3400\\2&DABA3FF&0",
+				"ACPI\\FIXEDBUTTON\\2&DABA3FF&0"
+			],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : [],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 105,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Syst\u00e8me compatible ACPI Microsoft",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0006",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5915",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Syst\u00e8me compatible ACPI Microsoft",
+					"hardwareId" : "*pnp0c08",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "acpi.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "B171FF22300A2140F5C6045A3AE43411A29659DC070223C96516B542BF8E9F0A",
+					"oemInf" : "C:\\Windows\\INF\\acpi.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16711681,
+					"rejectedReason" : 0,
+					"sectionName" : "ACPI_Inst",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\acpi.inf_amd64_97c3d1202d1bd78a\\acpi.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"ACPI_HAL\\PNP0C08",
+				"*PNP0C08"
+			],
+			"hasProblem" : false,
+			"hash" : "B171FF22300A2140F5C6045A3AE43411A29659DC070223C96516B542BF8E9F0A",
+			"id" : "Microsoft-Syst\u00e8mecompatibleACPIMicrosoft",
+			"ignored" : false,
+			"installDate" : 13392295789,
+			"installDateFormatted" : "2025-05-21 10:09:49",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295789,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "ACPI_HAL\\PNP0C08\\0",
+			"instances" : 
+			[
+				"ACPI_HAL\\PNP0C08\\0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "Syst\u00e8me compatible ACPI Microsoft",
+			"parent" : "ROOT\\ACPI_HAL\\0000",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "",
+			"classGuid" : "",
+			"classIconName" : "",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D31&REV_21",
+				"PCI\\VEN_8086&DEV_9D31",
+				"PCI\\VEN_8086&CC_118000",
+				"PCI\\VEN_8086&CC_1180",
+				"PCI\\VEN_8086",
+				"PCI\\CC_118000",
+				"PCI\\CC_1180"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 16,
+			"driversList" : [],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D31&SUBSYS_12601043&REV_21",
+				"PCI\\VEN_8086&DEV_9D31&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_9D31&CC_118000",
+				"PCI\\VEN_8086&DEV_9D31&CC_1180"
+			],
+			"hasProblem" : true,
+			"hash" : "B3657E1541FCB851CB742A66AB206A3484BEE775163636E215E1682432C319A3",
+			"id" : "PCIDataAcquisitionandSignalProcessingController",
+			"ignored" : false,
+			"installDate" : 13392295794,
+			"installDateFormatted" : "2025-05-21 10:09:54",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295794,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000002",
+			"instancePath" : "PCI\\VEN_8086&DEV_9D31&SUBSYS_12601043&REV_21\\3&11583659&0&A2",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_9D31&SUBSYS_12601043&REV_21\\3&11583659&0&A2"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 20, function 2",
+			"manufacturer" : "",
+			"name" : "PCI Data Acquisition and Signal Processing Controller",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 28,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : 
+			[
+				"PCI\\VEN_10DE&DEV_139B&SUBSYS_12601043&REV_A2\\4&2721B0D4&0&00E0"
+			],
+			"class" : "System",
+			"classGuid" : "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+			"classIconName" : "System",
+			"compatibleIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D10&REV_F1",
+				"PCI\\VEN_8086&DEV_9D10",
+				"PCI\\VEN_8086&CC_060400",
+				"PCI\\VEN_8086&CC_0604",
+				"PCI\\VEN_8086",
+				"PCI\\CC_060400&DT_4",
+				"PCI\\CC_060400",
+				"PCI\\CC_0604&DT_4",
+				"PCI\\CC_0604"
+			],
+			"connected" : true,
+			"containerId" : "{00000000-0000-0000-FFFF-FFFFFFFFFFFF}",
+			"devType" : 34,
+			"deviceInst" : 19,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Port racine PCI Express",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{4d36e97d-e325-11ce-bfc1-08002be10318}\\0020",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5607",
+					"fix" : false,
+					"flags" : 1318980,
+					"friendlyName" : "Port racine PCI Express",
+					"hardwareId" : "pci\\cc_0604&dt_4",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "pci.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+					"matchingId" : "B62687EC621C15D550476209A858A95778533A1A52DF0BF7D857D0D25F80CA63",
+					"oemInf" : "C:\\Windows\\INF\\pci.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719879,
+					"rejectedReason" : 0,
+					"sectionName" : "PCI_BRIDGE",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\pci.inf_amd64_fa7515b440352bbb\\pci.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"PCI\\VEN_8086&DEV_9D10&SUBSYS_12601043&REV_F1",
+				"PCI\\VEN_8086&DEV_9D10&SUBSYS_12601043",
+				"PCI\\VEN_8086&DEV_9D10&CC_060400",
+				"PCI\\VEN_8086&DEV_9D10&CC_0604"
+			],
+			"hasProblem" : false,
+			"hash" : "B62687EC621C15D550476209A858A95778533A1A52DF0BF7D857D0D25F80CA63",
+			"id" : "(P\u00e9riph\u00e9riquessyst\u00e8mestandard)-PortracinePCIExpress",
+			"ignored" : false,
+			"installDate" : 13392295790,
+			"installDateFormatted" : "2025-05-21 10:09:50",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13392295790,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "PCI\\VEN_8086&DEV_9D10&SUBSYS_12601043&REV_F1\\3&11583659&0&E0",
+			"instances" : 
+			[
+				"PCI\\VEN_8086&DEV_9D10&SUBSYS_12601043&REV_F1\\3&11583659&0&E0"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "PCI bus 0, device 28, function 0",
+			"manufacturer" : "(P\u00e9riph\u00e9riques syst\u00e8me standard)",
+			"name" : "Port racine PCI Express",
+			"parent" : "ACPI\\PNP0A08\\0",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		},
+		{
+			"childrenIds" : [],
+			"class" : "Bluetooth",
+			"classGuid" : "{E0CBF06C-CD8B-4647-BB8A-263B43F0F974}",
+			"classIconName" : "Bluetooth",
+			"compatibleIds" : 
+			[
+				"BTHENUM\\{00001000-0000-1000-8000-00805f9b34fb}",
+				"BTHENUM\\{00001000-0000-1000-8000-00805f9b34fb}_GENERIC"
+			],
+			"connected" : true,
+			"containerId" : "{C8BDE295-AF1B-593A-ABF3-E6CAAB8E804C}",
+			"devType" : 34,
+			"deviceInst" : 98,
+			"driversList" : 
+			[
+				{
+					"crashCounter" : 0,
+					"cveIdentifiers" : [],
+					"description" : "Service de d\u00e9couverte de service",
+					"driverDate" : 12795321600,
+					"driverDateFormatted" : "2006-06-21 00:00:00",
+					"driverFiles" : [],
+					"driverKey" : "{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}\\0005",
+					"driverType" : 2,
+					"driverVersion" : "10.0.19041.5848",
+					"fix" : false,
+					"flags" : 1318976,
+					"friendlyName" : "Service de d\u00e9couverte de service",
+					"hardwareId" : "bthenum\\{00001000-0000-1000-8000-00805f9b34fb}",
+					"hasProblem" : false,
+					"hidden" : false,
+					"ignored" : false,
+					"inbox" : true,
+					"infDate" : 13394296225,
+					"infDateFormatted" : "2025-06-13 13:50:25",
+					"infFileName" : "bth.inf",
+					"isDchDriver" : false,
+					"manufacturer" : "Microsoft",
+					"matchingId" : "B6E9899BC2A259BDC73FE21E89DFCD087576422D261DB0FA38F4732A46E02E1B",
+					"oemInf" : "C:\\Windows\\INF\\bth.inf",
+					"providerName" : "Microsoft",
+					"rank" : 16719872,
+					"rejectedReason" : 0,
+					"sectionName" : "BthDefaultService",
+					"selectionOrder" : 0,
+					"state" : 0,
+					"storeInf" : "C:\\Windows\\System32\\DriverStore\\FileRepository\\bth.inf_amd64_4bae36cc9672513d\\bth.inf",
+					"vulnerable" : false
+				}
+			],
+			"functionalData" : 
+			{
+				"audioChildNumber" : 0,
+				"audioEndpointNumber" : 0,
+				"childNumber" : 0,
+				"childProblems" : 0,
+				"hasPotentialProblem" : false,
+				"hasProblem" : false,
+				"potentialProblemCode" : 0,
+				"problemCode" : 0,
+				"siblingNumber" : 0,
+				"siblingProblems" : 0
+			},
+			"hardwareIds" : 
+			[
+				"BTHENUM\\{00001000-0000-1000-8000-00805f9b34fb}_VID&00020a5c_PID&4503",
+				"BTHENUM\\{00001000-0000-1000-8000-00805f9b34fb}_LOCALMFG&001d"
+			],
+			"hasProblem" : false,
+			"hash" : "B6E9899BC2A259BDC73FE21E89DFCD087576422D261DB0FA38F4732A46E02E1B",
+			"id" : "Microsoft-Serviceded\u00e9couvertedeservice",
+			"ignored" : false,
+			"installDate" : 13394042249,
+			"installDateFormatted" : "2025-06-10 15:17:29",
+			"installOperationData" : 
+			{
+				"actionPerformed" : 0,
+				"driverId" : "",
+				"driverType" : 0,
+				"error" : 0,
+				"installDate" : 13394042249,
+				"installDuration" : 0,
+				"installationFinished" : 0,
+				"pendingVerification" : false,
+				"prevDriverId" : "",
+				"requiredReboot" : false
+			},
+			"installState" : "0X00000000",
+			"instancePath" : "BTHENUM\\{00001000-0000-1000-8000-00805F9B34FB}_VID&00020A5C_PID&4503\\7&32368669&0&DC2C26AFCD86_C00000000",
+			"instances" : 
+			[
+				"BTHENUM\\{00001000-0000-1000-8000-00805F9B34FB}_VID&00020A5C_PID&4503\\7&32368669&0&DC2C26AFCD86_C00000000"
+			],
+			"lastTimeConnected" : 1750843142,
+			"lastTimeConnectedFormatted" : "2025-06-25 09:19:02",
+			"location" : "",
+			"manufacturer" : "Microsoft",
+			"name" : "Service de d\u00e9couverte de service",
+			"parent" : "BTH\\MS_BTHBRB\\6&34019FBB&0&1",
+			"problemCode" : 0,
+			"state" : 1,
+			"type" : 2
+		}
+	],
+	"IgnoreList" : [],
+	"OpenTasks" : [],
+	"Status" : 
+	{
+		"crashingDrivers" : 0,
+		"foundDevices" : 37,
+		"hasProblemDevices" : 4,
+		"lastDeviceScan" : 0,
+		"lastRevert" : 0,
+		"lastScan" : 0,
+		"lastUpdate" : 0,
+		"outdatedDrivers" : 0,
+		"rebootRequired" : false,
+		"version" : "24.4.5778.0",
+		"vulnerableDrivers" : 0
+	},
+	"audioEndpoints" : 
+	{
+		"current" : 
+		[
+			{
+				"default" : true,
+				"flow" : 0,
+				"id" : "{0.0.0.00000000}.{C7E50729-A147-4E65-BC26-A8063146FB56}",
+				"name" : "Haut-parleurs (Conexant SmartAudio HD)",
+				"role" : 2,
+				"state" : 1
+			},
+			{
+				"default" : true,
+				"flow" : 1,
+				"id" : "{0.0.1.00000000}.{FE37A803-A5BF-4709-896B-4BBFB690F2A8}",
+				"name" : "Microphone (Conexant SmartAudio HD)",
+				"role" : 2,
+				"state" : 1
+			}
+		]
+	},
+	"computerInfo" : 
+	{
+		"baseboard_manufacturer" : "ASUSTeK COMPUTER INC.",
+		"baseboard_product" : "X756UW",
+		"baseboard_version" : "1.0       ",
+		"bios_manufacturer" : "American Megatrends Inc.",
+		"bios_name" : "X756UW.304",
+		"bios_smbios_version" : "X756UW.304",
+		"bios_version" : "_ASUS_ - 1072009",
+		"model" : "X756UW",
+		"system_family" : "X",
+		"system_sku" : "ASUS-NotebookSKU",
+		"type" : "laptop",
+		"vendor" : "ASUSTeK COMPUTER INC."
+	},
+	"hasProblemList" : []
+}

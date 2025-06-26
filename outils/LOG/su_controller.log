@@ -1,0 +1,6 @@
+﻿[2025-06-25 09:18:55.009] [info   ] [sw_updater ] [ 9616:10728] [98DA86:  96] asw::su_controller::detail::SUControllerModule::OnScanStateUpdated
+[2025-06-25 09:18:55.025] [info   ] [sw_updater ] [ 9616:10728] [98DA86:  96] asw::su_controller::detail::SUControllerModule::OnDetectionsUpdated
+[2025-06-25 09:18:55.025] [info   ] [sw_updater ] [ 9616:10728] [98DA86: 105] asw::su_controller::detail::SUControllerModule::StartScan:S-1-5-21-3716413623-1852897319-3438831038-1001,Nothing,Manual,,nullopt
+[2025-06-25 09:19:02.505] [info   ] [sw_updater ] [ 9616: 2344] [98DA86: 105] asw::su_controller::detail::SUControllerModule::GetDetections:S-1-5-21-3716413623-1852897319-3438831038-1001
+[2025-06-25 09:19:02.567] [info   ] [sw_updater ] [ 9616: 8152] [1C62F9:  48] Cleaning up data directory: C:\Users\UTILISATEUR\Desktop\Xorno\outils\Data\su_data
+[2025-06-25 09:19:02.567] [info   ] [sw_updater ] [ 9616: 8152] [1C62F9:  62] Data directory successfully cleaned
