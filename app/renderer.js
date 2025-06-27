@@ -129,126 +129,134 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  const bloatwareList = [
-    'Microsoft.3DViewer','Microsoft.3DBuilder','Microsoft.GetHelp','Microsoft.Getstarted',
-    'Microsoft.MicrosoftSolitaireCollection','Microsoft.People','Microsoft.SkypeApp',
-    'Microsoft.MicrosoftOfficeHub','Microsoft.WindowsMaps','Microsoft.ZuneMusic',
-    'Microsoft.ZuneVideo','Microsoft.BingWeather','Microsoft.BingNews',
-    'Microsoft.BingFinance','Microsoft.BingSports','Microsoft.WindowsFeedbackHub',
-    'Microsoft.MicrosoftStickyNotes','Microsoft.XboxApp','Microsoft.YourPhone'
-  ]
-  document.getElementById('bloatware-list').innerHTML = bloatwareList
-    .map(id => `<label><input type="checkbox" name="bloat" value="${id}" checked> ${id.replace('Microsoft.','')}</label>`)
-    .join('')
+  const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a']
+  let konamiPosition = 0
+  window.addEventListener('keydown', e => {
+    if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return
+    if (e.key === konamiCode[konamiPosition]) {
+      konamiPosition++
+      if (konamiPosition === konamiCode.length) {
+        konamiPosition = 0
+        activateSnakeMode()
+      }
+    } else konamiPosition = 0
+  })
 
-  function runBloatwareRemoval(logDiv) {
-    return new Promise(resolve => {
-      const script = path.join(__dirname, '..', 'scripts', 'remove-bloatwares.ps1')
-      const p = spawn('powershell.exe', ['-ExecutionPolicy', 'Bypass', '-File', script], { shell: true })
-      p.stdout.on('data', d => logDiv.innerHTML += `<div>${d.toString().trim()}</div>`)
-      p.stderr.on('data', d => logDiv.innerHTML += `<div>Erreur : ${d.toString().trim()}</div>`)
-      p.on('close', () => { logDiv.innerHTML += `<div>✅ Désinstallation terminée.</div>`; resolve() })
+  function activateSnakeMode() {
+    if (document.getElementById('snake-tab-button')) return
+    const newButton = document.createElement('button')
+    newButton.className = 'tab-button'
+    newButton.id = 'snake-tab-button'
+    newButton.dataset.tab = 'snake-tab'
+    newButton.innerHTML = `<span class="icon"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M3 10a7 7 0 017-7h2a3 3 0 110 6h-2a1 1 0 100 2h2a3 3 0 110 6h-2a7 7 0 01-7-7z"/></svg></span> Snake`
+    document.getElementById('tabs-content').appendChild(newButton)
+
+    const snakeTab = document.createElement('div')
+    snakeTab.id = 'snake-tab'
+    snakeTab.className = 'tab'
+    snakeTab.innerHTML = `
+      <h1>Snake Secret</h1>
+      <div id="score-container" style="margin-bottom:10px;color:#88aaff;font-size:1rem;">
+        Score: <span id="current-score">0</span> – Meilleur: <span id="best-score">0</span>
+      </div>
+      <canvas id="snake-canvas" width="400" height="400" style="background:#1f1f1f;border:2px solid #587fff;"></canvas>
+      <p style="color:#aaa;font-size:0.9rem;margin-top:10px;">Utilisez les flèches pour jouer. ESC pour quitter.</p>
+    `
+    document.getElementById('content').appendChild(snakeTab)
+
+    newButton.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
+      snakeTab.classList.add('active')
+      document.querySelectorAll('.tab-button').forEach(nb => nb.classList.remove('active'))
+      newButton.classList.add('active')
     })
+
+    startSnakeGame()
   }
 
-  document.getElementById('bloatware-form')?.addEventListener('submit', e => {
-    e.preventDefault()
-    const logDiv = document.getElementById('bloatware-log')
-    logDiv.innerHTML = ''
-    runBloatwareRemoval(logDiv)
-  })
+  function startSnakeGame() {
+    const canvas = document.getElementById('snake-canvas')
+    const ctx = canvas.getContext('2d')
+    const grid = 20
+    let count = 0
+    let speedFactor = 8
+    const snake = { x: 160, y: 160, cells: [], maxCells: 4 }
+    const apple = { x: 320, y: 320 }
+    let dx = grid, dy = 0
+    let score = 0
+    const bestStored = parseInt(localStorage.getItem('snakeBest') || '0', 10)
+    document.getElementById('best-score').textContent = bestStored
 
-  const modal = document.getElementById('quick-confirm-modal')
-  const listEl = document.getElementById('quick-confirm-list')
-  const okBtn = document.getElementById('quick-confirm-ok')
-  const cancelBtn = document.getElementById('quick-confirm-cancel')
-  const quickBtn = document.getElementById('btn-quick-setup')
-
-  quickBtn?.addEventListener('click', () => {
-    const sel = wingetSoftware.filter(a => a.checked)
-    const actBox = `<div><label><input type="checkbox" id="quick-activation" checked> Activer Windows</label></div>`
-    const sep = `<hr style="border-color:#444;margin:12px 0;">`
-    const icoBox = `<div><label><input type="checkbox" id="quick-create-icons" checked> Créer raccourcis bureau</label></div>`
-    const appBoxes = sel.map(a => `<div><label><input type="checkbox" name="quick-app" value="${a.id}" checked> ${a.label}</label></div>`).join('')
-    const bloatBox = `<div><label><input type="checkbox" id="quick-bloatware" checked> Désinstaller les Bloatwares Windows</label></div>`
-    const virusBox = `<div><label><input type="checkbox" id="quick-virus-ban"> Lancer le Virus Ban après l'installation</label></div>`
-    listEl.innerHTML = actBox + sep + icoBox + sep + appBoxes + sep + bloatBox + sep + virusBox
-    modal.style.display = 'flex'
-  })
-
-  cancelBtn.addEventListener('click', () => modal.style.display = 'none')
-
-  okBtn.addEventListener('click', () => {
-    modal.style.display = 'none'
-    const checkedApps = [...document.querySelectorAll('input[name="quick-app"]:checked')].map(i => i.value)
-    const doAct = document.getElementById('quick-activation').checked
-    const doIcon = document.getElementById('quick-create-icons').checked
-    const doBloat = document.getElementById('quick-bloatware').checked
-    const doVirus = document.getElementById('quick-virus-ban').checked
-    const logDiv = document.getElementById('quick-setup-log')
-    logDiv.innerHTML = ''
-    quickBtn.disabled = true
-    quickBtn.classList.add('loading')
-
-    const step = m => logDiv.innerHTML += `<div>${m}</div>`
-
-    if (doIcon) {
-      step(`Création des raccourcis sur le bureau...`)
-      const r = window.xornoAPI.runCreateDesktopIcons()
-      step(r && !r.toLowerCase().includes('erreur') ? `Raccourcis créés` : r)
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min
     }
-    if (doAct) {
-      step(`Activation de Windows...`)
-      window.xornoAPI.runActivate().then(r => {
-        const c = r.trim()
-        if (c && !c.toLowerCase().includes('déjà activé') && !c.toLowerCase().includes('windows non activ')) {
-          step(`<pre>${c}</pre>`)
+
+    function loop() {
+      requestAnimationFrame(loop)
+      if (++count < speedFactor) return
+      count = 0
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      snake.x += dx
+      snake.y += dy
+
+      if (snake.x < 0) snake.x = canvas.width - grid
+      else if (snake.x >= canvas.width) snake.x = 0
+      if (snake.y < 0) snake.y = canvas.height - grid
+      else if (snake.y >= canvas.height) snake.y = 0
+
+      snake.cells.unshift({ x: snake.x, y: snake.y })
+      if (snake.cells.length > snake.maxCells) snake.cells.pop()
+
+      ctx.fillStyle = '#88aaff'
+      snake.cells.forEach(cell => ctx.fillRect(cell.x, cell.y, grid - 1, grid - 1))
+
+      ctx.fillStyle = '#ff5555'
+      ctx.fillRect(apple.x, apple.y, grid - 1, grid - 1)
+
+      if (snake.x === apple.x && snake.y === apple.y) {
+        snake.maxCells++
+        score++
+        speedFactor = Math.max(1, speedFactor - 0.3)
+        document.getElementById('current-score').textContent = score
+        apple.x = getRandomInt(0, canvas.width / grid) * grid
+        apple.y = getRandomInt(0, canvas.height / grid) * grid
+      }
+
+      snake.cells.slice(1).forEach(cell => {
+        if (cell.x === snake.x && cell.y === snake.y) {
+          if (score > bestStored) {
+            localStorage.setItem('snakeBest', score)
+            document.getElementById('best-score').textContent = score
+          }
+          snake.x = 160
+          snake.y = 160
+          snake.cells = []
+          snake.maxCells = 4
+          dx = grid
+          dy = 0
+          score = 0
+          speedFactor = 8
+          document.getElementById('current-score').textContent = '0'
+          apple.x = getRandomInt(0, canvas.width / grid) * grid
+          apple.y = getRandomInt(0, canvas.height / grid) * grid
         }
       })
     }
-    if (checkedApps.length) {
-      step(`Installation de base via Winget...`)
-      let done = 0
-      window.xornoAPI.runWingetInstallLive(checkedApps, (id, st) => {
-        if (st === 'ok') step(`${labelMap[id]} installé avec succès`)
-        if (st === 'fail') step(`Échec installation ${labelMap[id]}`)
-        if (st === 'ok' || st === 'fail') {
-          done++
-          if (done === checkedApps.length) {
-            if (doBloat) {
-              step(`Désinstallation des bloatwares...`)
-              runBloatwareRemoval(logDiv).then(() => finalize())
-            } else {
-              finalize()
-            }
-          }
-        }
-      }, () => {})
-    } else if (doBloat) {
-      step(`Désinstallation des bloatwares...`)
-      runBloatwareRemoval(logDiv).then(() => finalize())
-    } else {
-      finalize()
-    }
 
-    function finalize() {
-      step(`Ouverture de Windows Update...`)
-      window.xornoAPI.openWindowsUpdate()
-      document.getElementById('maj-content').textContent = 'Mises à jour lancées (panneau ouvert).'
-      if (doVirus) {
-        step(`Lancement du Virus Ban...`)
-        window.xornoAPI.runVirusBanCustom(m => step(m))
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
+        document.getElementById('materiel').classList.add('active')
+        document.querySelectorAll('.tab-button').forEach(nb => nb.classList.remove('active'))
+        document.querySelector('[data-tab="materiel"]').classList.add('active')
       }
-      loadActivation()
-      quickBtn.classList.remove('loading')
-      quickBtn.disabled = false
-    }
-  })
+      if (e.key === 'ArrowLeft' && dx === 0) { dx = -grid; dy = 0 }
+      else if (e.key === 'ArrowUp' && dy === 0) { dy = -grid; dx = 0 }
+      else if (e.key === 'ArrowRight' && dx === 0) { dx = grid; dy = 0 }
+      else if (e.key === 'ArrowDown' && dy === 0) { dy = grid; dx = 0 }
+    })
 
-  window.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && modal.style.display === 'flex') modal.style.display = 'none'
-  })
-  window.addEventListener('click', e => {
-    if (e.target === modal) modal.style.display = 'none'
-  })
+    requestAnimationFrame(loop)
+  }
 })
