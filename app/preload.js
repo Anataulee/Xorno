@@ -79,21 +79,12 @@ function runActivate() {
   }
 }
 
-function runNinite(type) {
-  const exePath = path.join(
-    __dirname,
-    '..',
-    'scripts',
-    type === 'bureau'
-      ? 'ninite-bureautique.exe'
-      : type === 'gaming'
-      ? 'ninite-gaming.exe'
-      : 'ninite-combo.exe'
-  );
+async function checkInternetConnection() {
   try {
-    return execSync(`"${exePath}"`, { encoding: 'utf8' });
-  } catch (e) {
-    return `Erreur Ninite (${type}) : ${e.message}`;
+    const netRes = await si.inetChecksite('https://google.com');
+    return netRes.ok;
+  } catch {
+    return false;
   }
 }
 
@@ -101,7 +92,6 @@ function runWingetInstallLive(appList, reportStatus, reportLog) {
   if (!Array.isArray(appList) || appList.length === 0) return;
 
   let index = 0;
-
   const runNext = () => {
     const id = appList[index];
     reportStatus(id, 'running');
@@ -114,11 +104,8 @@ function runWingetInstallLive(appList, reportStatus, reportLog) {
     proc.stdout.on('data', (data) => {
       const line = data.toString();
       reportLog(id, line);
-      if (/Téléchargement en cours|Downloading/.test(line)) {
-        reportStatus(id, 'download');
-      } else if (/Installation de|Installing|Installing package/.test(line)) {
-        reportStatus(id, 'install');
-      }
+      if (/Téléchargement en cours|Downloading/.test(line)) reportStatus(id, 'download');
+      else if (/Installation de|Installing|Installing package/.test(line)) reportStatus(id, 'install');
     });
 
     proc.stderr.on('data', (data) => {
@@ -208,7 +195,7 @@ window.xornoAPI = {
   checkActivation,
   openWindowsUpdate,
   runActivate,
-  runNinite,
+  checkInternetConnection,
   runWingetInstallLive,
   runCreateDesktopIcons,
   quitApp,
