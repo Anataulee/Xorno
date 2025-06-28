@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
   <title>XORNO - Diagnostic</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
 <body>
   <div id="sidebar-container" class="backdrop-blur-3xl">
     <div id="tabs">
@@ -48,7 +46,7 @@
         <button class="tab-button" data-tab="installations">
           <span class="icon">
             <svg viewBox="0 0 20 20" fill="currentColor">
-              <path d="M5 3a2 2 0 0 0-2 2v6h2V5h10v6h2V5a2 2 0 0 0-2-2H5zm10 10H5a2 2 0 0 0-2 2v1h14v-1a2 2 0 0 0-2-2zm-5-4l3 3h-2v4h-2v-4H7l3-3z" />
+              <path d="M5 3a2 2 0 0 0-2 2v6h2V5h10v6h2V5a2 2 0 0 0-2-2H5zm10 10H5a2 2 0 0 0-2 2v1h14v-1zm-5-4l3 3h-2v4h-2v-4H7l3-3z" />
             </svg>
           </span>
           Installations
@@ -56,7 +54,7 @@
         <button class="tab-button" data-tab="appbuster">
           <span class="icon">
             <svg viewBox="0 0 20 20" fill="currentColor">
-              <path d="M4 4h12v2H4V4zm0 4h12v2H4V8zm0 4h12v2H4v-2zM4 16h12v2H4v-2z" />
+              <path d="M4 4h12v2H4V4zm0 4h12v2H8V8zm0 8h12v2H4v-2z" />
             </svg>
           </span>
           AppBuster
@@ -82,17 +80,12 @@
       </div>
     </div>
   </div>
-
   <div id="content">
     <div id="content-header">X:ORNO</div>
-
     <div id="materiel" class="tab active">
       <h1>État du système</h1>
-      <div id="materiel-content">
-        <div class="spinner"></div>
-      </div>
+      <div id="materiel-content"><div class="spinner"></div></div>
     </div>
-
     <div id="installations" class="tab">
       <h1>Installations via Winget</h1>
       <form id="winget-form">
@@ -106,13 +99,10 @@
       </form>
       <div id="winget-output"></div>
     </div>
-
     <div id="winget-logs" class="tab">
       <h1>Logs détaillés Winget</h1>
-      <div id="winget-raw-log" style="white-space:pre-wrap; max-height:300px; overflow-y:auto; background:#111; padding:10px; font-size:0.9rem;">
-      </div>
+      <div id="winget-raw-log" style="white-space:pre-wrap; max-height:300px; overflow-y:auto; background:#111; padding:10px; font-size:0.9rem;"></div>
     </div>
-
     <div id="maj" class="tab">
       <h1>Mises à jour Windows</h1>
       <button id="btn-update" class="action-btn">
@@ -123,7 +113,6 @@
       </button>
       <div id="maj-content"></div>
     </div>
-
     <div id="activation" class="tab">
       <h1>Activation Windows</h1>
       <button id="btn-activate" class="action-btn">
@@ -134,7 +123,6 @@
       </button>
       <div id="activation-content"></div>
     </div>
-
     <div id="virus-ban" class="tab">
       <h1>Virus Ban (Nettoyage Automatisé)</h1>
       <form id="virus-ban-form">
@@ -146,28 +134,32 @@
       </form>
       <div id="virus-ban-log"></div>
     </div>
-
     <div id="appbuster" class="tab">
       <h1>Lancer O&O AppBuster</h1>
       <button id="btn-appbuster" class="action-btn">Lancer AppBuster</button>
       <div id="appbuster-log" style="margin-top: 10px; color: #88aaff;"></div>
     </div>
-
-    <div id="quick-setup-log"></div>
-  </div>
-
-  <div id="quick-confirm-modal" class="modal">
-    <div class="modal-content">
-      <h2>Confirmer l'installation rapide</h2>
-      <p>Les logiciels suivants seront installés via Winget :</p>
-      <ul id="quick-confirm-list"></ul>
-      <div class="modal-buttons">
-        <button id="quick-confirm-cancel" class="action-btn">Annuler</button>
-        <button id="quick-confirm-ok" class="action-btn">Installer</button>
+    <div id="quick-confirm-modal" class="modal">
+      <div class="modal-content">
+        <h2>Installation rapide – Configuration</h2>
+        <div class="quick-section">
+          <h3>Fonctions système</h3>
+          <label><input type="checkbox" id="quick-activation" checked> Activer Windows</label><br>
+          <label><input type="checkbox" id="quick-updates" checked> Installer les mises à jour Windows</label>
+        </div>
+        <div class="quick-section">
+          <h3>Applications à installer</h3>
+          <div id="quick-softwares"></div>
+        </div>
+        <!-- Bloatware Ban / Virus Ban volontairement masqués -->
+        <div class="modal-buttons">
+          <button id="quick-confirm-cancel" class="action-btn">Annuler</button>
+          <button id="quick-confirm-ok" class="action-btn">Lancer</button>
+        </div>
       </div>
     </div>
+    <div id="quick-setup-log"></div>
   </div>
-
   <script src="renderer.js"></script>
 </body>
 </html>

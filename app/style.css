@@ -527,3 +527,11 @@ body {
 .retro-theme .action-btn:hover {
   background-color: #005050 !important;
 }
+.quick-section {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #444;
+}
+.quick-section:last-child {
+  border-bottom: none;
+}

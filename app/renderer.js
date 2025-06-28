@@ -31,12 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .forEach(k => loadSection(k, window.xornoAPI['get' + k.charAt(0).toUpperCase() + k.slice(1)]));
   function loadActivation() {
     window.xornoAPI.checkActivation()
-      .then(status => {
-        document.getElementById('sec-Activation Windows').innerHTML = `<strong>Activation Windows :</strong> ${status}`;
-      })
-      .catch(() => {
-        document.getElementById('sec-Activation Windows').innerHTML = `<strong>Activation Windows :</strong> Erreur`;
-      });
+      .then(status => document.getElementById('sec-Activation Windows').innerHTML = `<strong>Activation Windows :</strong> ${status}`)
+      .catch(() => document.getElementById('sec-Activation Windows').innerHTML = `<strong>Activation Windows :</strong> Erreur`);
   }
   loadActivation();
 
@@ -52,9 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.disabled = true;
     document.getElementById('activation-content').textContent = 'Activation en cours…';
     window.xornoAPI.runActivate()
-      .then(result => {
-        document.getElementById('activation-content').innerHTML = `<pre>${result}</pre>`;
-      })
+      .then(result => document.getElementById('activation-content').innerHTML = `<pre>${result}</pre>`)
       .finally(() => {
         btn.classList.remove('loading');
         btn.disabled = false;
@@ -79,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'Opera.Opera', label: 'Opera', checked: false },
     { id: 'Brave.Brave', label: 'Brave', checked: false },
     { id: 'RARLab.WinRAR', label: 'WinRAR', checked: false },
-    //{ id: 'Nvidia.GeForceExperience', label: 'NVIDIA GeForce Experience', checked: false },
     { id: 'AMD.AMDSoftwareCloudEdition', label: 'AMD Software', checked: false },
     { id: 'Malwarebytes.Malwarebytes', label: 'Malwarebytes Anti‑Malware', checked: false }
   ];
@@ -96,8 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .join('');
     document.getElementById('winget-raw-log').textContent = '';
     window.xornoAPI.runWingetInstallLive(selected, (id, step) => {
-      const s = document.getElementById(`status-${id}`);
-      const p = document.getElementById(`prog-${id}`);
+      const s = document.getElementById(`status-${id}`), p = document.getElementById(`prog-${id}`);
       if (!s || !p) return;
       if (step === 'running') s.textContent = 'En attente';
       else if (step === 'download') { s.textContent = 'Téléchargement…'; p.removeAttribute('value'); }
@@ -129,6 +121,104 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.getElementById('btn-appbuster')?.addEventListener('click', () => {
+    const logContainer = document.getElementById('appbuster-log');
+    logContainer.innerHTML = 'Lancement de O&O AppBuster...';
+    window.xornoAPI.launchAppBuster(output => {
+      logContainer.innerHTML += `<br>${output}`;
+    });
+  });
+  document.getElementById('btn-quick-setup')?.addEventListener('click', () => {
+    const quickSoftware = wingetSoftware.filter(a => a.checked);
+    const container = document.getElementById('quick-softwares');
+    container.innerHTML = quickSoftware
+      .map(s => `<label><input type="checkbox" class="quick-soft" value="${s.id}" checked> ${s.label}</label><br>`)
+      .join('');
+    document.getElementById('quick-confirm-modal').style.display = 'flex';
+  });
+
+  document.getElementById('quick-confirm-cancel')?.addEventListener('click', () => {
+    document.getElementById('quick-confirm-modal').style.display = 'none';
+  });
+
+  document.getElementById('quick-confirm-ok')?.addEventListener('click', () => {
+    const installActivation = document.getElementById('quick-activation').checked;
+    const installUpdates = document.getElementById('quick-updates').checked;
+    const installBloatwareBanEl = document.getElementById('quick-bloatware');
+    const installVirusBanEl = document.getElementById('quick-virusban');
+
+    const installBloatwareBan = installBloatwareBanEl ? installBloatwareBanEl.checked : false;
+    const installVirusBan = installVirusBanEl ? installVirusBanEl.checked : false;
+
+
+    const selectedSoftwares = [...document.querySelectorAll('.quick-soft:checked')].map(i => i.value);
+
+    document.getElementById('quick-confirm-modal').style.display = 'none';
+
+    const quickSetupLog = document.getElementById('quick-setup-log');
+    quickSetupLog.innerHTML = '<div>Démarrage de l\'installation rapide...</div>';
+
+    if (installActivation) {
+      quickSetupLog.innerHTML += '<div>Activation de Windows en cours...</div>';
+      window.xornoAPI.runActivate().then(result => {
+        quickSetupLog.innerHTML += '<div>Windows activé avec succès.</div>';
+      }).catch(() => {
+        quickSetupLog.innerHTML += '<div>Erreur lors de l\'activation de Windows.</div>';
+      });
+    }
+
+    if (installUpdates) {
+      quickSetupLog.innerHTML += '<div>Ouverture de Windows Update...</div>';
+      window.xornoAPI.openWindowsUpdate();
+      quickSetupLog.innerHTML += '<div>Windows Update ouvert.</div>';
+    }
+
+    if (selectedSoftwares.length > 0) {
+      quickSetupLog.innerHTML += '<div>Installation des logiciels sélectionnés...</div>';
+
+      let currentIndex = 0;
+
+      const runNext = () => {
+        if (currentIndex >= selectedSoftwares.length) {
+          quickSetupLog.innerHTML += '<div>Installation des logiciels terminée.</div>';
+          return;
+        }
+
+        const id = selectedSoftwares[currentIndex];
+        const name = labelMap[id];
+
+        quickSetupLog.innerHTML += `<div>Installation de ${name} en cours...</div>`;
+
+        window.xornoAPI.runWingetInstallLive([id], (softwareId, step) => {
+          if (step === 'ok') {
+            quickSetupLog.innerHTML += `<div>${name} installé avec succès.</div>`;
+            currentIndex++;
+            runNext();
+          } else if (step === 'fail') {
+            quickSetupLog.innerHTML += `<div>Échec de l'installation de ${name}.</div>`;
+            currentIndex++;
+            runNext();
+          }
+        }, () => { });
+      };
+
+      runNext();
+    }
+
+    if (installBloatwareBan) {
+      quickSetupLog.innerHTML += '<div>Exécution de Bloatware Ban...</div>';
+      window.xornoAPI.runCreateDesktopIcons();
+      quickSetupLog.innerHTML += '<div>Bloatware Ban terminé.</div>';
+    }
+
+    if (installVirusBan) {
+      quickSetupLog.innerHTML += '<div>Lancement de Virus Ban...</div>';
+      window.xornoAPI.runVirusBanCustom(['CCleaner64.exe', 'adwcleaner.exe'], msg => {
+        quickSetupLog.innerHTML += `<div>${msg}</div>`;
+      });
+    }
+  });
+
   const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
   let konamiPosition = 0;
   window.addEventListener('keydown', e => {
@@ -148,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
     newButton.className = 'tab-button';
     newButton.id = 'snake-tab-button';
     newButton.dataset.tab = 'snake-tab';
-    newButton.innerHTML = `<span class="icon"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M3 10a7 7 0 017-7h2a3 3 0 110 6h-2a1 1 0 100 2h2a3 3 0 110 6h-2a7 7 0 01-7-7z"/></svg></span> Snake`;
+    newButton.innerHTML = `<span class="icon"><svg viewBox="0 0 20 20"><path d="M3 10a7 7 0 017-7h2a3 3 0 110 6h-2a1 1 0 100 2h2a3 3 0 110 6h-2a7 7 0 01-7-7z"/></svg></span> Snake`;
     document.getElementById('tabs-content').appendChild(newButton);
 
     const snakeTab = document.createElement('div');
@@ -160,20 +250,17 @@ document.addEventListener('DOMContentLoaded', () => {
         Score: <span id="current-score">0</span> – Meilleur: <span id="best-score">0</span>
       </div>
       <canvas id="snake-canvas" width="400" height="400" style="background:#1f1f1f;border:2px solid #587fff;"></canvas>
-      <p style="color:#aaa;font-size:0.9rem;margin-top:10px;">Utilisez les flèches pour jouer. ESC pour quitter.</p>
+      <p style="color:#aaa;font-size:0.9rem;margin-top:10px;">Utilise les flèches. ESC pour revenir.</p>
     `;
     document.getElementById('content').appendChild(snakeTab);
-
     newButton.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
       snakeTab.classList.add('active');
       document.querySelectorAll('.tab-button').forEach(nb => nb.classList.remove('active'));
       newButton.classList.add('active');
     });
-
     startSnakeGame();
   }
-
   function startSnakeGame() {
     const canvas = document.getElementById('snake-canvas');
     const ctx = canvas.getContext('2d');
@@ -199,7 +286,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       snake.x += dx;
       snake.y += dy;
-
       if (snake.x < 0) snake.x = canvas.width - grid;
       else if (snake.x >= canvas.width) snake.x = 0;
       if (snake.y < 0) snake.y = canvas.height - grid;
@@ -210,7 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       ctx.fillStyle = '#88aaff';
       snake.cells.forEach(cell => ctx.fillRect(cell.x, cell.y, grid - 1, grid - 1));
-
       ctx.fillStyle = '#ff5555';
       ctx.fillRect(apple.x, apple.y, grid - 1, grid - 1);
 
@@ -229,14 +314,8 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('snakeBest', score);
             document.getElementById('best-score').textContent = score;
           }
-          snake.x = 160;
-          snake.y = 160;
-          snake.cells = [];
-          snake.maxCells = 4;
-          dx = grid;
-          dy = 0;
-          score = 0;
-          speedFactor = 8;
+          snake.x = 160; snake.y = 160; snake.cells = []; snake.maxCells = 4;
+          dx = grid; dy = 0; score = 0; speedFactor = 8;
           document.getElementById('current-score').textContent = '0';
           apple.x = getRandomInt(0, canvas.width / grid) * grid;
           apple.y = getRandomInt(0, canvas.height / grid) * grid;
@@ -266,7 +345,6 @@ document.addEventListener('DOMContentLoaded', () => {
     retro: { code: ['r', 'e', 't', 'r', 'o'], pos: 0 },
     credits: { code: ['t', 'a', 'g'], pos: 0 }
   };
-
   window.addEventListener('keydown', e => {
     Object.entries(sequences).forEach(([k, s]) => {
       if (e.key.toLowerCase() === s.code[s.pos]) {
@@ -299,8 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const interval = setInterval(() => {
       ctx.fillStyle = 'rgba(0,0,0,0.05)';
       ctx.fillRect(0, 0, w, h);
-      ctx.fillStyle = '#0f0';
-      ctx.font = '15px monospace';
+      ctx.fillStyle = '#0f0'; ctx.font = '15px monospace';
       drops.forEach((y, i) => {
         const text = chars[Math.floor(Math.random() * chars.length)];
         ctx.fillText(text, i * 20, y);
@@ -323,44 +400,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const original = { bg: document.body.style.background, color: document.body.style.color };
     let count = 0;
     const iv = setInterval(() => {
-      document.body.style.background = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-      document.body.style.color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-      count++;
-      if (count > 25) {
-        clearInterval(iv);
-        document.body.style.background = original.bg;
-        document.body.style.color = original.color;
-      }
+      document.body.style.background = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`;
+      document.body.style.color = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`;
+      count++; if (count > 25) { clearInterval(iv); document.body.style.background = original.bg; document.body.style.color = original.color; }
     }, 200);
+  }
+
+  function startRetro() {
+    document.getElementById('content').classList.add('retro-theme');
+    document.querySelectorAll('.tab-button,.footer-btn').forEach(el => el.classList.add('retro-theme'));
+    setTimeout(() => {
+      document.getElementById('content').classList.remove('retro-theme');
+      document.querySelectorAll('.tab-button,.footer-btn').forEach(el => el.classList.remove('retro-theme'));
+    }, 10000);
   }
 
   function showCredits() {
     const modal = document.createElement('div');
     modal.style = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:9999';
     modal.innerHTML = `<div style="background:#2a2a2a;padding:20px;border-radius:8px;color:#fff;font-family:monospace;">
-    <h2>Crédits</h2><p>Anataule was here.</p><button id="cred-ok" style="margin-top:10px;">OK</button></div>`;
+      <h2>Crédits</h2><p>Anataule was here.</p><button id="cred-ok" style="margin-top:10px;">OK</button></div>`;
     document.body.appendChild(modal);
     modal.querySelector('#cred-ok').addEventListener('click', () => modal.remove());
   }
 
-  function startRetro() {
-    document.getElementById('content').classList.add('retro-theme');
-    document.querySelectorAll('.tab-button, .footer-btn').forEach(el => el.classList.add('retro-theme'));
-    setTimeout(() => {
-      document.getElementById('content').classList.remove('retro-theme');
-      document.querySelectorAll('.tab-button, .footer-btn').forEach(el => el.classList.remove('retro-theme'));
-    }, 10000);
-  }
-
-  document.getElementById('btn-appbuster')?.addEventListener('click', () => {
-    console.log('Clic détecté');
-    console.log('launchAppBuster existe ?', !!window.xornoAPI.launchAppBuster);
-
-    const logContainer = document.getElementById('appbuster-log');
-    logContainer.innerHTML = 'Lancement de O&O AppBuster...';
-
-    window.xornoAPI.launchAppBuster((output) => {
-      logContainer.innerHTML += `<br>${output}`;
-    });
-  });
-})
+});
