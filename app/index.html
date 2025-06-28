@@ -32,8 +32,7 @@
           <span class="icon">
             <svg viewBox="0 0 20 20" fill="currentColor">
               <path d="M10 2a8 8 0 1 0 7.446 4.894l1.626-.158A9.5 9.5 0 1 1 9.5.5V3l-2-1.5L9.5.5V3A8 8 0 0 0 10 2z" />
-              <path
-                d="M10 5.5a.75.75 0 0 1 .75.75v4l3 .75a.75.75 0 1 1-.5 1.43l-3.5-.875A.75.75 0 0 1 9.25 10V6.25A.75.75 0 0 1 10 5.5z" />
+              <path d="M10 5.5a.75.75 0 0 1 .75.75v4l3 .75a.75.75 0 1 1-.5 1.43l-3.5-.875A.75.75 0 0 1 9.25 10V6.25A.75.75 0 0 1 10 5.5z" />
             </svg>
           </span>
           Mises à jour
@@ -49,20 +48,19 @@
         <button class="tab-button" data-tab="installations">
           <span class="icon">
             <svg viewBox="0 0 20 20" fill="currentColor">
-              <path
-                d="M5 3a2 2 0 0 0-2 2v6h2V5h10v6h2V5a2 2 0 0 0-2-2H5zm10 10H5a2 2 0 0 0-2 2v1h14v-1a2 2 0 0 0-2-2zm-5-4l3 3h-2v4h-2v-4H7l3-3z" />
+              <path d="M5 3a2 2 0 0 0-2 2v6h2V5h10v6h2V5a2 2 0 0 0-2-2H5zm10 10H5a2 2 0 0 0-2 2v1h14v-1a2 2 0 0 0-2-2zm-5-4l3 3h-2v4h-2v-4H7l3-3z" />
             </svg>
           </span>
           Installations
         </button>
-        <!--button class="tab-button" data-tab="winget-logs">
+        <button class="tab-button" data-tab="appbuster">
           <span class="icon">
             <svg viewBox="0 0 20 20" fill="currentColor">
               <path d="M4 4h12v2H4V4zm0 4h12v2H4V8zm0 4h12v2H4v-2zM4 16h12v2H4v-2z" />
             </svg>
           </span>
-          Logs
-        </button-->
+          AppBuster
+        </button>
       </div>
       <div id="footer-buttons">
         <button id="btn-quick-setup" class="footer-btn quick-btn">
@@ -101,8 +99,7 @@
         <div id="winget-software-list" class="software-grid"></div>
         <button type="submit" class="action-btn">
           <svg viewBox="0 0 20 20" fill="currentColor">
-            <path
-              d="M10 2a1 1 0 011 1v8.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a 1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L9 11.586V3a1 1 0 011-1z" />
+            <path d="M10 2a1 1 0 011 1v8.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L9 11.586V3a1 1 0 011-1z" />
           </svg>
           Installer la sélection
         </button>
@@ -112,8 +109,7 @@
 
     <div id="winget-logs" class="tab">
       <h1>Logs détaillés Winget</h1>
-      <div id="winget-raw-log"
-        style="white-space:pre-wrap; max-height:300px; overflow-y:auto; background:#111; padding:10px; font-size:0.9rem;">
+      <div id="winget-raw-log" style="white-space:pre-wrap; max-height:300px; overflow-y:auto; background:#111; padding:10px; font-size:0.9rem;">
       </div>
     </div>
 
@@ -144,12 +140,17 @@
       <form id="virus-ban-form">
         <label><input type="checkbox" name="vb-tool" value="CCleaner64.exe" checked> CCleaner</label><br>
         <label><input type="checkbox" name="vb-tool" value="adwcleaner.exe" checked> AdwCleaner</label><br>
-        <label><input type="checkbox" name="vb-tool" value="WindowsDefender" checked> Windows Defender (scan
-          rapide)</label><br>
+        <label><input type="checkbox" name="vb-tool" value="WindowsDefender" checked> Windows Defender (scan rapide)</label><br>
         <label><input type="checkbox" name="vb-tool" value="JRT.exe"> JRT (ferme tout)</label><br><br>
         <button id="btn-virus-ban" type="submit" class="action-btn">Lancer le Virus Ban</button>
       </form>
       <div id="virus-ban-log"></div>
+    </div>
+
+    <div id="appbuster" class="tab">
+      <h1>Lancer O&O AppBuster</h1>
+      <button id="btn-appbuster" class="action-btn">Lancer AppBuster</button>
+      <div id="appbuster-log" style="margin-top: 10px; color: #88aaff;"></div>
     </div>
 
     <div id="quick-setup-log"></div>

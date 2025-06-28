@@ -183,6 +183,14 @@ function runVirusBanCustom(tools, reportLog) {
   runNext();
 }
 
+function launchAppBuster() {
+  try {
+    const appPath = path.join(__dirname, '..', 'outils', 'OOAPB.exe');
+    spawn('cmd.exe', ['/c', `"${appPath}"`], { shell: true, detached: true });
+  } catch (e) {
+    console.error('Erreur lancement AppBuster:', e.message);
+  }
+}
 window.xornoAPI = {
   getCpu,
   getGpu,
@@ -199,5 +207,6 @@ window.xornoAPI = {
   runWingetInstallLive,
   runCreateDesktopIcons,
   quitApp,
-  runVirusBanCustom
+  runVirusBanCustom,
+  launchAppBuster
 };

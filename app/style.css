@@ -62,7 +62,8 @@ body {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* important: top aligned */
+  justify-content: flex-start;
+  /* important: top aligned */
   gap: 8px;
 }
 
@@ -120,7 +121,8 @@ body {
   z-index: 20;
   display: flex;
   flex-direction: column;
-  margin-top: auto; /* push footer buttons to bottom */
+  margin-top: auto;
+  /* push footer buttons to bottom */
 }
 
 #footer-buttons .footer-btn {
@@ -441,6 +443,7 @@ body {
   -webkit-app-region: no-drag;
   cursor: pointer;
 }
+
 .software-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -462,4 +465,65 @@ body {
 
 .software-grid label:hover {
   background: #444;
+}
+
+.retro-theme * {
+  font-family: 'Courier New', monospace !important;
+  background: #c0c0c0 !important;
+  color: black !important;
+  border: 2px solid black !important;
+}
+
+.retro-theme button {
+  background: #e0e0e0 !important;
+  color: black !important;
+  border: 2px outset #fff !important;
+}
+
+.retro-theme .action-btn {
+  background: #e0e0e0 !important;
+  color: black !important;
+  border: 2px outset #fff !important;
+}
+
+.retro-theme input[type="checkbox"]:checked {
+  background: black !important;
+  border-color: black !important;
+}
+
+.retro-theme input[type="checkbox"]:checked::after {
+  border-color: white !important;
+}
+.retro-theme-sidebar {
+  background-color: #008080 !important; /* Bleu/vert typique Windows 95 */
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-right: 2px solid #004f4f !important;
+  box-shadow: none !important;
+}
+
+.retro-theme-sidebar .tab-button,
+.retro-theme-sidebar .footer-btn {
+  background-color: #00aaaa !important;
+  color: black !important;
+}
+
+.retro-theme-sidebar .tab-button.active,
+.retro-theme-sidebar .footer-btn.active {
+  background-color: #007070 !important;
+  color: white !important;
+}
+
+.retro-theme {
+  background-color: #c0c0c0 !important; /* Gris clair rétro */
+  color: black !important;
+}
+
+.retro-theme .action-btn {
+  background-color: #007070 !important;
+  color: white !important;
+}
+
+.retro-theme .action-btn:hover {
+  background-color: #005050 !important;
 }

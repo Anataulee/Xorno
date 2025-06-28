@@ -1,0 +1,34 @@
+﻿[2025-06-28 08:48:01.571] [notice ] [bug_report ] [ 8016: 5392] [60E748: 313] BugReport started.
+[2025-06-28 08:48:01.571] [notice ] [bug_report ] [ 8016: 5392] [60E748:  95]  - valid package type found in [send]: 0
+[2025-06-28 08:48:01.571] [notice ] [bug_report ] [ 8016: 5392] [60E748:  95]  - valid package type found in [send]: 2
+[2025-06-28 08:48:01.571] [notice ] [bug_report ] [ 8016: 5392] [60E748: 120]  - setting [product] to 90
+[2025-06-28 08:48:01.571] [notice ] [bug_report ] [ 8016: 5392] [60E748: 120]  - setting [programpath] to C:\Users\UTILISATEUR\Desktop\Xorno\outils
+[2025-06-28 08:48:01.571] [notice ] [bug_report ] [ 8016: 5392] [60E748: 120]  - setting [version] to 6.36.0.11508
+[2025-06-28 08:48:01.571] [notice ] [bug_report ] [ 8016: 5392] [60E748: 120]  - setting [guid] to 䠐צּʭ
+[2025-06-28 08:48:01.571] [notice ] [bug_report ] [ 8016: 5392] [60E748: 115]  - setting [silent]
+[2025-06-28 08:48:01.571] [notice ] [bug_report ] [ 8016: 5392] [60E748: 149]  - setting [path] to C:\Users\UTILISATEUR\Desktop\Xorno\outils\LOG
+[2025-06-28 08:48:01.613] [warning] [crashguard ] [ 8016: 5392] [4AF4BF: 248] Process dumper doesn't exist in path 'C:\Users\UTILISATEUR\Desktop\Xorno\outils\x64\avDump.exe'.
+[2025-06-28 08:48:01.623] [warning] [ini_access ] [ 8016: 5392] [C83FCF: 198] failed to read ini file C:\Users\UTILISATEUR\Desktop\Xorno\outils\settings.ini
+                                                                              Exception: couldn't open file
+                                                                              Code: 0x00000002 (2)
+[2025-06-28 08:48:01.639] [notice ] [crashguard ] [ 8016:13160] [FF32C0: 223] Process monitoring installed.
+[2025-06-28 08:48:01.647] [notice ] [bug_report ] [ 8016: 5392] [60E748: 399] Processing package type (0)
+[2025-06-28 08:48:01.650] [notice ] [bug_report ] [ 8016: 5392] [8BAFB8: 100] {PackageType_0} Done submitting dumps with result: 1
+[2025-06-28 08:48:01.650] [notice ] [bug_report ] [ 8016: 5392] [60E748: 399] Processing package type (2)
+[2025-06-28 08:48:01.653] [error  ] [bug_report ] [ 8016: 5392] [6B2A78: 115] {PackageType_2::LogFilesWithReport-90-6.36.0.11508} Error while attaching content 2
+                                                                              Exception: Unable to enumerate directory 'C:\ProgramData\Piriform\*'!
+                                                                              Code: 0x00000003 (3)
+[2025-06-28 08:48:01.653] [error  ] [bug_report ] [ 8016: 5392] [6B2A78: 115] {PackageType_2::LogFilesWithReport-90-6.36.0.11508} Error while attaching content 4
+                                                                              Exception: Unable to enumerate directory 'C:\ProgramData\Piriform\Subscriptions\*'!
+                                                                              Code: 0x00000003 (3)
+[2025-06-28 08:48:01.658] [notice ] [bug_report ] [ 8016: 5392] [451BD4:  57] {PackageType_2::LogFilesWithReport-90-6.36.0.11508} About to submit payload of type (2.102)
+[2025-06-28 08:48:01.658] [warning] [sb         ] [ 8016: 5392] [AF8487:  22] {PackageType_2::LogFilesWithReport-90-6.36.0.11508} Couldn't get installation info.
+[2025-06-28 08:48:01.658] [warning] [sb         ] [ 8016: 5392] [AF8487:  34] {PackageType_2::LogFilesWithReport-90-6.36.0.11508} Couldn't get setting 'avdef://config/Common/VersionType', failed with error code 3
+[2025-06-28 08:48:01.658] [warning] [sb         ] [ 8016: 5392] [AF8487:  89] {PackageType_2::LogFilesWithReport-90-6.36.0.11508} InitAvastIdentity was not able to get running program version
+[2025-06-28 08:48:01.787] [warning] [bug_report ] [ 8016: 5392] [451BD4: 129] {PackageType_2::LogFilesWithReport-90-6.36.0.11508} Streamback submitting failed.
+                                                                              Exception: Request failed with status code: 500, reason 'Internal Server Error'
+                                                                              Code: 0x000001f4 (500)
+[2025-06-28 08:48:01.787] [notice ] [bug_report ] [ 8016: 5392] [8BAFB8: 170] {PackageType_2::LogFilesWithReport-90-6.36.0.11508} Payload was NOT submitted
+[2025-06-28 08:48:01.787] [notice ] [bug_report ] [ 8016: 5392] [60E748: 462] Package type '0' reports result: 0
+[2025-06-28 08:48:01.787] [notice ] [bug_report ] [ 8016: 5392] [60E748: 462] Package type '2' reports result: 5
+[2025-06-28 08:48:01.787] [notice ] [bug_report ] [ 8016: 5392] [60E748: 466] BugReport is finished with: [5].
