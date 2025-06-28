@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'Opera.Opera', label: 'Opera', checked: false },
     { id: 'Brave.Brave', label: 'Brave', checked: false },
     { id: 'RARLab.WinRAR', label: 'WinRAR', checked: false },
-    { id: 'Nvidia.GeForceExperience', label: 'NVIDIA GeForce Experience', checked: false },
+    //{ id: 'Nvidia.GeForceExperience', label: 'NVIDIA GeForce Experience', checked: false },
     { id: 'AMD.AMDSoftwareCloudEdition', label: 'AMD Software', checked: false },
     { id: 'Malwarebytes.Malwarebytes', label: 'Malwarebytes Anti‑Malware', checked: false }
   ];
